@@ -61,9 +61,13 @@
             this.gHICHUDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tRANGTHAIDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mSANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.m_KHACHHANGTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_KHACHHANGTableAdapter();
             this.m_SANPHAMTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_SANPHAMTableAdapter();
+            this.tHOADONBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t_HOADONTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter();
+            this.tCHITIETHOADONBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t_CHITIETHOADONTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mKHACHHANGBindingSource)).BeginInit();
@@ -76,6 +80,8 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHOADONBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tCHITIETHOADONBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -303,6 +309,7 @@
             this.dgOrder.Name = "dgOrder";
             this.dgOrder.Size = new System.Drawing.Size(370, 245);
             this.dgOrder.TabIndex = 0;
+            this.dgOrder.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgOrder_CellDoubleClick);
             // 
             // groupBox5
             // 
@@ -387,14 +394,15 @@
             this.mSANPHAMBindingSource.DataMember = "M_SANPHAM";
             this.mSANPHAMBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
             // 
-            // button1
+            // btnFinish
             // 
-            this.button1.Location = new System.Drawing.Point(666, 544);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFinish.Location = new System.Drawing.Point(666, 544);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(116, 36);
+            this.btnFinish.TabIndex = 2;
+            this.btnFinish.Text = "Hoàn thành";
+            this.btnFinish.UseVisualStyleBackColor = true;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // m_KHACHHANGTableAdapter
             // 
@@ -404,12 +412,30 @@
             // 
             this.m_SANPHAMTableAdapter.ClearBeforeFill = true;
             // 
+            // tHOADONBindingSource
+            // 
+            this.tHOADONBindingSource.DataMember = "T_HOADON";
+            this.tHOADONBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
+            // 
+            // t_HOADONTableAdapter
+            // 
+            this.t_HOADONTableAdapter.ClearBeforeFill = true;
+            // 
+            // tCHITIETHOADONBindingSource
+            // 
+            this.tCHITIETHOADONBindingSource.DataMember = "T_CHITIETHOADON";
+            this.tCHITIETHOADONBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
+            // 
+            // t_CHITIETHOADONTableAdapter
+            // 
+            this.t_CHITIETHOADONTableAdapter.ClearBeforeFill = true;
+            // 
             // AddOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 582);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddOrder";
@@ -429,6 +455,8 @@
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tHOADONBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tCHITIETHOADONBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,7 +472,7 @@
         private System.Windows.Forms.DataGridView dgOrder;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dgProduct;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFinish;
         private DB_QLCatDaHaiDatDataSet dB_QLCatDaHaiDatDataSet;
         private System.Windows.Forms.BindingSource mKHACHHANGBindingSource;
         private DB_QLCatDaHaiDatDataSetTableAdapters.M_KHACHHANGTableAdapter m_KHACHHANGTableAdapter;
@@ -470,5 +498,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource tHOADONBindingSource;
+        private DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter t_HOADONTableAdapter;
+        private System.Windows.Forms.BindingSource tCHITIETHOADONBindingSource;
+        private DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter t_CHITIETHOADONTableAdapter;
     }
 }

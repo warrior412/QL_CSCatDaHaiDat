@@ -68,6 +68,10 @@
       <DependentUpon>AddOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Common.cs" />
+    <Compile Include="DB_QLCatDaHaiDatDataSet.cs">
+      <DependentUpon>DB_QLCatDaHaiDatDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DB_QLCatDaHaiDatDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -55,3 +55,15 @@ D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHA
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddOrder.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListCustomer.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListOrder.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListProduct.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
