@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,8 +78,15 @@ namespace QL_CATDAHAIDAT
             int insertedID =int.Parse(t_HOADONTableAdapter.InsertQuery(newRow.NGAY_LAP, newRow.GHI_CHU, newRow.TONG_TIEN, newRow.TRANG_THAI, newRow.KHACH_HANG).ToString());
             foreach (DataRow row in dtOrder.Rows)
             {
-                t_CHITIETHOADONTableAdapter.Insert(insertedID, int.Parse(row.ItemArray[0].ToString()), double.Parse(row.ItemArray[3].ToString()),"",1);
+                t_CHITIETHOADONTableAdapter.Insert(insertedID, int.Parse(row.ItemArray[0].ToString()), double.Parse(row.ItemArray[3].ToString()), "", 1, double.Parse(row.ItemArray[2].ToString()));
             }
+
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+            string stotal = totalAmount.ToString("#,###", cul.NumberFormat);
+
+            PrintOrder printpreviewer = new PrintOrder(label5.Text,label6.Text,label7.Text,stotal);
+            printpreviewer.ma_hd = insertedID;
+            printpreviewer.ShowDialog();
 
         }
 

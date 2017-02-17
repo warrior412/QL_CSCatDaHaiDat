@@ -19,9 +19,15 @@ namespace QL_CATDAHAIDAT
 
         private void ListOrder_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.GetOrderList' table. You can move, or remove it, as needed.
+            this.getOrderListTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.GetOrderList);
+            // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.GetOrderList' table. You can move, or remove it, as needed.
+            this.getOrderListTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.GetOrderList);
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.T_HOADON' table. You can move, or remove it, as needed.
-            this.t_HOADONTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.T_HOADON);
 
         }
+
+
+
     }
 }

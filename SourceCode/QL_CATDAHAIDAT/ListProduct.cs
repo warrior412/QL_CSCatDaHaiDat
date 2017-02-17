@@ -18,6 +18,7 @@ namespace QL_CATDAHAIDAT
         public ListProduct()
         {
             InitializeComponent();
+            
         }
 
         private void setViewMode ()
@@ -85,7 +86,21 @@ namespace QL_CATDAHAIDAT
         {
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.M_SANPHAM' table. You can move, or remove it, as needed.
             this.m_SANPHAMTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
+            Binding b = new Binding("Text", this.mSANPHAMBindingSource, "TRANG_THAI", true);
+            b.Format += b_Format;
+            lblStatus.DataBindings.Add(b);
             this.setViewMode();
+        }
+
+        void b_Format(object sender, ConvertEventArgs e)
+        {
+            if (e.Value == null || e.Value.ToString().Equals(""))
+                return;
+            if (int.Parse(e.Value.ToString()) == 1)
+                e.Value = "Còn hàng";
+            else
+                e.Value = "Ngưng kinh doanh";
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -117,6 +132,7 @@ namespace QL_CATDAHAIDAT
                 newRow.GIA_SP = double.Parse(this.txtProductPrice.Text);
                 newRow.GHI_CHU = this.txtDescription.Text;
                 newRow.DON_VI_TINH = this.txtUnit.Text;
+                newRow.TRANG_THAI = 1;
 
                 this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.Rows.Add(newRow);
                 m_SANPHAMTableAdapter.Update(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
@@ -139,10 +155,18 @@ namespace QL_CATDAHAIDAT
                     "Xác nhận",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     int maSP = int.Parse(this.dgListProduct.CurrentRow.Cells[0].Value.ToString());
-                    DB_QLCatDaHaiDatDataSet.M_SANPHAMRow deleteRow =
-                        this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.FindByMA_SP(maSP);
-                    this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.RemoveM_SANPHAMRow(deleteRow);
-                    m_SANPHAMTableAdapter.Delete(maSP);
+                    foreach(DataRow row in this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.Rows)
+                    {
+                        int rowid = int.Parse(row[0].ToString());
+                        if(maSP==rowid)
+                        {
+                            row[5] = -1;
+                            this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.AcceptChanges();
+                            this.mSANPHAMBindingSource.EndEdit();
+                            this.m_SANPHAMTableAdapter.Update(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
+                            this.setViewMode();
+                        }
+                    }
                 }
             }
         }
@@ -151,6 +175,8 @@ namespace QL_CATDAHAIDAT
         {
             setInsertMode();
         }
+
+
 
     }
 }
