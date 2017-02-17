@@ -32,9 +32,14 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnListProduct = new System.Windows.Forms.ToolStripButton();
             this.btnListCutomer = new System.Windows.Forms.ToolStripButton();
             this.btnListOrder = new System.Windows.Forms.ToolStripButton();
+            this.BtnHistoryOrder = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +50,12 @@
             this.toolStripSeparator1,
             this.btnListCutomer,
             this.toolStripSeparator2,
-            this.btnListOrder});
+            this.btnListOrder,
+            this.toolStripSeparator3,
+            this.BtnHistoryOrder,
+            this.toolStripSeparator5,
+            this.toolStripButton1,
+            this.toolStripSeparator4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(732, 78);
@@ -61,6 +71,21 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 78);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 78);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 78);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 78);
             // 
             // btnListProduct
             // 
@@ -97,11 +122,36 @@
             this.btnListOrder.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnListOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnListOrder.Name = "btnListOrder";
-            this.btnListOrder.Size = new System.Drawing.Size(74, 75);
-            this.btnListOrder.Text = "Hóa đơn";
+            this.btnListOrder.Size = new System.Drawing.Size(101, 75);
+            this.btnListOrder.Text = "Tạo hóa đơn";
             this.btnListOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnListOrder.Click += new System.EventHandler(this.btnListOrder_Click);
+            // 
+            // BtnHistoryOrder
+            // 
+            this.BtnHistoryOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.BtnHistoryOrder.Image = global::QL_CATDAHAIDAT.Properties.Resources.historyorder;
+            this.BtnHistoryOrder.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BtnHistoryOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnHistoryOrder.Name = "BtnHistoryOrder";
+            this.BtnHistoryOrder.Size = new System.Drawing.Size(124, 75);
+            this.BtnHistoryOrder.Text = "Lịch sử hóa đơn";
+            this.BtnHistoryOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnHistoryOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnHistoryOrder.Click += new System.EventHandler(this.BtnHistoryOrder_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.toolStripButton1.Image = global::QL_CATDAHAIDAT.Properties.Resources.backup;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(117, 75);
+            this.toolStripButton1.Text = "Sao lưu dữ liệu";
+            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // Main
             // 
@@ -113,7 +163,8 @@
             this.IsMdiContainer = true;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "ỨNG DỤNG QUẢN LÝ XÂY DỰNG HAI ĐẠT";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -129,5 +180,10 @@
         private System.Windows.Forms.ToolStripButton btnListOrder;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton BtnHistoryOrder;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
