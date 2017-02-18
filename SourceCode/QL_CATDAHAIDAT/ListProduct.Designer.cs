@@ -33,14 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgListProduct = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dONVITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mSANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtUnit = new System.Windows.Forms.TextBox();
@@ -52,11 +53,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.m_SANPHAMTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_SANPHAMTableAdapter();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gIASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dONVITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgListProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).BeginInit();
@@ -67,6 +68,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dgListProduct);
             this.groupBox1.Location = new System.Drawing.Point(11, 16);
             this.groupBox1.Name = "groupBox1";
@@ -115,8 +117,41 @@
             this.dgListProduct.RowTemplate.Height = 25;
             this.dgListProduct.RowTemplate.ReadOnly = true;
             this.dgListProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgListProduct.Size = new System.Drawing.Size(351, 411);
+            this.dgListProduct.Size = new System.Drawing.Size(351, 370);
             this.dgListProduct.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MA_SP";
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // tENSPDataGridViewTextBoxColumn
+            // 
+            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
+            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
+            // 
+            // gIASPDataGridViewTextBoxColumn
+            // 
+            this.gIASPDataGridViewTextBoxColumn.DataPropertyName = "GIA_SP";
+            this.gIASPDataGridViewTextBoxColumn.HeaderText = "Giá";
+            this.gIASPDataGridViewTextBoxColumn.Name = "gIASPDataGridViewTextBoxColumn";
+            // 
+            // dONVITINHDataGridViewTextBoxColumn
+            // 
+            this.dONVITINHDataGridViewTextBoxColumn.DataPropertyName = "DON_VI_TINH";
+            this.dONVITINHDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
+            this.dONVITINHDataGridViewTextBoxColumn.Name = "dONVITINHDataGridViewTextBoxColumn";
+            // 
+            // TRANG_THAI
+            // 
+            this.TRANG_THAI.DataPropertyName = "TRANG_THAI";
+            this.TRANG_THAI.HeaderText = "TRANG_THAI";
+            this.TRANG_THAI.Name = "TRANG_THAI";
+            this.TRANG_THAI.Visible = false;
             // 
             // mSANPHAMBindingSource
             // 
@@ -159,57 +194,6 @@
             this.groupBox3.Size = new System.Drawing.Size(323, 54);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Image = global::QL_CATDAHAIDAT.Properties.Resources.save;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(84, 19);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete.Image = global::QL_CATDAHAIDAT.Properties.Resources.close;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.Location = new System.Drawing.Point(246, 19);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Image = global::QL_CATDAHAIDAT.Properties.Resources.add_icon;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(3, 19);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Image = global::QL_CATDAHAIDAT.Properties.Resources.edit_icon;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(165, 19);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 3;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblStatus
             // 
@@ -317,38 +301,68 @@
             // 
             this.m_SANPHAMTableAdapter.ClearBeforeFill = true;
             // 
-            // Column1
+            // btnSave
             // 
-            this.Column1.DataPropertyName = "MA_SP";
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
+            this.btnSave.Image = global::QL_CATDAHAIDAT.Properties.Resources.save;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(84, 19);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // tENSPDataGridViewTextBoxColumn
+            // btnDelete
             // 
-            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
-            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
-            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Image = global::QL_CATDAHAIDAT.Properties.Resources.close;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.Location = new System.Drawing.Point(246, 19);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // gIASPDataGridViewTextBoxColumn
+            // btnAdd
             // 
-            this.gIASPDataGridViewTextBoxColumn.DataPropertyName = "GIA_SP";
-            this.gIASPDataGridViewTextBoxColumn.HeaderText = "Giá";
-            this.gIASPDataGridViewTextBoxColumn.Name = "gIASPDataGridViewTextBoxColumn";
+            this.btnAdd.Image = global::QL_CATDAHAIDAT.Properties.Resources.add_icon;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(3, 19);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dONVITINHDataGridViewTextBoxColumn
+            // btnEdit
             // 
-            this.dONVITINHDataGridViewTextBoxColumn.DataPropertyName = "DON_VI_TINH";
-            this.dONVITINHDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
-            this.dONVITINHDataGridViewTextBoxColumn.Name = "dONVITINHDataGridViewTextBoxColumn";
+            this.btnEdit.Image = global::QL_CATDAHAIDAT.Properties.Resources.edit_icon;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(165, 19);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // TRANG_THAI
+            // button1
             // 
-            this.TRANG_THAI.DataPropertyName = "TRANG_THAI";
-            this.TRANG_THAI.HeaderText = "TRANG_THAI";
-            this.TRANG_THAI.Name = "TRANG_THAI";
-            this.TRANG_THAI.Visible = false;
+            this.button1.Image = global::QL_CATDAHAIDAT.Properties.Resources.printer;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(256, 396);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 35);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "In báo giá";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ListProduct
             // 
@@ -402,5 +416,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gIASPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dONVITINHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRANG_THAI;
+        private System.Windows.Forms.Button button1;
     }
 }

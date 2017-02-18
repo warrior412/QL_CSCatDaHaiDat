@@ -30,35 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtFilter = new System.Windows.Forms.TextBox();
             this.dgCustomer = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.mAKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dIACHIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sODTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mKHACHHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.m_KHACHHANGTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_KHACHHANGTableAdapter();
-            this.txtFilter = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mKHACHHANGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -71,6 +71,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách khách hàng";
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.Location = new System.Drawing.Point(347, 21);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(142, 20);
+            this.txtFilter.TabIndex = 1;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // dgCustomer
             // 
@@ -90,9 +98,49 @@
             this.dgCustomer.Location = new System.Drawing.Point(7, 55);
             this.dgCustomer.Name = "dgCustomer";
             this.dgCustomer.RowHeadersVisible = false;
+            this.dgCustomer.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgCustomer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgCustomer.RowTemplate.Height = 26;
+            this.dgCustomer.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgCustomer.Size = new System.Drawing.Size(482, 410);
             this.dgCustomer.TabIndex = 0;
+            // 
+            // mAKHDataGridViewTextBoxColumn
+            // 
+            this.mAKHDataGridViewTextBoxColumn.DataPropertyName = "MA_KH";
+            this.mAKHDataGridViewTextBoxColumn.HeaderText = "MA_KH";
+            this.mAKHDataGridViewTextBoxColumn.Name = "mAKHDataGridViewTextBoxColumn";
+            this.mAKHDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mAKHDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tENKHDataGridViewTextBoxColumn
+            // 
+            this.tENKHDataGridViewTextBoxColumn.DataPropertyName = "TEN_KH";
+            this.tENKHDataGridViewTextBoxColumn.HeaderText = "Tên khách hàng";
+            this.tENKHDataGridViewTextBoxColumn.Name = "tENKHDataGridViewTextBoxColumn";
+            // 
+            // dIACHIDataGridViewTextBoxColumn
+            // 
+            this.dIACHIDataGridViewTextBoxColumn.DataPropertyName = "DIA_CHI";
+            this.dIACHIDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.dIACHIDataGridViewTextBoxColumn.Name = "dIACHIDataGridViewTextBoxColumn";
+            // 
+            // sODTDataGridViewTextBoxColumn
+            // 
+            this.sODTDataGridViewTextBoxColumn.DataPropertyName = "SO_DT";
+            this.sODTDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
+            this.sODTDataGridViewTextBoxColumn.Name = "sODTDataGridViewTextBoxColumn";
+            // 
+            // mKHACHHANGBindingSource
+            // 
+            this.mKHACHHANGBindingSource.DataMember = "M_KHACHHANG";
+            this.mKHACHHANGBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
+            // 
+            // dB_QLCatDaHaiDatDataSet
+            // 
+            this.dB_QLCatDaHaiDatDataSet.DataSetName = "DB_QLCatDaHaiDatDataSet";
+            this.dB_QLCatDaHaiDatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
@@ -111,87 +159,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên khách hàng :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Địa Chỉ :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(21, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Số điện thoại :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(21, 242);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Ghi chú :";
-            // 
-            // txtName
-            // 
-            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mKHACHHANGBindingSource, "TEN_KH", true));
-            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKHACHHANGBindingSource, "TEN_KH", true));
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(25, 54);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(347, 26);
-            this.txtName.TabIndex = 1;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mKHACHHANGBindingSource, "DIA_CHI", true));
-            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKHACHHANGBindingSource, "DIA_CHI", true));
-            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(24, 118);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(347, 26);
-            this.txtAddress.TabIndex = 1;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mKHACHHANGBindingSource, "SO_DT", true));
-            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKHACHHANGBindingSource, "SO_DT", true));
-            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(24, 191);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(179, 26);
-            this.txtPhone.TabIndex = 1;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mKHACHHANGBindingSource, "GHI_CHU", true));
-            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKHACHHANGBindingSource, "GHI_CHU", true));
-            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(24, 274);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(347, 82);
-            this.txtDescription.TabIndex = 1;
             // 
             // groupBox3
             // 
@@ -256,53 +223,90 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // mAKHDataGridViewTextBoxColumn
+            // txtDescription
             // 
-            this.mAKHDataGridViewTextBoxColumn.DataPropertyName = "MA_KH";
-            this.mAKHDataGridViewTextBoxColumn.HeaderText = "MA_KH";
-            this.mAKHDataGridViewTextBoxColumn.Name = "mAKHDataGridViewTextBoxColumn";
-            this.mAKHDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mAKHDataGridViewTextBoxColumn.Visible = false;
+            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mKHACHHANGBindingSource, "GHI_CHU", true));
+            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKHACHHANGBindingSource, "GHI_CHU", true));
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(24, 274);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(347, 82);
+            this.txtDescription.TabIndex = 1;
             // 
-            // tENKHDataGridViewTextBoxColumn
+            // txtPhone
             // 
-            this.tENKHDataGridViewTextBoxColumn.DataPropertyName = "TEN_KH";
-            this.tENKHDataGridViewTextBoxColumn.HeaderText = "Tên khách hàng";
-            this.tENKHDataGridViewTextBoxColumn.Name = "tENKHDataGridViewTextBoxColumn";
+            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mKHACHHANGBindingSource, "SO_DT", true));
+            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKHACHHANGBindingSource, "SO_DT", true));
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(24, 191);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(179, 26);
+            this.txtPhone.TabIndex = 1;
             // 
-            // dIACHIDataGridViewTextBoxColumn
+            // txtAddress
             // 
-            this.dIACHIDataGridViewTextBoxColumn.DataPropertyName = "DIA_CHI";
-            this.dIACHIDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
-            this.dIACHIDataGridViewTextBoxColumn.Name = "dIACHIDataGridViewTextBoxColumn";
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mKHACHHANGBindingSource, "DIA_CHI", true));
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKHACHHANGBindingSource, "DIA_CHI", true));
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(24, 118);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(347, 26);
+            this.txtAddress.TabIndex = 1;
             // 
-            // sODTDataGridViewTextBoxColumn
+            // txtName
             // 
-            this.sODTDataGridViewTextBoxColumn.DataPropertyName = "SO_DT";
-            this.sODTDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
-            this.sODTDataGridViewTextBoxColumn.Name = "sODTDataGridViewTextBoxColumn";
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mKHACHHANGBindingSource, "TEN_KH", true));
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mKHACHHANGBindingSource, "TEN_KH", true));
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(25, 54);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(347, 26);
+            this.txtName.TabIndex = 1;
             // 
-            // mKHACHHANGBindingSource
+            // label4
             // 
-            this.mKHACHHANGBindingSource.DataMember = "M_KHACHHANG";
-            this.mKHACHHANGBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(21, 242);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ghi chú :";
             // 
-            // dB_QLCatDaHaiDatDataSet
+            // label3
             // 
-            this.dB_QLCatDaHaiDatDataSet.DataSetName = "DB_QLCatDaHaiDatDataSet";
-            this.dB_QLCatDaHaiDatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(21, 159);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Số điện thoại :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Địa Chỉ :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên khách hàng :";
             // 
             // m_KHACHHANGTableAdapter
             // 
             this.m_KHACHHANGTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.Location = new System.Drawing.Point(347, 21);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(142, 20);
-            this.txtFilter.TabIndex = 1;
-            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // ListCustomer
             // 
@@ -318,11 +322,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mKHACHHANGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mKHACHHANGBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

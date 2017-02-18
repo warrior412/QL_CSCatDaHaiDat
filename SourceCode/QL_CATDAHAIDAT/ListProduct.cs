@@ -176,6 +176,12 @@ namespace QL_CATDAHAIDAT
             setInsertMode();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PrintProductList frm = new PrintProductList();
+            frm.ShowDialog();
+        }
+
 
 
     }

@@ -69,7 +69,12 @@ namespace QL_CATDAHAIDAT
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            
+            if(MessageBox.Show("Bạn muốn thực hiện thanh toán cho hóa đơn này ?","Xác nhận",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==DialogResult.OK)
+            {
+                int ma_hd = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                getOrderListTableAdapter.DoPaymentQuery(ma_hd);
+                getOrderListTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.GetOrderList);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,6 +101,10 @@ namespace QL_CATDAHAIDAT
                 int id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderID' table. You can move, or remove it, as needed.
                 this.getOrderDetailByOrderIDTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderID, id);
+                if (int.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString()) == 1)
+                    btnCheckOut.Enabled = false;
+                else
+                    btnCheckOut.Enabled = true;
             }
         }
 

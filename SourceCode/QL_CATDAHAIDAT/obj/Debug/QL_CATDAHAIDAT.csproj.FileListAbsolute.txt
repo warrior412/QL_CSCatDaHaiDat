@@ -37,22 +37,6 @@ D:\JunF\Projects\QL_HAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Li
 D:\JunF\Projects\QL_HAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
 D:\JunF\Projects\QL_HAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
 D:\JunF\Projects\QL_HAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.dll
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.dll
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.xml
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.xml
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddOrder.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListCustomer.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListOrder.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListProduct.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
@@ -66,10 +50,6 @@ C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAI
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.cache
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintOrder.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
@@ -85,3 +65,28 @@ D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.c
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.manifest
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.application
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.dll
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.dll
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.xml
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.xml
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddOrder.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListCustomer.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListOrder.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListProduct.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintOrder.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.cache
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe.manifest
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.application
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintProductList.resources

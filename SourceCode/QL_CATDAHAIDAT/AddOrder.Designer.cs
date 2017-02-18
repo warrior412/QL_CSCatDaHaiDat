@@ -232,6 +232,10 @@
             this.dgCustomer.Name = "dgCustomer";
             this.dgCustomer.ReadOnly = true;
             this.dgCustomer.RowHeadersVisible = false;
+            this.dgCustomer.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgCustomer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgCustomer.RowTemplate.Height = 26;
+            this.dgCustomer.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgCustomer.Size = new System.Drawing.Size(370, 185);
             this.dgCustomer.TabIndex = 0;
@@ -307,6 +311,10 @@
             this.dgOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgOrder.Location = new System.Drawing.Point(2, 9);
             this.dgOrder.Name = "dgOrder";
+            this.dgOrder.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgOrder.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgOrder.RowTemplate.Height = 26;
+            this.dgOrder.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgOrder.Size = new System.Drawing.Size(370, 245);
             this.dgOrder.TabIndex = 0;
             this.dgOrder.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgOrder_CellDoubleClick);
@@ -339,6 +347,10 @@
             this.dgProduct.Name = "dgProduct";
             this.dgProduct.ReadOnly = true;
             this.dgProduct.RowHeadersVisible = false;
+            this.dgProduct.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgProduct.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgProduct.RowTemplate.Height = 26;
+            this.dgProduct.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProduct.Size = new System.Drawing.Size(364, 245);
             this.dgProduct.TabIndex = 0;
