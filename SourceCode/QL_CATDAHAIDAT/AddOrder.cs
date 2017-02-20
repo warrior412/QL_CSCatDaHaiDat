@@ -14,6 +14,7 @@ namespace QL_CATDAHAIDAT
     public partial class AddOrder : Form
     {
         DataTable dtOrder = new DataTable();
+        int ma_kh;
         public AddOrder()
         {
             InitializeComponent();
@@ -25,8 +26,6 @@ namespace QL_CATDAHAIDAT
             this.t_CHITIETHOADONTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.T_CHITIETHOADON);
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.T_HOADON' table. You can move, or remove it, as needed.
             this.t_HOADONTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.T_HOADON);
-            // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.M_SANPHAM' table. You can move, or remove it, as needed.
-            this.m_SANPHAMTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.M_KHACHHANG' table. You can move, or remove it, as needed.
             this.m_KHACHHANGTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
 
@@ -37,9 +36,9 @@ namespace QL_CATDAHAIDAT
             if(dgOrder.RowCount==0)
             {
                 dtOrder.Columns.Clear();
-                dtOrder.Columns.Add("Mã sản phẩm", typeof(int));
+                dtOrder.Columns.Add("Mã sản phẩm", typeof(string));
                 dtOrder.Columns.Add("Tên sản phẩm", typeof(string));
-                dtOrder.Columns.Add("Giá", typeof(double));
+                dtOrder.Columns.Add("Giá", typeof(string));
                 dtOrder.Columns.Add("Số lượng", typeof(string));
             }
             DataGridViewRow row = dgProduct.SelectedRows[0];
@@ -51,10 +50,22 @@ namespace QL_CATDAHAIDAT
                     return;
                 }
             }
-            dtOrder.Rows.Add(dgProduct.SelectedRows[0].Cells[0].Value.ToString(),
-                dgProduct.SelectedRows[0].Cells[1].Value.ToString(),
-                double.Parse(dgProduct.SelectedRows[0].Cells[2].Value.ToString()));
+
+            DataGridViewComboBoxCell cbCell = new DataGridViewComboBoxCell();
+            cbCell.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+            cbCell.Items.Add(dgProduct.SelectedRows[0].Cells[2].Value.ToString());
+            cbCell.Items.Add(dgProduct.SelectedRows[0].Cells[3].Value.ToString());
+            cbCell.Items.Add(dgProduct.SelectedRows[0].Cells[4].Value.ToString());
+
+
+
+            dtOrder.Rows.Add(dgProduct.SelectedRows[0].Cells[7].Value.ToString(),
+                dgProduct.SelectedRows[0].Cells[0].Value.ToString(),
+                dgProduct.SelectedRows[0].Cells[2].Value.ToString());
+
             dgOrder.DataSource = dtOrder;
+
+            dgOrder.Rows[dtOrder.Rows.Count - 1].Cells[2] = cbCell;
             dgOrder.Columns[0].Visible = false;
         }
 
@@ -90,9 +101,11 @@ namespace QL_CATDAHAIDAT
 
         }
 
-        private void dgOrder_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgCustomer_SelectionChanged(object sender, EventArgs e)
         {
-
+            ma_kh = int.Parse(dgCustomer.CurrentRow.Cells[0].Value.ToString());
+            this.getProductPriceListByCustomerTableAdapter.Fill(dB_QLCatDaHaiDatDataSet.GetProductPriceListByCustomer, ma_kh);
         }
+
     }
 }

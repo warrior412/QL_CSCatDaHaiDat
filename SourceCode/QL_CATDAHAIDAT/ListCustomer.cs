@@ -154,5 +154,12 @@ namespace QL_CATDAHAIDAT
         {
             mKHACHHANGBindingSource.Filter = string.Format("TEN_KH LIKE '%{0}%'", txtFilter.Text);
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SetProductPrice frm = new SetProductPrice();
+            frm.Ma_kh = int.Parse(dgCustomer.CurrentRow.Cells[0].Value.ToString());
+            frm.ShowDialog();
+        }
     }
 }

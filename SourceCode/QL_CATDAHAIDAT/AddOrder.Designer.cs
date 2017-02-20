@@ -54,12 +54,15 @@
             this.dgOrder = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgProduct = new System.Windows.Forms.DataGridView();
-            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gIASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dONVITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gHICHUDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tRANGTHAIDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIAADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIABDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tINHTRANGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kHACHHANGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getProductPriceListByCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mSANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnFinish = new System.Windows.Forms.Button();
             this.m_KHACHHANGTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_KHACHHANGTableAdapter();
@@ -68,6 +71,7 @@
             this.t_HOADONTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter();
             this.tCHITIETHOADONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t_CHITIETHOADONTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter();
+            this.getProductPriceListByCustomerTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetProductPriceListByCustomerTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mKHACHHANGBindingSource)).BeginInit();
@@ -79,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgOrder)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getProductPriceListByCustomerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOADONBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCHITIETHOADONBindingSource)).BeginInit();
@@ -239,6 +244,7 @@
             this.dgCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgCustomer.Size = new System.Drawing.Size(370, 185);
             this.dgCustomer.TabIndex = 0;
+            this.dgCustomer.SelectionChanged += new System.EventHandler(this.dgCustomer_SelectionChanged);
             // 
             // mAKHDataGridViewTextBoxColumn
             // 
@@ -317,7 +323,6 @@
             this.dgOrder.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgOrder.Size = new System.Drawing.Size(370, 245);
             this.dgOrder.TabIndex = 0;
-            this.dgOrder.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgOrder_CellDoubleClick);
             // 
             // groupBox5
             // 
@@ -336,13 +341,15 @@
             this.dgProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mASPDataGridViewTextBoxColumn,
             this.tENSPDataGridViewTextBoxColumn,
-            this.gIASPDataGridViewTextBoxColumn,
             this.dONVITINHDataGridViewTextBoxColumn,
-            this.gHICHUDataGridViewTextBoxColumn1,
-            this.tRANGTHAIDataGridViewTextBoxColumn1});
-            this.dgProduct.DataSource = this.mSANPHAMBindingSource;
+            this.gIAADataGridViewTextBoxColumn,
+            this.gIABDataGridViewTextBoxColumn,
+            this.gIACDataGridViewTextBoxColumn,
+            this.tINHTRANGDataGridViewTextBoxColumn,
+            this.kHACHHANGDataGridViewTextBoxColumn,
+            this.mASPDataGridViewTextBoxColumn});
+            this.dgProduct.DataSource = this.getProductPriceListByCustomerBindingSource;
             this.dgProduct.Location = new System.Drawing.Point(2, 9);
             this.dgProduct.Name = "dgProduct";
             this.dgProduct.ReadOnly = true;
@@ -356,27 +363,12 @@
             this.dgProduct.TabIndex = 0;
             this.dgProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProduct_CellDoubleClick);
             // 
-            // mASPDataGridViewTextBoxColumn
-            // 
-            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MA_SP";
-            this.mASPDataGridViewTextBoxColumn.HeaderText = "MA_SP";
-            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
-            this.mASPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mASPDataGridViewTextBoxColumn.Visible = false;
-            // 
             // tENSPDataGridViewTextBoxColumn
             // 
             this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
             this.tENSPDataGridViewTextBoxColumn.HeaderText = "TEN_SP";
             this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
             this.tENSPDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // gIASPDataGridViewTextBoxColumn
-            // 
-            this.gIASPDataGridViewTextBoxColumn.DataPropertyName = "GIA_SP";
-            this.gIASPDataGridViewTextBoxColumn.HeaderText = "GIA_SP";
-            this.gIASPDataGridViewTextBoxColumn.Name = "gIASPDataGridViewTextBoxColumn";
-            this.gIASPDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dONVITINHDataGridViewTextBoxColumn
             // 
@@ -385,21 +377,58 @@
             this.dONVITINHDataGridViewTextBoxColumn.Name = "dONVITINHDataGridViewTextBoxColumn";
             this.dONVITINHDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // gHICHUDataGridViewTextBoxColumn1
+            // gIAADataGridViewTextBoxColumn
             // 
-            this.gHICHUDataGridViewTextBoxColumn1.DataPropertyName = "GHI_CHU";
-            this.gHICHUDataGridViewTextBoxColumn1.HeaderText = "GHI_CHU";
-            this.gHICHUDataGridViewTextBoxColumn1.Name = "gHICHUDataGridViewTextBoxColumn1";
-            this.gHICHUDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.gHICHUDataGridViewTextBoxColumn1.Visible = false;
+            this.gIAADataGridViewTextBoxColumn.DataPropertyName = "GIA_A";
+            this.gIAADataGridViewTextBoxColumn.HeaderText = "GIA_A";
+            this.gIAADataGridViewTextBoxColumn.Name = "gIAADataGridViewTextBoxColumn";
+            this.gIAADataGridViewTextBoxColumn.ReadOnly = true;
+            this.gIAADataGridViewTextBoxColumn.Visible = false;
             // 
-            // tRANGTHAIDataGridViewTextBoxColumn1
+            // gIABDataGridViewTextBoxColumn
             // 
-            this.tRANGTHAIDataGridViewTextBoxColumn1.DataPropertyName = "TRANG_THAI";
-            this.tRANGTHAIDataGridViewTextBoxColumn1.HeaderText = "TRANG_THAI";
-            this.tRANGTHAIDataGridViewTextBoxColumn1.Name = "tRANGTHAIDataGridViewTextBoxColumn1";
-            this.tRANGTHAIDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.tRANGTHAIDataGridViewTextBoxColumn1.Visible = false;
+            this.gIABDataGridViewTextBoxColumn.DataPropertyName = "GIA_B";
+            this.gIABDataGridViewTextBoxColumn.HeaderText = "GIA_B";
+            this.gIABDataGridViewTextBoxColumn.Name = "gIABDataGridViewTextBoxColumn";
+            this.gIABDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gIABDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // gIACDataGridViewTextBoxColumn
+            // 
+            this.gIACDataGridViewTextBoxColumn.DataPropertyName = "GIA_C";
+            this.gIACDataGridViewTextBoxColumn.HeaderText = "GIA_C";
+            this.gIACDataGridViewTextBoxColumn.Name = "gIACDataGridViewTextBoxColumn";
+            this.gIACDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gIACDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tINHTRANGDataGridViewTextBoxColumn
+            // 
+            this.tINHTRANGDataGridViewTextBoxColumn.DataPropertyName = "TINH_TRANG";
+            this.tINHTRANGDataGridViewTextBoxColumn.HeaderText = "TINH_TRANG";
+            this.tINHTRANGDataGridViewTextBoxColumn.Name = "tINHTRANGDataGridViewTextBoxColumn";
+            this.tINHTRANGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tINHTRANGDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // kHACHHANGDataGridViewTextBoxColumn
+            // 
+            this.kHACHHANGDataGridViewTextBoxColumn.DataPropertyName = "KHACH_HANG";
+            this.kHACHHANGDataGridViewTextBoxColumn.HeaderText = "KHACH_HANG";
+            this.kHACHHANGDataGridViewTextBoxColumn.Name = "kHACHHANGDataGridViewTextBoxColumn";
+            this.kHACHHANGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kHACHHANGDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // mASPDataGridViewTextBoxColumn
+            // 
+            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MA_SP";
+            this.mASPDataGridViewTextBoxColumn.HeaderText = "MA_SP";
+            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
+            this.mASPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mASPDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // getProductPriceListByCustomerBindingSource
+            // 
+            this.getProductPriceListByCustomerBindingSource.DataMember = "GetProductPriceListByCustomer";
+            this.getProductPriceListByCustomerBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
             // 
             // mSANPHAMBindingSource
             // 
@@ -442,6 +471,10 @@
             // 
             this.t_CHITIETHOADONTableAdapter.ClearBeforeFill = true;
             // 
+            // getProductPriceListByCustomerTableAdapter
+            // 
+            this.getProductPriceListByCustomerTableAdapter.ClearBeforeFill = true;
+            // 
             // AddOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,6 +499,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgOrder)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getProductPriceListByCustomerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHOADONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCHITIETHOADONBindingSource)).EndInit();
@@ -496,12 +530,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tRANGTHAIDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource mSANPHAMBindingSource;
         private DB_QLCatDaHaiDatDataSetTableAdapters.M_SANPHAMTableAdapter m_SANPHAMTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mASPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gIASPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dONVITINHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gHICHUDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tRANGTHAIDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -514,5 +542,15 @@
         private DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter t_HOADONTableAdapter;
         private System.Windows.Forms.BindingSource tCHITIETHOADONBindingSource;
         private DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter t_CHITIETHOADONTableAdapter;
+        private System.Windows.Forms.BindingSource getProductPriceListByCustomerBindingSource;
+        private DB_QLCatDaHaiDatDataSetTableAdapters.GetProductPriceListByCustomerTableAdapter getProductPriceListByCustomerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dONVITINHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gIAADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gIABDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gIACDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tINHTRANGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kHACHHANGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mASPDataGridViewTextBoxColumn;
     }
 }

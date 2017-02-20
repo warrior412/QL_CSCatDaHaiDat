@@ -33,7 +33,7 @@ namespace QL_CATDAHAIDAT
 
         private void btnListOrder_Click(object sender, EventArgs e)
         {
-            AddOrder frm = new AddOrder();
+            AddNewOrder frm = new AddNewOrder();
             frm.MdiParent = this;
             frm.Show();
         }

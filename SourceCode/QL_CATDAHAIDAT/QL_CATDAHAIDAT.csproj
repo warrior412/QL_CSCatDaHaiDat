@@ -93,6 +93,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewOrder.Designer.cs">
+      <DependentUpon>AddNewOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetProductPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetProductPrice.Designer.cs">
+      <DependentUpon>SetProductPrice.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewOrder.resx">
+      <DependentUpon>AddNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddOrder.resx">
       <DependentUpon>AddOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +189,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetProductPrice.resx">
+      <DependentUpon>SetProductPrice.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DB_QLCatDaHaiDatDataSet.xsc">
       <DependentUpon>DB_QLCatDaHaiDatDataSet.xsd</DependentUpon>
