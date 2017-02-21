@@ -336,7 +336,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>3.34667cm</Top>
         <Left>0.44031cm</Left>
-        <Height>2.33771cm</Height>
+        <Height>2.3377cm</Height>
         <Width>13.74479cm</Width>
         <Style>
           <Border>
@@ -614,41 +614,8 @@
         <Top>5.98551cm</Top>
         <Left>10.09603cm</Left>
         <Height>0.86458cm</Height>
-        <Width>2.7397cm</Width>
+        <Width>4.08908cm</Width>
         <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <VerticalAlign>Middle</VerticalAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox41">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>VNĐ</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox41</rd:DefaultName>
-        <Top>5.98551cm</Top>
-        <Left>13.01212cm</Left>
-        <Height>0.86458cm</Height>
-        <Width>1.17299cm</Width>
-        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

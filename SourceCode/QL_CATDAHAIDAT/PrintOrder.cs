@@ -12,7 +12,14 @@ namespace QL_CATDAHAIDAT
 {
     public partial class PrintOrder : Form
     {
-        public int ma_hd;
+        private DataTable dtReport;
+
+        public DataTable DtReport
+        {
+            get { return dtReport; }
+            set { dtReport = value; }
+        }
+        public string ma_hd;
         public string ten;
         public string diachi;
         public string sodt;
@@ -28,8 +35,19 @@ namespace QL_CATDAHAIDAT
 
         private void PrintOrder_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER' table. You can move, or remove it, as needed.
-            this.SELECTDETAILORDERTableAdapter.Fill(this.DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER,ma_hd);
+             //TODO: This line of code loads data into the 'DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER' table. You can move, or remove it, as needed.
+            //this.SELECTDETAILORDERTableAdapter.Fill(this.DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER,ma_hd);
+
+            foreach(DataRow row in DtReport.Rows)
+            {
+                DB_QLCatDaHaiDatDataSet.SELECTDETAILORDERRow item = this.DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.NewSELECTDETAILORDERRow();
+                item.TEN_SP = row[1].ToString();
+                item.GIA = double.Parse(row[2].ToString());
+                item.SO_LUONG = double.Parse(row[4].ToString());
+                item.DON_VI_TINH = row[6].ToString();
+                DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.AddSELECTDETAILORDERRow(item);
+            }
+
             Microsoft.Reporting.WinForms.ReportParameter[] param = new Microsoft.Reporting.WinForms.ReportParameter[]
             {
                 new Microsoft.Reporting.WinForms.ReportParameter("customer_name",ten),

@@ -443,7 +443,7 @@
             this.btnFinish.TabIndex = 2;
             this.btnFinish.Text = "Hoàn thành";
             this.btnFinish.UseVisualStyleBackColor = true;
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            //this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // m_KHACHHANGTableAdapter
             // 

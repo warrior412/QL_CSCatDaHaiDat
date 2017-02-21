@@ -81,13 +81,13 @@ namespace QL_CATDAHAIDAT
         {
             if (dataGridView1.SelectedRows[0].Cells[0].Value != null && !dataGridView1.SelectedRows[0].Cells[0].Value.ToString().Equals(""))
             {
-                int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-                float totalAmount = float.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString());
-                CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
-                string stotal = totalAmount.ToString("#,###", cul.NumberFormat);
-                PrintOrder printpreviewer = new PrintOrder(lblCustomerName.Text, lblAddress.Text, lblPhone.Text, stotal);
-                printpreviewer.ma_hd = id;
-                printpreviewer.ShowDialog();
+                //int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                //float totalAmount = float.Parse(dataGridView1.SelectedRows[0].Cells[4].Value.ToString());
+                //CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+                //string stotal = totalAmount.ToString("#,###", cul.NumberFormat);
+                //PrintOrder printpreviewer = new PrintOrder(lblCustomerName.Text, lblAddress.Text, lblPhone.Text, stotal);
+                //printpreviewer.ma_hd = id;
+                //printpreviewer.ShowDialog();
             }
         }
 

@@ -69,37 +69,37 @@ namespace QL_CATDAHAIDAT
             dgOrder.Columns[0].Visible = false;
         }
 
-        private void btnFinish_Click(object sender, EventArgs e)
-        {
-            float totalAmount = 0;
-            foreach(DataRow row in dtOrder.Rows)
-            {
-                totalAmount += float.Parse(row.ItemArray[2].ToString()) * float.Parse(row.ItemArray[3].ToString());
-            }
+        //private void btnFinish_Click(object sender, EventArgs e)
+        //{
+        //    float totalAmount = 0;
+        //    foreach(DataRow row in dtOrder.Rows)
+        //    {
+        //        totalAmount += float.Parse(row.ItemArray[2].ToString()) * float.Parse(row.ItemArray[3].ToString());
+        //    }
 
-            DB_QLCatDaHaiDatDataSet.T_HOADONRow newRow = dB_QLCatDaHaiDatDataSet.T_HOADON.NewT_HOADONRow();
-            newRow.NGAY_LAP = DateTime.Now;
-            newRow.GHI_CHU = "";
-            newRow.TONG_TIEN = totalAmount;
-            newRow.TRANG_THAI = 0;
-            newRow.KHACH_HANG = int.Parse( dgCustomer.SelectedRows[0].Cells[0].Value.ToString());
+        //    DB_QLCatDaHaiDatDataSet.T_HOADONRow newRow = dB_QLCatDaHaiDatDataSet.T_HOADON.NewT_HOADONRow();
+        //    newRow.NGAY_LAP = DateTime.Now;
+        //    newRow.GHI_CHU = "";
+        //    newRow.TONG_TIEN = totalAmount;
+        //    newRow.TRANG_THAI = 0;
+        //    newRow.KHACH_HANG = int.Parse( dgCustomer.SelectedRows[0].Cells[0].Value.ToString());
 
-            this.dB_QLCatDaHaiDatDataSet.T_HOADON.Rows.Add(newRow);
+        //    this.dB_QLCatDaHaiDatDataSet.T_HOADON.Rows.Add(newRow);
 
-            int insertedID =int.Parse(t_HOADONTableAdapter.InsertQuery(newRow.NGAY_LAP, newRow.GHI_CHU, newRow.TONG_TIEN, newRow.TRANG_THAI, newRow.KHACH_HANG).ToString());
-            foreach (DataRow row in dtOrder.Rows)
-            {
-                t_CHITIETHOADONTableAdapter.Insert(insertedID, int.Parse(row.ItemArray[0].ToString()), double.Parse(row.ItemArray[3].ToString()), "", 1, double.Parse(row.ItemArray[2].ToString()));
-            }
+        //    int insertedID =int.Parse(t_HOADONTableAdapter.InsertQuery(newRow.NGAY_LAP, newRow.GHI_CHU, newRow.TONG_TIEN, newRow.TRANG_THAI, newRow.KHACH_HANG).ToString());
+        //    foreach (DataRow row in dtOrder.Rows)
+        //    {
+        //        t_CHITIETHOADONTableAdapter.Insert(insertedID, int.Parse(row.ItemArray[0].ToString()), double.Parse(row.ItemArray[3].ToString()), "", 1, double.Parse(row.ItemArray[2].ToString()));
+        //    }
 
-            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
-            string stotal = totalAmount.ToString("#,###", cul.NumberFormat);
+        //    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+        //    string stotal = totalAmount.ToString("#,###", cul.NumberFormat);
 
-            PrintOrder printpreviewer = new PrintOrder(label5.Text,label6.Text,label7.Text,stotal);
-            printpreviewer.ma_hd = insertedID;
-            printpreviewer.ShowDialog();
+        //    PrintOrder printpreviewer = new PrintOrder(label5.Text,label6.Text,label7.Text,stotal);
+        //    printpreviewer.ma_hd = insertedID;
+        //    printpreviewer.ShowDialog();
 
-        }
+        //}
 
         private void dgCustomer_SelectionChanged(object sender, EventArgs e)
         {

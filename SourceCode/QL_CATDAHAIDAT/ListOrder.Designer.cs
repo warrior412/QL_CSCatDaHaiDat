@@ -32,6 +32,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mAHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nGAYLAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sODTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tONGTIENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tRANGTHAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dIACHIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getOrderListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -57,13 +64,6 @@
             this.getOrderDetailByOrderIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getOrderListTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetOrderListTableAdapter();
             this.getOrderDetailByOrderIDTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetOrderDetailByOrderIDTableAdapter();
-            this.mAHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nGAYLAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sODTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tONGTIENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tRANGTHAIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dIACHIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getOrderListBindingSource1)).BeginInit();
@@ -123,11 +123,69 @@
             this.dataGridView1.RowTemplate.Height = 26;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(473, 416);
+            this.dataGridView1.Size = new System.Drawing.Size(472, 416);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // mAHDDataGridViewTextBoxColumn
+            // 
+            this.mAHDDataGridViewTextBoxColumn.DataPropertyName = "MA_HD";
+            this.mAHDDataGridViewTextBoxColumn.FillWeight = 10F;
+            this.mAHDDataGridViewTextBoxColumn.HeaderText = "MA_HD";
+            this.mAHDDataGridViewTextBoxColumn.Name = "mAHDDataGridViewTextBoxColumn";
+            this.mAHDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mAHDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nGAYLAPDataGridViewTextBoxColumn
+            // 
+            this.nGAYLAPDataGridViewTextBoxColumn.DataPropertyName = "NGAY_LAP";
+            this.nGAYLAPDataGridViewTextBoxColumn.FillWeight = 25F;
+            this.nGAYLAPDataGridViewTextBoxColumn.HeaderText = "Ngày lập";
+            this.nGAYLAPDataGridViewTextBoxColumn.Name = "nGAYLAPDataGridViewTextBoxColumn";
+            this.nGAYLAPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tENKHDataGridViewTextBoxColumn
+            // 
+            this.tENKHDataGridViewTextBoxColumn.DataPropertyName = "TEN_KH";
+            this.tENKHDataGridViewTextBoxColumn.FillWeight = 40F;
+            this.tENKHDataGridViewTextBoxColumn.HeaderText = "Tên khách hàng";
+            this.tENKHDataGridViewTextBoxColumn.Name = "tENKHDataGridViewTextBoxColumn";
+            this.tENKHDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sODTDataGridViewTextBoxColumn
+            // 
+            this.sODTDataGridViewTextBoxColumn.DataPropertyName = "SO_DT";
+            this.sODTDataGridViewTextBoxColumn.FillWeight = 30F;
+            this.sODTDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
+            this.sODTDataGridViewTextBoxColumn.Name = "sODTDataGridViewTextBoxColumn";
+            this.sODTDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sODTDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tONGTIENDataGridViewTextBoxColumn
+            // 
+            this.tONGTIENDataGridViewTextBoxColumn.DataPropertyName = "TONG_TIEN";
+            this.tONGTIENDataGridViewTextBoxColumn.FillWeight = 25F;
+            this.tONGTIENDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
+            this.tONGTIENDataGridViewTextBoxColumn.Name = "tONGTIENDataGridViewTextBoxColumn";
+            this.tONGTIENDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tRANGTHAIDataGridViewTextBoxColumn
+            // 
+            this.tRANGTHAIDataGridViewTextBoxColumn.DataPropertyName = "TRANG_THAI";
+            this.tRANGTHAIDataGridViewTextBoxColumn.HeaderText = "TRANG_THAI";
+            this.tRANGTHAIDataGridViewTextBoxColumn.Name = "tRANGTHAIDataGridViewTextBoxColumn";
+            this.tRANGTHAIDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tRANGTHAIDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dIACHIDataGridViewTextBoxColumn
+            // 
+            this.dIACHIDataGridViewTextBoxColumn.DataPropertyName = "DIA_CHI";
+            this.dIACHIDataGridViewTextBoxColumn.HeaderText = "DIA_CHI";
+            this.dIACHIDataGridViewTextBoxColumn.Name = "dIACHIDataGridViewTextBoxColumn";
+            this.dIACHIDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dIACHIDataGridViewTextBoxColumn.Visible = false;
             // 
             // getOrderListBindingSource1
             // 
@@ -375,64 +433,6 @@
             // getOrderDetailByOrderIDTableAdapter
             // 
             this.getOrderDetailByOrderIDTableAdapter.ClearBeforeFill = true;
-            // 
-            // mAHDDataGridViewTextBoxColumn
-            // 
-            this.mAHDDataGridViewTextBoxColumn.DataPropertyName = "MA_HD";
-            this.mAHDDataGridViewTextBoxColumn.FillWeight = 10F;
-            this.mAHDDataGridViewTextBoxColumn.HeaderText = "MA_HD";
-            this.mAHDDataGridViewTextBoxColumn.Name = "mAHDDataGridViewTextBoxColumn";
-            this.mAHDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mAHDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nGAYLAPDataGridViewTextBoxColumn
-            // 
-            this.nGAYLAPDataGridViewTextBoxColumn.DataPropertyName = "NGAY_LAP";
-            this.nGAYLAPDataGridViewTextBoxColumn.FillWeight = 25F;
-            this.nGAYLAPDataGridViewTextBoxColumn.HeaderText = "Ngày lập";
-            this.nGAYLAPDataGridViewTextBoxColumn.Name = "nGAYLAPDataGridViewTextBoxColumn";
-            this.nGAYLAPDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tENKHDataGridViewTextBoxColumn
-            // 
-            this.tENKHDataGridViewTextBoxColumn.DataPropertyName = "TEN_KH";
-            this.tENKHDataGridViewTextBoxColumn.FillWeight = 40F;
-            this.tENKHDataGridViewTextBoxColumn.HeaderText = "Tên khách hàng";
-            this.tENKHDataGridViewTextBoxColumn.Name = "tENKHDataGridViewTextBoxColumn";
-            this.tENKHDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sODTDataGridViewTextBoxColumn
-            // 
-            this.sODTDataGridViewTextBoxColumn.DataPropertyName = "SO_DT";
-            this.sODTDataGridViewTextBoxColumn.FillWeight = 30F;
-            this.sODTDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
-            this.sODTDataGridViewTextBoxColumn.Name = "sODTDataGridViewTextBoxColumn";
-            this.sODTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sODTDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tONGTIENDataGridViewTextBoxColumn
-            // 
-            this.tONGTIENDataGridViewTextBoxColumn.DataPropertyName = "TONG_TIEN";
-            this.tONGTIENDataGridViewTextBoxColumn.FillWeight = 25F;
-            this.tONGTIENDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
-            this.tONGTIENDataGridViewTextBoxColumn.Name = "tONGTIENDataGridViewTextBoxColumn";
-            this.tONGTIENDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tRANGTHAIDataGridViewTextBoxColumn
-            // 
-            this.tRANGTHAIDataGridViewTextBoxColumn.DataPropertyName = "TRANG_THAI";
-            this.tRANGTHAIDataGridViewTextBoxColumn.HeaderText = "TRANG_THAI";
-            this.tRANGTHAIDataGridViewTextBoxColumn.Name = "tRANGTHAIDataGridViewTextBoxColumn";
-            this.tRANGTHAIDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tRANGTHAIDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dIACHIDataGridViewTextBoxColumn
-            // 
-            this.dIACHIDataGridViewTextBoxColumn.DataPropertyName = "DIA_CHI";
-            this.dIACHIDataGridViewTextBoxColumn.HeaderText = "DIA_CHI";
-            this.dIACHIDataGridViewTextBoxColumn.Name = "dIACHIDataGridViewTextBoxColumn";
-            this.dIACHIDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dIACHIDataGridViewTextBoxColumn.Visible = false;
             // 
             // ListOrder
             // 
