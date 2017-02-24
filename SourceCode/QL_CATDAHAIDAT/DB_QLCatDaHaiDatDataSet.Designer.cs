@@ -34,11 +34,11 @@ namespace QL_CATDAHAIDAT {
         
         private GetOrderDetailByOrderIDDataTable tableGetOrderDetailByOrderID;
         
-        private GetOrderListDataTable tableGetOrderList;
-        
         private GetProductPriceListByCustomerDataTable tableGetProductPriceListByCustomer;
         
         private T_CHITIETHOADONDataTable tableT_CHITIETHOADON;
+        
+        private SelectListOrderWithCustomerInfoDataTable tableSelectListOrderWithCustomerInfo;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -83,14 +83,14 @@ namespace QL_CATDAHAIDAT {
                 if ((ds.Tables["GetOrderDetailByOrderID"] != null)) {
                     base.Tables.Add(new GetOrderDetailByOrderIDDataTable(ds.Tables["GetOrderDetailByOrderID"]));
                 }
-                if ((ds.Tables["GetOrderList"] != null)) {
-                    base.Tables.Add(new GetOrderListDataTable(ds.Tables["GetOrderList"]));
-                }
                 if ((ds.Tables["GetProductPriceListByCustomer"] != null)) {
                     base.Tables.Add(new GetProductPriceListByCustomerDataTable(ds.Tables["GetProductPriceListByCustomer"]));
                 }
                 if ((ds.Tables["T_CHITIETHOADON"] != null)) {
                     base.Tables.Add(new T_CHITIETHOADONDataTable(ds.Tables["T_CHITIETHOADON"]));
+                }
+                if ((ds.Tables["SelectListOrderWithCustomerInfo"] != null)) {
+                    base.Tables.Add(new SelectListOrderWithCustomerInfoDataTable(ds.Tables["SelectListOrderWithCustomerInfo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -164,16 +164,6 @@ namespace QL_CATDAHAIDAT {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GetOrderListDataTable GetOrderList {
-            get {
-                return this.tableGetOrderList;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public GetProductPriceListByCustomerDataTable GetProductPriceListByCustomer {
             get {
                 return this.tableGetProductPriceListByCustomer;
@@ -187,6 +177,16 @@ namespace QL_CATDAHAIDAT {
         public T_CHITIETHOADONDataTable T_CHITIETHOADON {
             get {
                 return this.tableT_CHITIETHOADON;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SelectListOrderWithCustomerInfoDataTable SelectListOrderWithCustomerInfo {
+            get {
+                return this.tableSelectListOrderWithCustomerInfo;
             }
         }
         
@@ -272,14 +272,14 @@ namespace QL_CATDAHAIDAT {
                 if ((ds.Tables["GetOrderDetailByOrderID"] != null)) {
                     base.Tables.Add(new GetOrderDetailByOrderIDDataTable(ds.Tables["GetOrderDetailByOrderID"]));
                 }
-                if ((ds.Tables["GetOrderList"] != null)) {
-                    base.Tables.Add(new GetOrderListDataTable(ds.Tables["GetOrderList"]));
-                }
                 if ((ds.Tables["GetProductPriceListByCustomer"] != null)) {
                     base.Tables.Add(new GetProductPriceListByCustomerDataTable(ds.Tables["GetProductPriceListByCustomer"]));
                 }
                 if ((ds.Tables["T_CHITIETHOADON"] != null)) {
                     base.Tables.Add(new T_CHITIETHOADONDataTable(ds.Tables["T_CHITIETHOADON"]));
+                }
+                if ((ds.Tables["SelectListOrderWithCustomerInfo"] != null)) {
+                    base.Tables.Add(new SelectListOrderWithCustomerInfoDataTable(ds.Tables["SelectListOrderWithCustomerInfo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -344,12 +344,6 @@ namespace QL_CATDAHAIDAT {
                     this.tableGetOrderDetailByOrderID.InitVars();
                 }
             }
-            this.tableGetOrderList = ((GetOrderListDataTable)(base.Tables["GetOrderList"]));
-            if ((initTable == true)) {
-                if ((this.tableGetOrderList != null)) {
-                    this.tableGetOrderList.InitVars();
-                }
-            }
             this.tableGetProductPriceListByCustomer = ((GetProductPriceListByCustomerDataTable)(base.Tables["GetProductPriceListByCustomer"]));
             if ((initTable == true)) {
                 if ((this.tableGetProductPriceListByCustomer != null)) {
@@ -360,6 +354,12 @@ namespace QL_CATDAHAIDAT {
             if ((initTable == true)) {
                 if ((this.tableT_CHITIETHOADON != null)) {
                     this.tableT_CHITIETHOADON.InitVars();
+                }
+            }
+            this.tableSelectListOrderWithCustomerInfo = ((SelectListOrderWithCustomerInfoDataTable)(base.Tables["SelectListOrderWithCustomerInfo"]));
+            if ((initTable == true)) {
+                if ((this.tableSelectListOrderWithCustomerInfo != null)) {
+                    this.tableSelectListOrderWithCustomerInfo.InitVars();
                 }
             }
         }
@@ -382,12 +382,12 @@ namespace QL_CATDAHAIDAT {
             base.Tables.Add(this.tableSELECTDETAILORDER);
             this.tableGetOrderDetailByOrderID = new GetOrderDetailByOrderIDDataTable();
             base.Tables.Add(this.tableGetOrderDetailByOrderID);
-            this.tableGetOrderList = new GetOrderListDataTable();
-            base.Tables.Add(this.tableGetOrderList);
             this.tableGetProductPriceListByCustomer = new GetProductPriceListByCustomerDataTable();
             base.Tables.Add(this.tableGetProductPriceListByCustomer);
             this.tableT_CHITIETHOADON = new T_CHITIETHOADONDataTable();
             base.Tables.Add(this.tableT_CHITIETHOADON);
+            this.tableSelectListOrderWithCustomerInfo = new SelectListOrderWithCustomerInfoDataTable();
+            base.Tables.Add(this.tableSelectListOrderWithCustomerInfo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -422,12 +422,6 @@ namespace QL_CATDAHAIDAT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeGetOrderList() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeGetProductPriceListByCustomer() {
             return false;
         }
@@ -435,6 +429,12 @@ namespace QL_CATDAHAIDAT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeT_CHITIETHOADON() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeSelectListOrderWithCustomerInfo() {
             return false;
         }
         
@@ -509,13 +509,13 @@ namespace QL_CATDAHAIDAT {
         public delegate void GetOrderDetailByOrderIDRowChangeEventHandler(object sender, GetOrderDetailByOrderIDRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void GetOrderListRowChangeEventHandler(object sender, GetOrderListRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void GetProductPriceListByCustomerRowChangeEventHandler(object sender, GetProductPriceListByCustomerRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void T_CHITIETHOADONRowChangeEventHandler(object sender, T_CHITIETHOADONRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void SelectListOrderWithCustomerInfoRowChangeEventHandler(object sender, SelectListOrderWithCustomerInfoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1840,6 +1840,8 @@ namespace QL_CATDAHAIDAT {
             
             private global::System.Data.DataColumn columnTRANG_THAI;
             
+            private global::System.Data.DataColumn columnTHOI_GIAN_TAO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GetOrderDetailByOrderIDDataTable() {
@@ -1907,6 +1909,14 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn THOI_GIAN_TAOColumn {
+                get {
+                    return this.columnTHOI_GIAN_TAO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1942,13 +1952,14 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderDetailByOrderIDRow AddGetOrderDetailByOrderIDRow(string TEN_SP, double SO_LUONG, double GIA, int TRANG_THAI) {
+            public GetOrderDetailByOrderIDRow AddGetOrderDetailByOrderIDRow(string TEN_SP, double SO_LUONG, double GIA, int TRANG_THAI, System.DateTime THOI_GIAN_TAO) {
                 GetOrderDetailByOrderIDRow rowGetOrderDetailByOrderIDRow = ((GetOrderDetailByOrderIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TEN_SP,
                         SO_LUONG,
                         GIA,
-                        TRANG_THAI};
+                        TRANG_THAI,
+                        THOI_GIAN_TAO};
                 rowGetOrderDetailByOrderIDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetOrderDetailByOrderIDRow);
                 return rowGetOrderDetailByOrderIDRow;
@@ -1975,6 +1986,7 @@ namespace QL_CATDAHAIDAT {
                 this.columnSO_LUONG = base.Columns["SO_LUONG"];
                 this.columnGIA = base.Columns["GIA"];
                 this.columnTRANG_THAI = base.Columns["TRANG_THAI"];
+                this.columnTHOI_GIAN_TAO = base.Columns["THOI_GIAN_TAO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1988,7 +2000,10 @@ namespace QL_CATDAHAIDAT {
                 base.Columns.Add(this.columnGIA);
                 this.columnTRANG_THAI = new global::System.Data.DataColumn("TRANG_THAI", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTRANG_THAI);
+                this.columnTHOI_GIAN_TAO = new global::System.Data.DataColumn("THOI_GIAN_TAO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTHOI_GIAN_TAO);
                 this.columnTEN_SP.MaxLength = 100;
+                this.columnTHOI_GIAN_TAO.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2075,355 +2090,6 @@ namespace QL_CATDAHAIDAT {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "GetOrderDetailByOrderIDDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GetOrderListDataTable : global::System.Data.TypedTableBase<GetOrderListRow> {
-            
-            private global::System.Data.DataColumn columnMA_HD;
-            
-            private global::System.Data.DataColumn columnTEN_KH;
-            
-            private global::System.Data.DataColumn columnNGAY_LAP;
-            
-            private global::System.Data.DataColumn columnTONG_TIEN;
-            
-            private global::System.Data.DataColumn columnTRANG_THAI;
-            
-            private global::System.Data.DataColumn columnDIA_CHI;
-            
-            private global::System.Data.DataColumn columnSO_DT;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderListDataTable() {
-                this.TableName = "GetOrderList";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal GetOrderListDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected GetOrderListDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MA_HDColumn {
-                get {
-                    return this.columnMA_HD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TEN_KHColumn {
-                get {
-                    return this.columnTEN_KH;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NGAY_LAPColumn {
-                get {
-                    return this.columnNGAY_LAP;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TONG_TIENColumn {
-                get {
-                    return this.columnTONG_TIEN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TRANG_THAIColumn {
-                get {
-                    return this.columnTRANG_THAI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DIA_CHIColumn {
-                get {
-                    return this.columnDIA_CHI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SO_DTColumn {
-                get {
-                    return this.columnSO_DT;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderListRow this[int index] {
-                get {
-                    return ((GetOrderListRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GetOrderListRowChangeEventHandler GetOrderListRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GetOrderListRowChangeEventHandler GetOrderListRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GetOrderListRowChangeEventHandler GetOrderListRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GetOrderListRowChangeEventHandler GetOrderListRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddGetOrderListRow(GetOrderListRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderListRow AddGetOrderListRow(string TEN_KH, System.DateTime NGAY_LAP, double TONG_TIEN, int TRANG_THAI, string DIA_CHI, string SO_DT) {
-                GetOrderListRow rowGetOrderListRow = ((GetOrderListRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        TEN_KH,
-                        NGAY_LAP,
-                        TONG_TIEN,
-                        TRANG_THAI,
-                        DIA_CHI,
-                        SO_DT};
-                rowGetOrderListRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGetOrderListRow);
-                return rowGetOrderListRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderListRow FindByMA_HD(int MA_HD) {
-                return ((GetOrderListRow)(this.Rows.Find(new object[] {
-                            MA_HD})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                GetOrderListDataTable cln = ((GetOrderListDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new GetOrderListDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnMA_HD = base.Columns["MA_HD"];
-                this.columnTEN_KH = base.Columns["TEN_KH"];
-                this.columnNGAY_LAP = base.Columns["NGAY_LAP"];
-                this.columnTONG_TIEN = base.Columns["TONG_TIEN"];
-                this.columnTRANG_THAI = base.Columns["TRANG_THAI"];
-                this.columnDIA_CHI = base.Columns["DIA_CHI"];
-                this.columnSO_DT = base.Columns["SO_DT"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnMA_HD = new global::System.Data.DataColumn("MA_HD", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMA_HD);
-                this.columnTEN_KH = new global::System.Data.DataColumn("TEN_KH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTEN_KH);
-                this.columnNGAY_LAP = new global::System.Data.DataColumn("NGAY_LAP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNGAY_LAP);
-                this.columnTONG_TIEN = new global::System.Data.DataColumn("TONG_TIEN", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTONG_TIEN);
-                this.columnTRANG_THAI = new global::System.Data.DataColumn("TRANG_THAI", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTRANG_THAI);
-                this.columnDIA_CHI = new global::System.Data.DataColumn("DIA_CHI", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIA_CHI);
-                this.columnSO_DT = new global::System.Data.DataColumn("SO_DT", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSO_DT);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMA_HD}, true));
-                this.columnMA_HD.AutoIncrement = true;
-                this.columnMA_HD.AutoIncrementSeed = -1;
-                this.columnMA_HD.AutoIncrementStep = -1;
-                this.columnMA_HD.AllowDBNull = false;
-                this.columnMA_HD.ReadOnly = true;
-                this.columnMA_HD.Unique = true;
-                this.columnTEN_KH.MaxLength = 50;
-                this.columnDIA_CHI.MaxLength = 200;
-                this.columnSO_DT.MaxLength = 20;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderListRow NewGetOrderListRow() {
-                return ((GetOrderListRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GetOrderListRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(GetOrderListRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.GetOrderListRowChanged != null)) {
-                    this.GetOrderListRowChanged(this, new GetOrderListRowChangeEvent(((GetOrderListRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.GetOrderListRowChanging != null)) {
-                    this.GetOrderListRowChanging(this, new GetOrderListRowChangeEvent(((GetOrderListRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.GetOrderListRowDeleted != null)) {
-                    this.GetOrderListRowDeleted(this, new GetOrderListRowChangeEvent(((GetOrderListRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.GetOrderListRowDeleting != null)) {
-                    this.GetOrderListRowDeleting(this, new GetOrderListRowChangeEvent(((GetOrderListRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveGetOrderListRow(GetOrderListRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DB_QLCatDaHaiDatDataSet ds = new DB_QLCatDaHaiDatDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GetOrderListDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3125,6 +2791,444 @@ namespace QL_CATDAHAIDAT {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "T_CHITIETHOADONDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SelectListOrderWithCustomerInfoDataTable : global::System.Data.TypedTableBase<SelectListOrderWithCustomerInfoRow> {
+            
+            private global::System.Data.DataColumn columnMA_HD;
+            
+            private global::System.Data.DataColumn columnNGAY_LAP;
+            
+            private global::System.Data.DataColumn columnTONG_TIEN;
+            
+            private global::System.Data.DataColumn columnGHI_CHU;
+            
+            private global::System.Data.DataColumn columnTRANG_THAI;
+            
+            private global::System.Data.DataColumn columnTIEN_TRA;
+            
+            private global::System.Data.DataColumn columnKHACH_HANG;
+            
+            private global::System.Data.DataColumn columnTEN_KH;
+            
+            private global::System.Data.DataColumn columnSO_DT;
+            
+            private global::System.Data.DataColumn columnExpr1;
+            
+            private global::System.Data.DataColumn columnExpr2;
+            
+            private global::System.Data.DataColumn columnDIA_CHI;
+            
+            private global::System.Data.DataColumn columnMA_KH;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SelectListOrderWithCustomerInfoDataTable() {
+                this.TableName = "SelectListOrderWithCustomerInfo";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal SelectListOrderWithCustomerInfoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected SelectListOrderWithCustomerInfoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MA_HDColumn {
+                get {
+                    return this.columnMA_HD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NGAY_LAPColumn {
+                get {
+                    return this.columnNGAY_LAP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TONG_TIENColumn {
+                get {
+                    return this.columnTONG_TIEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GHI_CHUColumn {
+                get {
+                    return this.columnGHI_CHU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TRANG_THAIColumn {
+                get {
+                    return this.columnTRANG_THAI;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TIEN_TRAColumn {
+                get {
+                    return this.columnTIEN_TRA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KHACH_HANGColumn {
+                get {
+                    return this.columnKHACH_HANG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TEN_KHColumn {
+                get {
+                    return this.columnTEN_KH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SO_DTColumn {
+                get {
+                    return this.columnSO_DT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr1Column {
+                get {
+                    return this.columnExpr1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr2Column {
+                get {
+                    return this.columnExpr2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DIA_CHIColumn {
+                get {
+                    return this.columnDIA_CHI;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MA_KHColumn {
+                get {
+                    return this.columnMA_KH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SelectListOrderWithCustomerInfoRow this[int index] {
+                get {
+                    return ((SelectListOrderWithCustomerInfoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event SelectListOrderWithCustomerInfoRowChangeEventHandler SelectListOrderWithCustomerInfoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event SelectListOrderWithCustomerInfoRowChangeEventHandler SelectListOrderWithCustomerInfoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event SelectListOrderWithCustomerInfoRowChangeEventHandler SelectListOrderWithCustomerInfoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event SelectListOrderWithCustomerInfoRowChangeEventHandler SelectListOrderWithCustomerInfoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddSelectListOrderWithCustomerInfoRow(SelectListOrderWithCustomerInfoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SelectListOrderWithCustomerInfoRow AddSelectListOrderWithCustomerInfoRow(string MA_HD, System.DateTime NGAY_LAP, double TONG_TIEN, string GHI_CHU, int TRANG_THAI, double TIEN_TRA, int KHACH_HANG, string TEN_KH, string SO_DT, string Expr1, int Expr2, string DIA_CHI) {
+                SelectListOrderWithCustomerInfoRow rowSelectListOrderWithCustomerInfoRow = ((SelectListOrderWithCustomerInfoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        MA_HD,
+                        NGAY_LAP,
+                        TONG_TIEN,
+                        GHI_CHU,
+                        TRANG_THAI,
+                        TIEN_TRA,
+                        KHACH_HANG,
+                        TEN_KH,
+                        SO_DT,
+                        Expr1,
+                        Expr2,
+                        DIA_CHI,
+                        null};
+                rowSelectListOrderWithCustomerInfoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSelectListOrderWithCustomerInfoRow);
+                return rowSelectListOrderWithCustomerInfoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SelectListOrderWithCustomerInfoRow FindByMA_HDMA_KH(string MA_HD, int MA_KH) {
+                return ((SelectListOrderWithCustomerInfoRow)(this.Rows.Find(new object[] {
+                            MA_HD,
+                            MA_KH})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SelectListOrderWithCustomerInfoDataTable cln = ((SelectListOrderWithCustomerInfoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SelectListOrderWithCustomerInfoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnMA_HD = base.Columns["MA_HD"];
+                this.columnNGAY_LAP = base.Columns["NGAY_LAP"];
+                this.columnTONG_TIEN = base.Columns["TONG_TIEN"];
+                this.columnGHI_CHU = base.Columns["GHI_CHU"];
+                this.columnTRANG_THAI = base.Columns["TRANG_THAI"];
+                this.columnTIEN_TRA = base.Columns["TIEN_TRA"];
+                this.columnKHACH_HANG = base.Columns["KHACH_HANG"];
+                this.columnTEN_KH = base.Columns["TEN_KH"];
+                this.columnSO_DT = base.Columns["SO_DT"];
+                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnExpr2 = base.Columns["Expr2"];
+                this.columnDIA_CHI = base.Columns["DIA_CHI"];
+                this.columnMA_KH = base.Columns["MA_KH"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnMA_HD = new global::System.Data.DataColumn("MA_HD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMA_HD);
+                this.columnNGAY_LAP = new global::System.Data.DataColumn("NGAY_LAP", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNGAY_LAP);
+                this.columnTONG_TIEN = new global::System.Data.DataColumn("TONG_TIEN", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTONG_TIEN);
+                this.columnGHI_CHU = new global::System.Data.DataColumn("GHI_CHU", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGHI_CHU);
+                this.columnTRANG_THAI = new global::System.Data.DataColumn("TRANG_THAI", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTRANG_THAI);
+                this.columnTIEN_TRA = new global::System.Data.DataColumn("TIEN_TRA", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIEN_TRA);
+                this.columnKHACH_HANG = new global::System.Data.DataColumn("KHACH_HANG", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKHACH_HANG);
+                this.columnTEN_KH = new global::System.Data.DataColumn("TEN_KH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEN_KH);
+                this.columnSO_DT = new global::System.Data.DataColumn("SO_DT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSO_DT);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr2);
+                this.columnDIA_CHI = new global::System.Data.DataColumn("DIA_CHI", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDIA_CHI);
+                this.columnMA_KH = new global::System.Data.DataColumn("MA_KH", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMA_KH);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnMA_HD,
+                                this.columnMA_KH}, true));
+                this.columnMA_HD.AllowDBNull = false;
+                this.columnMA_HD.MaxLength = 50;
+                this.columnGHI_CHU.MaxLength = 200;
+                this.columnTEN_KH.MaxLength = 50;
+                this.columnSO_DT.MaxLength = 20;
+                this.columnExpr1.MaxLength = 500;
+                this.columnDIA_CHI.MaxLength = 200;
+                this.columnMA_KH.AutoIncrement = true;
+                this.columnMA_KH.AutoIncrementSeed = -1;
+                this.columnMA_KH.AutoIncrementStep = -1;
+                this.columnMA_KH.AllowDBNull = false;
+                this.columnMA_KH.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SelectListOrderWithCustomerInfoRow NewSelectListOrderWithCustomerInfoRow() {
+                return ((SelectListOrderWithCustomerInfoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SelectListOrderWithCustomerInfoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SelectListOrderWithCustomerInfoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SelectListOrderWithCustomerInfoRowChanged != null)) {
+                    this.SelectListOrderWithCustomerInfoRowChanged(this, new SelectListOrderWithCustomerInfoRowChangeEvent(((SelectListOrderWithCustomerInfoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SelectListOrderWithCustomerInfoRowChanging != null)) {
+                    this.SelectListOrderWithCustomerInfoRowChanging(this, new SelectListOrderWithCustomerInfoRowChangeEvent(((SelectListOrderWithCustomerInfoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SelectListOrderWithCustomerInfoRowDeleted != null)) {
+                    this.SelectListOrderWithCustomerInfoRowDeleted(this, new SelectListOrderWithCustomerInfoRowChangeEvent(((SelectListOrderWithCustomerInfoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SelectListOrderWithCustomerInfoRowDeleting != null)) {
+                    this.SelectListOrderWithCustomerInfoRowDeleting(this, new SelectListOrderWithCustomerInfoRowChangeEvent(((SelectListOrderWithCustomerInfoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveSelectListOrderWithCustomerInfoRow(SelectListOrderWithCustomerInfoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DB_QLCatDaHaiDatDataSet ds = new DB_QLCatDaHaiDatDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SelectListOrderWithCustomerInfoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3898,6 +4002,17 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime THOI_GIAN_TAO {
+                get {
+                    return ((global::System.DateTime)(this[this.tableGetOrderDetailByOrderID.THOI_GIAN_TAOColumn]));
+                }
+                set {
+                    this[this.tableGetOrderDetailByOrderID.THOI_GIAN_TAOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTEN_SPNull() {
                 return this.IsNull(this.tableGetOrderDetailByOrderID.TEN_SPColumn);
             }
@@ -3942,200 +4057,6 @@ namespace QL_CATDAHAIDAT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTRANG_THAINull() {
                 this[this.tableGetOrderDetailByOrderID.TRANG_THAIColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class GetOrderListRow : global::System.Data.DataRow {
-            
-            private GetOrderListDataTable tableGetOrderList;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal GetOrderListRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableGetOrderList = ((GetOrderListDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MA_HD {
-                get {
-                    return ((int)(this[this.tableGetOrderList.MA_HDColumn]));
-                }
-                set {
-                    this[this.tableGetOrderList.MA_HDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TEN_KH {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetOrderList.TEN_KHColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TEN_KH\' in table \'GetOrderList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetOrderList.TEN_KHColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime NGAY_LAP {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableGetOrderList.NGAY_LAPColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NGAY_LAP\' in table \'GetOrderList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetOrderList.NGAY_LAPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double TONG_TIEN {
-                get {
-                    try {
-                        return ((double)(this[this.tableGetOrderList.TONG_TIENColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TONG_TIEN\' in table \'GetOrderList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetOrderList.TONG_TIENColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TRANG_THAI {
-                get {
-                    try {
-                        return ((int)(this[this.tableGetOrderList.TRANG_THAIColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TRANG_THAI\' in table \'GetOrderList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetOrderList.TRANG_THAIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DIA_CHI {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetOrderList.DIA_CHIColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DIA_CHI\' in table \'GetOrderList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetOrderList.DIA_CHIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SO_DT {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetOrderList.SO_DTColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SO_DT\' in table \'GetOrderList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetOrderList.SO_DTColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTEN_KHNull() {
-                return this.IsNull(this.tableGetOrderList.TEN_KHColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTEN_KHNull() {
-                this[this.tableGetOrderList.TEN_KHColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNGAY_LAPNull() {
-                return this.IsNull(this.tableGetOrderList.NGAY_LAPColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNGAY_LAPNull() {
-                this[this.tableGetOrderList.NGAY_LAPColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTONG_TIENNull() {
-                return this.IsNull(this.tableGetOrderList.TONG_TIENColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTONG_TIENNull() {
-                this[this.tableGetOrderList.TONG_TIENColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTRANG_THAINull() {
-                return this.IsNull(this.tableGetOrderList.TRANG_THAIColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTRANG_THAINull() {
-                this[this.tableGetOrderList.TRANG_THAIColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDIA_CHINull() {
-                return this.IsNull(this.tableGetOrderList.DIA_CHIColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDIA_CHINull() {
-                this[this.tableGetOrderList.DIA_CHIColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSO_DTNull() {
-                return this.IsNull(this.tableGetOrderList.SO_DTColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSO_DTNull() {
-                this[this.tableGetOrderList.SO_DTColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4526,6 +4447,362 @@ namespace QL_CATDAHAIDAT {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SelectListOrderWithCustomerInfoRow : global::System.Data.DataRow {
+            
+            private SelectListOrderWithCustomerInfoDataTable tableSelectListOrderWithCustomerInfo;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal SelectListOrderWithCustomerInfoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSelectListOrderWithCustomerInfo = ((SelectListOrderWithCustomerInfoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MA_HD {
+                get {
+                    return ((string)(this[this.tableSelectListOrderWithCustomerInfo.MA_HDColumn]));
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.MA_HDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime NGAY_LAP {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSelectListOrderWithCustomerInfo.NGAY_LAPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NGAY_LAP\' in table \'SelectListOrderWithCustomerInfo\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.NGAY_LAPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double TONG_TIEN {
+                get {
+                    try {
+                        return ((double)(this[this.tableSelectListOrderWithCustomerInfo.TONG_TIENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TONG_TIEN\' in table \'SelectListOrderWithCustomerInfo\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.TONG_TIENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string GHI_CHU {
+                get {
+                    try {
+                        return ((string)(this[this.tableSelectListOrderWithCustomerInfo.GHI_CHUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GHI_CHU\' in table \'SelectListOrderWithCustomerInfo\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.GHI_CHUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TRANG_THAI {
+                get {
+                    try {
+                        return ((int)(this[this.tableSelectListOrderWithCustomerInfo.TRANG_THAIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TRANG_THAI\' in table \'SelectListOrderWithCustomerInfo\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.TRANG_THAIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double TIEN_TRA {
+                get {
+                    try {
+                        return ((double)(this[this.tableSelectListOrderWithCustomerInfo.TIEN_TRAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIEN_TRA\' in table \'SelectListOrderWithCustomerInfo\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.TIEN_TRAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int KHACH_HANG {
+                get {
+                    try {
+                        return ((int)(this[this.tableSelectListOrderWithCustomerInfo.KHACH_HANGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KHACH_HANG\' in table \'SelectListOrderWithCustomerInfo\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.KHACH_HANGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TEN_KH {
+                get {
+                    try {
+                        return ((string)(this[this.tableSelectListOrderWithCustomerInfo.TEN_KHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TEN_KH\' in table \'SelectListOrderWithCustomerInfo\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.TEN_KHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SO_DT {
+                get {
+                    try {
+                        return ((string)(this[this.tableSelectListOrderWithCustomerInfo.SO_DTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SO_DT\' in table \'SelectListOrderWithCustomerInfo\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.SO_DTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Expr1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableSelectListOrderWithCustomerInfo.Expr1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expr1\' in table \'SelectListOrderWithCustomerInfo\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.Expr1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Expr2 {
+                get {
+                    try {
+                        return ((int)(this[this.tableSelectListOrderWithCustomerInfo.Expr2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expr2\' in table \'SelectListOrderWithCustomerInfo\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.Expr2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DIA_CHI {
+                get {
+                    try {
+                        return ((string)(this[this.tableSelectListOrderWithCustomerInfo.DIA_CHIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DIA_CHI\' in table \'SelectListOrderWithCustomerInfo\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.DIA_CHIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int MA_KH {
+                get {
+                    return ((int)(this[this.tableSelectListOrderWithCustomerInfo.MA_KHColumn]));
+                }
+                set {
+                    this[this.tableSelectListOrderWithCustomerInfo.MA_KHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNGAY_LAPNull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.NGAY_LAPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNGAY_LAPNull() {
+                this[this.tableSelectListOrderWithCustomerInfo.NGAY_LAPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTONG_TIENNull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.TONG_TIENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTONG_TIENNull() {
+                this[this.tableSelectListOrderWithCustomerInfo.TONG_TIENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGHI_CHUNull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.GHI_CHUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGHI_CHUNull() {
+                this[this.tableSelectListOrderWithCustomerInfo.GHI_CHUColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTRANG_THAINull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.TRANG_THAIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTRANG_THAINull() {
+                this[this.tableSelectListOrderWithCustomerInfo.TRANG_THAIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTIEN_TRANull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.TIEN_TRAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTIEN_TRANull() {
+                this[this.tableSelectListOrderWithCustomerInfo.TIEN_TRAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKHACH_HANGNull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.KHACH_HANGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKHACH_HANGNull() {
+                this[this.tableSelectListOrderWithCustomerInfo.KHACH_HANGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTEN_KHNull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.TEN_KHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTEN_KHNull() {
+                this[this.tableSelectListOrderWithCustomerInfo.TEN_KHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSO_DTNull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.SO_DTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSO_DTNull() {
+                this[this.tableSelectListOrderWithCustomerInfo.SO_DTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsExpr1Null() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.Expr1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetExpr1Null() {
+                this[this.tableSelectListOrderWithCustomerInfo.Expr1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsExpr2Null() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.Expr2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetExpr2Null() {
+                this[this.tableSelectListOrderWithCustomerInfo.Expr2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDIA_CHINull() {
+                return this.IsNull(this.tableSelectListOrderWithCustomerInfo.DIA_CHIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDIA_CHINull() {
+                this[this.tableSelectListOrderWithCustomerInfo.DIA_CHIColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4699,40 +4976,6 @@ namespace QL_CATDAHAIDAT {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class GetOrderListRowChangeEvent : global::System.EventArgs {
-            
-            private GetOrderListRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderListRowChangeEvent(GetOrderListRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderListRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public class GetProductPriceListByCustomerRowChangeEvent : global::System.EventArgs {
             
             private GetProductPriceListByCustomerRow eventRow;
@@ -4783,6 +5026,40 @@ namespace QL_CATDAHAIDAT {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public T_CHITIETHOADONRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class SelectListOrderWithCustomerInfoRowChangeEvent : global::System.EventArgs {
+            
+            private SelectListOrderWithCustomerInfoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SelectListOrderWithCustomerInfoRowChangeEvent(SelectListOrderWithCustomerInfoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SelectListOrderWithCustomerInfoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5742,7 +6019,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FROM T_HOAD" +
@@ -5750,27 +6027,33 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "dbo.InsertQuery";
+            this._commandCollection[1].CommandText = "dbo.DoPaymentQuery";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGAY_LAP", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GHI_CHU", global::System.Data.SqlDbType.NVarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TONG_TIEN", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TRANG_THAI", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KHACH_HANG", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_HD", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "dbo.SelectOrderIDByCustomer";
+            this._commandCollection[2].CommandText = "dbo.InsertQuery";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_KH", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGAY_LAP", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GHI_CHU", global::System.Data.SqlDbType.NVarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TONG_TIEN", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TRANG_THAI", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KHACH_HANG", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "dbo.UpdateTotalAmount";
+            this._commandCollection[3].CommandText = "dbo.SelectOrderIDByCustomer";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TONG_TIEN", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_HD", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_KH", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "dbo.UpdateTotalAmount";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TONG_TIEN", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_HD", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6092,9 +6375,43 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object DoPaymentQuery(string MA_HD) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((MA_HD == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(MA_HD));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual object InsertQuery(global::System.Nullable<global::System.DateTime> NGAY_LAP, string GHI_CHU, global::System.Nullable<double> TONG_TIEN, global::System.Nullable<int> TRANG_THAI, global::System.Nullable<int> KHACH_HANG) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((NGAY_LAP.HasValue == true)) {
                 command.Parameters[1].Value = ((System.DateTime)(NGAY_LAP.Value));
             }
@@ -6152,7 +6469,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual object SelectOrderIDByCustomer(global::System.Nullable<int> MA_KH) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((MA_KH.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(MA_KH.Value));
             }
@@ -6186,7 +6503,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual object UpdateTotalAmount(global::System.Nullable<double> TONG_TIEN, string MA_HD) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((TONG_TIEN.HasValue == true)) {
                 command.Parameters[1].Value = ((double)(TONG_TIEN.Value));
             }
@@ -6522,6 +6839,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
             tableMapping.ColumnMappings.Add("SO_LUONG", "SO_LUONG");
             tableMapping.ColumnMappings.Add("GIA", "GIA");
             tableMapping.ColumnMappings.Add("TRANG_THAI", "TRANG_THAI");
+            tableMapping.ColumnMappings.Add("THOI_GIAN_TAO", "THOI_GIAN_TAO");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6540,17 +6858,22 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.GetOrderDetailByOrderID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HOA_DON", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "HOA_DON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HOA_DON", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderIDDataTable dataTable, int HOA_DON) {
+        public virtual int Fill(DB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderIDDataTable dataTable, string HOA_DON) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(HOA_DON));
+            if ((HOA_DON == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(HOA_DON));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6562,221 +6885,17 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderIDDataTable GetData(int HOA_DON) {
+        public virtual DB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderIDDataTable GetData(string HOA_DON) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(HOA_DON));
+            if ((HOA_DON == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(HOA_DON));
+            }
             DB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderIDDataTable dataTable = new DB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderIDDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GetOrderListTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public GetOrderListTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "GetOrderList";
-            tableMapping.ColumnMappings.Add("MA_HD", "MA_HD");
-            tableMapping.ColumnMappings.Add("TEN_KH", "TEN_KH");
-            tableMapping.ColumnMappings.Add("NGAY_LAP", "NGAY_LAP");
-            tableMapping.ColumnMappings.Add("TONG_TIEN", "TONG_TIEN");
-            tableMapping.ColumnMappings.Add("TRANG_THAI", "TRANG_THAI");
-            tableMapping.ColumnMappings.Add("DIA_CHI", "DIA_CHI");
-            tableMapping.ColumnMappings.Add("SO_DT", "SO_DT");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QL_CATDAHAIDAT.Properties.Settings.Default.DB_QLCatDaHaiDatConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.GetOrderList";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "dbo.DoPaymentQuery";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_HD", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DB_QLCatDaHaiDatDataSet.GetOrderListDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DB_QLCatDaHaiDatDataSet.GetOrderListDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DB_QLCatDaHaiDatDataSet.GetOrderListDataTable dataTable = new DB_QLCatDaHaiDatDataSet.GetOrderListDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int DoPaymentQuery(global::System.Nullable<int> MA_HD) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((MA_HD.HasValue == true)) {
-                command.Parameters[1].Value = ((int)(MA_HD.Value));
-            }
-            else {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
         }
     }
     
@@ -7503,6 +7622,186 @@ SELECT HOA_DON, SAN_PHAM, THOI_GIAN_TAO, SO_LUONG, GIA, GHI_CHU, TRANG_THAI FROM
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<double> SO_LUONG, global::System.Nullable<double> GIA, string GHI_CHU, global::System.Nullable<int> TRANG_THAI, string Original_HOA_DON, int Original_SAN_PHAM, System.DateTime Original_THOI_GIAN_TAO, global::System.Nullable<double> Original_SO_LUONG, global::System.Nullable<double> Original_GIA, string Original_GHI_CHU, global::System.Nullable<int> Original_TRANG_THAI) {
             return this.Update(Original_HOA_DON, Original_SAN_PHAM, Original_THOI_GIAN_TAO, SO_LUONG, GIA, GHI_CHU, TRANG_THAI, Original_HOA_DON, Original_SAN_PHAM, Original_THOI_GIAN_TAO, Original_SO_LUONG, Original_GIA, Original_GHI_CHU, Original_TRANG_THAI);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SelectListOrderWithCustomerInfoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public SelectListOrderWithCustomerInfoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SelectListOrderWithCustomerInfo";
+            tableMapping.ColumnMappings.Add("MA_HD", "MA_HD");
+            tableMapping.ColumnMappings.Add("NGAY_LAP", "NGAY_LAP");
+            tableMapping.ColumnMappings.Add("TONG_TIEN", "TONG_TIEN");
+            tableMapping.ColumnMappings.Add("GHI_CHU", "GHI_CHU");
+            tableMapping.ColumnMappings.Add("TRANG_THAI", "TRANG_THAI");
+            tableMapping.ColumnMappings.Add("TIEN_TRA", "TIEN_TRA");
+            tableMapping.ColumnMappings.Add("KHACH_HANG", "KHACH_HANG");
+            tableMapping.ColumnMappings.Add("TEN_KH", "TEN_KH");
+            tableMapping.ColumnMappings.Add("SO_DT", "SO_DT");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("Expr2", "Expr2");
+            tableMapping.ColumnMappings.Add("DIA_CHI", "DIA_CHI");
+            tableMapping.ColumnMappings.Add("MA_KH", "MA_KH");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::QL_CATDAHAIDAT.Properties.Settings.Default.DB_QLCatDaHaiDatConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SelectListOrderWithCustomerInfo";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfoDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfoDataTable dataTable = new DB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     

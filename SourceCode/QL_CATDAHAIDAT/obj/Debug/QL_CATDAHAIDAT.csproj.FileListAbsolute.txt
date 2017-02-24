@@ -74,6 +74,7 @@ D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFram
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.dll
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.xml
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.xml
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddNewOrder.resources
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddOrder.resources
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListCustomer.resources
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListOrder.resources
@@ -90,5 +91,4 @@ D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHA
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.application
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddNewOrder.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PaymentInput.resources
