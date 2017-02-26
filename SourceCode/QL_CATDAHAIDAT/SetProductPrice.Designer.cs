@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.getProductPriceListByCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -55,6 +58,7 @@
             this.tINHTRANGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kHACHHANGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getProductPriceListByCustomerBindingSource)).BeginInit();
@@ -66,10 +70,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnPrint);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(4, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 376);
+            this.groupBox1.Size = new System.Drawing.Size(426, 376);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách sản phẩm";
@@ -94,7 +99,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(8, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(312, 351);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(412, 298);
             this.dataGridView1.TabIndex = 0;
             // 
             // getProductPriceListByCustomerBindingSource
@@ -118,7 +124,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(336, 9);
+            this.groupBox2.Location = new System.Drawing.Point(436, 9);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(235, 376);
             this.groupBox2.TabIndex = 1;
@@ -139,9 +145,9 @@
             // 
             this.btnSave.Image = global::QL_CATDAHAIDAT.Properties.Resources.save;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(33, 12);
+            this.btnSave.Location = new System.Drawing.Point(19, 12);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 41);
+            this.btnSave.Size = new System.Drawing.Size(89, 41);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -149,11 +155,13 @@
             // 
             // button1
             // 
+            this.button1.Image = global::QL_CATDAHAIDAT.Properties.Resources.close;
             this.button1.Location = new System.Drawing.Point(114, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 41);
+            this.button1.Size = new System.Drawing.Size(88, 41);
             this.button1.TabIndex = 0;
             this.button1.Text = "Hủy";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -200,9 +208,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 203);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 16);
+            this.label4.Size = new System.Drawing.Size(97, 16);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Giá :";
+            this.label4.Text = "Khối lượng 5M :";
             // 
             // label3
             // 
@@ -210,9 +218,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.Size = new System.Drawing.Size(97, 16);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Giá :";
+            this.label3.Text = "Khối lượng 4M :";
             // 
             // label2
             // 
@@ -220,9 +228,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 16);
+            this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Giá :";
+            this.label2.Text = "Khối lương 3M :";
             // 
             // label1
             // 
@@ -246,35 +254,41 @@
             // tENSPDataGridViewTextBoxColumn
             // 
             this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
-            this.tENSPDataGridViewTextBoxColumn.HeaderText = "TEN_SP";
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
             this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
             this.tENSPDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dONVITINHDataGridViewTextBoxColumn
             // 
             this.dONVITINHDataGridViewTextBoxColumn.DataPropertyName = "DON_VI_TINH";
-            this.dONVITINHDataGridViewTextBoxColumn.HeaderText = "DON_VI_TINH";
+            this.dONVITINHDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
             this.dONVITINHDataGridViewTextBoxColumn.Name = "dONVITINHDataGridViewTextBoxColumn";
             this.dONVITINHDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gIAADataGridViewTextBoxColumn
             // 
             this.gIAADataGridViewTextBoxColumn.DataPropertyName = "GIA_A";
-            this.gIAADataGridViewTextBoxColumn.HeaderText = "GIA_A";
+            dataGridViewCellStyle13.Format = "#,### VND";
+            this.gIAADataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.gIAADataGridViewTextBoxColumn.HeaderText = "Khối lương 3M";
             this.gIAADataGridViewTextBoxColumn.Name = "gIAADataGridViewTextBoxColumn";
             this.gIAADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gIABDataGridViewTextBoxColumn
             // 
             this.gIABDataGridViewTextBoxColumn.DataPropertyName = "GIA_B";
-            this.gIABDataGridViewTextBoxColumn.HeaderText = "GIA_B";
+            dataGridViewCellStyle14.Format = "#,### VND";
+            this.gIABDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.gIABDataGridViewTextBoxColumn.HeaderText = "Khối lương 4M";
             this.gIABDataGridViewTextBoxColumn.Name = "gIABDataGridViewTextBoxColumn";
             this.gIABDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gIACDataGridViewTextBoxColumn
             // 
             this.gIACDataGridViewTextBoxColumn.DataPropertyName = "GIA_C";
-            this.gIACDataGridViewTextBoxColumn.HeaderText = "GIA_C";
+            dataGridViewCellStyle15.Format = "#,### VND";
+            this.gIACDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            this.gIACDataGridViewTextBoxColumn.HeaderText = "Khối lương 5M";
             this.gIACDataGridViewTextBoxColumn.Name = "gIACDataGridViewTextBoxColumn";
             this.gIACDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -284,6 +298,7 @@
             this.tINHTRANGDataGridViewTextBoxColumn.HeaderText = "TINH_TRANG";
             this.tINHTRANGDataGridViewTextBoxColumn.Name = "tINHTRANGDataGridViewTextBoxColumn";
             this.tINHTRANGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tINHTRANGDataGridViewTextBoxColumn.Visible = false;
             // 
             // kHACHHANGDataGridViewTextBoxColumn
             // 
@@ -291,6 +306,7 @@
             this.kHACHHANGDataGridViewTextBoxColumn.HeaderText = "KHACH_HANG";
             this.kHACHHANGDataGridViewTextBoxColumn.Name = "kHACHHANGDataGridViewTextBoxColumn";
             this.kHACHHANGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kHACHHANGDataGridViewTextBoxColumn.Visible = false;
             // 
             // mASPDataGridViewTextBoxColumn
             // 
@@ -298,15 +314,30 @@
             this.mASPDataGridViewTextBoxColumn.HeaderText = "MA_SP";
             this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
             this.mASPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mASPDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = global::QL_CATDAHAIDAT.Properties.Resources.printer;
+            this.btnPrint.Location = new System.Drawing.Point(319, 323);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(101, 41);
+            this.btnPrint.TabIndex = 1;
+            this.btnPrint.Text = "In Báo Giá";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // SetProductPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 393);
+            this.ClientSize = new System.Drawing.Size(683, 393);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "SetProductPrice";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình cài đặt giá";
             this.Load += new System.EventHandler(this.SetProductPrice_Load);
             this.groupBox1.ResumeLayout(false);
@@ -349,6 +380,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tINHTRANGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kHACHHANGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mASPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnPrint;
 
     }
 }

@@ -85,6 +85,7 @@ namespace QL_CATDAHAIDAT
         private void ListProduct_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.M_SANPHAM' table. You can move, or remove it, as needed.
+            this.m_SANPHAMTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
             this.m_SANPHAMTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
             Binding b = new Binding("Text", this.mSANPHAMBindingSource, "TRANG_THAI", true);
             b.Format += b_Format;
@@ -176,11 +177,6 @@ namespace QL_CATDAHAIDAT
             setInsertMode();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PrintProductList frm = new PrintProductList();
-            frm.ShowDialog();
-        }
 
 
 

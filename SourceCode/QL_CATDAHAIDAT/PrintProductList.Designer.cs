@@ -32,16 +32,16 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
-            this.M_SANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.M_SANPHAMTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_SANPHAMTableAdapter();
+            this.GetProductInfoForPrintingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GetProductInfoForPrintingTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetProductInfoForPrintingTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DB_QLCatDaHaiDatDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.M_SANPHAMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GetProductInfoForPrintingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.M_SANPHAMBindingSource;
+            reportDataSource1.Value = this.GetProductInfoForPrintingBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QL_CATDAHAIDAT.PrintProductList.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -54,14 +54,14 @@
             this.DB_QLCatDaHaiDatDataSet.DataSetName = "DB_QLCatDaHaiDatDataSet";
             this.DB_QLCatDaHaiDatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // M_SANPHAMBindingSource
+            // GetProductInfoForPrintingBindingSource
             // 
-            this.M_SANPHAMBindingSource.DataMember = "M_SANPHAM";
-            this.M_SANPHAMBindingSource.DataSource = this.DB_QLCatDaHaiDatDataSet;
+            this.GetProductInfoForPrintingBindingSource.DataMember = "GetProductInfoForPrinting";
+            this.GetProductInfoForPrintingBindingSource.DataSource = this.DB_QLCatDaHaiDatDataSet;
             // 
-            // M_SANPHAMTableAdapter
+            // GetProductInfoForPrintingTableAdapter
             // 
-            this.M_SANPHAMTableAdapter.ClearBeforeFill = true;
+            this.GetProductInfoForPrintingTableAdapter.ClearBeforeFill = true;
             // 
             // PrintProductList
             // 
@@ -73,7 +73,7 @@
             this.Text = "PrintProductList";
             this.Load += new System.EventHandler(this.PrintProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DB_QLCatDaHaiDatDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.M_SANPHAMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GetProductInfoForPrintingBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -81,8 +81,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource M_SANPHAMBindingSource;
+        private System.Windows.Forms.BindingSource GetProductInfoForPrintingBindingSource;
         private DB_QLCatDaHaiDatDataSet DB_QLCatDaHaiDatDataSet;
-        private DB_QLCatDaHaiDatDataSetTableAdapters.M_SANPHAMTableAdapter M_SANPHAMTableAdapter;
+        private DB_QLCatDaHaiDatDataSetTableAdapters.GetProductInfoForPrintingTableAdapter GetProductInfoForPrintingTableAdapter;
     }
 }

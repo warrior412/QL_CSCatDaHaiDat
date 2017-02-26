@@ -15,10 +15,29 @@ namespace QL_CATDAHAIDAT
         public Main()
         {
             InitializeComponent();
+            btnSelectShop_Click(this, null);
         }
+        public bool checkBeforeOpen()
+        {
+            if (this.MdiChildren.Length > 0)
+            {
+                MessageBox.Show("Vui lòng tắt màn hình đang mở trước khi mở màn hình mới", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return false;
+            }
+                
+            return true;
+        }
+        public void changeShopName (string name)
+        {
+            this.Text = name;
+            this.toolStripLabel1.Text = name;
+        }
+
 
         private void btnListProduct_Click(object sender, EventArgs e)
         {
+            if (!checkBeforeOpen())
+                return;
             ListProduct frm = new ListProduct();
             frm.MdiParent = this;
             frm.Show();
@@ -26,6 +45,8 @@ namespace QL_CATDAHAIDAT
 
         private void btnListCutomer_Click(object sender, EventArgs e)
         {
+            if (!checkBeforeOpen())
+                return;
             ListCustomer frm = new ListCustomer();
             frm.MdiParent = this;
             frm.Show();
@@ -33,6 +54,8 @@ namespace QL_CATDAHAIDAT
 
         private void btnListOrder_Click(object sender, EventArgs e)
         {
+            if (!checkBeforeOpen())
+                return;
             AddNewOrder frm = new AddNewOrder();
             frm.MdiParent = this;
             frm.Show();
@@ -40,9 +63,25 @@ namespace QL_CATDAHAIDAT
 
         private void BtnHistoryOrder_Click(object sender, EventArgs e)
         {
+            if (!checkBeforeOpen())
+                return;
             ListOrder frm = new ListOrder();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSelectShop_Click(object sender, EventArgs e)
+        {
+            if (!checkBeforeOpen())
+                return;
+            ShopSelect dialog = new ShopSelect();
+            dialog.MdiParent = this;
+            dialog.Show();
         }
 
     }

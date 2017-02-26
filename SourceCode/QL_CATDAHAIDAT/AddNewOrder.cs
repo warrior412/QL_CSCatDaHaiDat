@@ -21,6 +21,8 @@ namespace QL_CATDAHAIDAT
         DataTable dtOrder = new DataTable();
         public AddNewOrder()
         {
+            
+
             InitializeComponent();
             txtOther.Enabled = false;
             txtOther.Text = "0";
@@ -38,12 +40,21 @@ namespace QL_CATDAHAIDAT
             dtOrder.Columns.Add("Số lượng", typeof(string));
             dtOrder.Columns.Add("Thành tiền", typeof(string));
             dtOrder.Columns.Add("Đơn vị tính", typeof(string));
+
+            
         }
 
         private void AddNewOrder_Load(object sender, EventArgs e)
         {
+            getProductPriceListByCustomerTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
+            t_CHITIETHOADONTableAdapter1.Connection.ConnectionString = Common.GetInstance().CurrentShop;
+            getProductPriceListByCustomerTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
+            m_KHACHHANGTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
+
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.M_KHACHHANG' table. You can move, or remove it, as needed.
             this.m_KHACHHANGTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
+            if (comboBox1.SelectedValue == null)
+                return;
             this.getProductPriceListByCustomerTableAdapter.Fill(dB_QLCatDaHaiDatDataSet.GetProductPriceListByCustomer, int.Parse(comboBox1.SelectedValue.ToString()));
 
         }
@@ -69,6 +80,8 @@ namespace QL_CATDAHAIDAT
 
         void doCalculate()
         {
+            if (getProductPriceListByCustomerBindingSource.Current == null)
+                return;
             currentRow =(DB_QLCatDaHaiDatDataSet.GetProductPriceListByCustomerRow)
                 ((DataRowView)getProductPriceListByCustomerBindingSource.Current).Row;
             float quantity = float.Parse(txtQuantity.Text);
@@ -158,9 +171,9 @@ namespace QL_CATDAHAIDAT
             double priceA = currentRow.IsGIA_ANull()?0:currentRow.GIA_A;
             double priceB = currentRow.IsGIA_BNull()?0:currentRow.GIA_B;
             double priceC = currentRow.IsGIA_CNull()?0:currentRow.GIA_C;
-            rdPriceA.Text = Common.GetInstance().getMoneyFormatByDouble(priceA);
-            rdPriceB.Text = Common.GetInstance().getMoneyFormatByDouble(priceB);
-            rdPriceC.Text = Common.GetInstance().getMoneyFormatByDouble(priceC);
+            lblPriceA.Text = "("+Common.GetInstance().getMoneyFormatByDouble(priceA)+")";
+            lblPriceB.Text = "(" + Common.GetInstance().getMoneyFormatByDouble(priceB) + ")";
+            lblPriceC.Text = "(" + Common.GetInstance().getMoneyFormatByDouble(priceC) + ")";
         }
 
         private void btnAddOrder_Click(object sender, EventArgs e)
@@ -180,6 +193,7 @@ namespace QL_CATDAHAIDAT
             dataGridView1.DataSource = dtOrder;
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
         }
 
         private void dataGridView1_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
@@ -237,7 +251,7 @@ namespace QL_CATDAHAIDAT
                     ts.Dispose();
                 }
 
-                PrintOrder printpreviewer = new PrintOrder(lblCustomerName.Text, lblAddress.Text, lblPhone.Text, Common.GetInstance().getMoneyFormatByDouble(totalAmount));
+                PrintOrder printpreviewer = new PrintOrder(lblCustomerName.Text, lblAddress.Text, lblPhone.Text, Common.GetInstance().getMoneyFormatByDouble(totalAmount), Common.GetInstance().getMoneyFormatByDouble(0), Common.GetInstance().getMoneyFormatByDouble(totalAmount));
                 printpreviewer.ma_hd = hd_id;
                 printpreviewer.DtReport = dtOrder;
                 printpreviewer.ShowDialog();

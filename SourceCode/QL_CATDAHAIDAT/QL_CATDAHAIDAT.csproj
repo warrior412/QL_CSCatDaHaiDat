@@ -79,6 +79,7 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -115,6 +116,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_QLCatDaHaiDatDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOrderDetail.Designer.cs">
+      <DependentUpon>EditOrderDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="ListCustomer.cs">
       <SubType>Form</SubType>
@@ -166,11 +173,20 @@
     <Compile Include="SetProductPrice.Designer.cs">
       <DependentUpon>SetProductPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShopSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopSelect.Designer.cs">
+      <DependentUpon>ShopSelect.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNewOrder.resx">
       <DependentUpon>AddNewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddOrder.resx">
       <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOrderDetail.resx">
+      <DependentUpon>EditOrderDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListCustomer.resx">
       <DependentUpon>ListCustomer.cs</DependentUpon>
@@ -203,6 +219,9 @@
     <EmbeddedResource Include="SetProductPrice.resx">
       <DependentUpon>SetProductPrice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ShopSelect.resx">
+      <DependentUpon>ShopSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DB_QLCatDaHaiDatDataSet.xsc">
       <DependentUpon>DB_QLCatDaHaiDatDataSet.xsd</DependentUpon>
     </None>
@@ -231,7 +250,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -249,6 +270,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1487257973_DAF_Tipper_Container_Truck.ico" />
+    <None Include="Resources\Actions-system-switch-user-icon.png" />
+    <None Include="Resources\shop-icon.png" />
+    <None Include="Resources\money-icon.png" />
     <None Include="Resources\backup.png" />
     <None Include="Resources\historyorder1.png" />
     <None Include="Resources\history.bmp" />

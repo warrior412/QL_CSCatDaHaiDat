@@ -21,16 +21,34 @@ namespace QL_CATDAHAIDAT
         }
         public SetProductPrice()
         {
+            
+
             InitializeComponent();
         }
 
         private void SetProductPrice_Load(object sender, EventArgs e)
         {
+            getProductPriceListByCustomerTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
             this.getProductPriceListByCustomerTableAdapter.Fill(dB_QLCatDaHaiDatDataSet.GetProductPriceListByCustomer, this.Ma_kh);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            double priceA=0, priceB=0, priceC =0;
+
+            try 
+            {
+                priceA = double.Parse(txtGiaA.Text);
+                priceB = double.Parse(txtGiaB.Text);
+                priceC = double.Parse(txtGiaC.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Vui lòng nhập giá chỉ chứa số !",
+                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if(MessageBox.Show("Bạn muốn lưu thông tin giá sản phẩm ?",
                 "Xác nhận",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==DialogResult.OK)
             {
@@ -38,12 +56,19 @@ namespace QL_CATDAHAIDAT
                 this.getProductPriceListByCustomerTableAdapter.InsertT_GIASANPHAM
                     (Ma_kh, 
                     ma_sp, 
-                    double.Parse(txtGiaA.Text), 
-                    double.Parse(txtGiaB.Text), 
-                    double.Parse(txtGiaC.Text), 
+                    priceA, 
+                    priceB, 
+                    priceC, 
                     1);
                 this.getProductPriceListByCustomerTableAdapter.Fill(dB_QLCatDaHaiDatDataSet.GetProductPriceListByCustomer, this.Ma_kh);
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintProductList dialog = new PrintProductList();
+            dialog.ma_kh = Ma_kh;
+            dialog.ShowDialog();
         }
     }
 }

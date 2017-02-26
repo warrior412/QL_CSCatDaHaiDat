@@ -47,6 +47,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblUnit = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -70,8 +72,9 @@
             this.getProductPriceListByCustomerTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetProductPriceListByCustomerTableAdapter();
             this.t_HOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter();
             this.t_CHITIETHOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblUnit = new System.Windows.Forms.Label();
+            this.lblPriceA = new System.Windows.Forms.Label();
+            this.lblPriceB = new System.Windows.Forms.Label();
+            this.lblPriceC = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getProductPriceListByCustomerBindingSource)).BeginInit();
@@ -86,6 +89,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblPriceC);
+            this.groupBox1.Controls.Add(this.lblPriceB);
+            this.groupBox1.Controls.Add(this.lblPriceA);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.txtOther);
             this.groupBox1.Controls.Add(this.txtQuantity);
@@ -168,9 +174,9 @@
             this.rdPriceC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdPriceC.Location = new System.Drawing.Point(142, 240);
             this.rdPriceC.Name = "rdPriceC";
-            this.rdPriceC.Size = new System.Drawing.Size(107, 21);
+            this.rdPriceC.Size = new System.Drawing.Size(116, 21);
             this.rdPriceC.TabIndex = 2;
-            this.rdPriceC.Text = "radioButton1";
+            this.rdPriceC.Text = "Khối lương 5M";
             this.rdPriceC.UseVisualStyleBackColor = true;
             this.rdPriceC.CheckedChanged += new System.EventHandler(this.rdPriceC_CheckedChanged);
             // 
@@ -180,9 +186,9 @@
             this.rdPriceB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdPriceB.Location = new System.Drawing.Point(142, 213);
             this.rdPriceB.Name = "rdPriceB";
-            this.rdPriceB.Size = new System.Drawing.Size(107, 21);
+            this.rdPriceB.Size = new System.Drawing.Size(116, 21);
             this.rdPriceB.TabIndex = 2;
-            this.rdPriceB.Text = "radioButton1";
+            this.rdPriceB.Text = "Khối lương 4M";
             this.rdPriceB.UseVisualStyleBackColor = true;
             this.rdPriceB.CheckedChanged += new System.EventHandler(this.rdPriceB_CheckedChanged);
             // 
@@ -193,10 +199,10 @@
             this.rdPriceA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdPriceA.Location = new System.Drawing.Point(142, 186);
             this.rdPriceA.Name = "rdPriceA";
-            this.rdPriceA.Size = new System.Drawing.Size(107, 21);
+            this.rdPriceA.Size = new System.Drawing.Size(116, 21);
             this.rdPriceA.TabIndex = 2;
             this.rdPriceA.TabStop = true;
-            this.rdPriceA.Text = "radioButton1";
+            this.rdPriceA.Text = "Khối lương 3M";
             this.rdPriceA.UseVisualStyleBackColor = true;
             this.rdPriceA.CheckedChanged += new System.EventHandler(this.rdPriceA_CheckedChanged);
             // 
@@ -285,6 +291,27 @@
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Đơn giá :";
+            // 
+            // lblUnit
+            // 
+            this.lblUnit.AutoSize = true;
+            this.lblUnit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.getProductPriceListByCustomerBindingSource, "DON_VI_TINH", true));
+            this.lblUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnit.Location = new System.Drawing.Point(139, 141);
+            this.lblUnit.Name = "lblUnit";
+            this.lblUnit.Size = new System.Drawing.Size(104, 20);
+            this.lblUnit.TabIndex = 0;
+            this.lblUnit.Text = "Đơn vị tính :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 141);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 17);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Đơn vị tính :";
             // 
             // label2
             // 
@@ -515,26 +542,35 @@
             // 
             this.t_CHITIETHOADONTableAdapter1.ClearBeforeFill = true;
             // 
-            // label10
+            // lblPriceA
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 141);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 17);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Đơn vị tính :";
+            this.lblPriceA.AutoSize = true;
+            this.lblPriceA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceA.Location = new System.Drawing.Point(255, 188);
+            this.lblPriceA.Name = "lblPriceA";
+            this.lblPriceA.Size = new System.Drawing.Size(54, 17);
+            this.lblPriceA.TabIndex = 5;
+            this.lblPriceA.Text = "label11";
             // 
-            // lblUnit
+            // lblPriceB
             // 
-            this.lblUnit.AutoSize = true;
-            this.lblUnit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.getProductPriceListByCustomerBindingSource, "DON_VI_TINH", true));
-            this.lblUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnit.Location = new System.Drawing.Point(139, 141);
-            this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(104, 20);
-            this.lblUnit.TabIndex = 0;
-            this.lblUnit.Text = "Đơn vị tính :";
+            this.lblPriceB.AutoSize = true;
+            this.lblPriceB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceB.Location = new System.Drawing.Point(255, 215);
+            this.lblPriceB.Name = "lblPriceB";
+            this.lblPriceB.Size = new System.Drawing.Size(54, 17);
+            this.lblPriceB.TabIndex = 5;
+            this.lblPriceB.Text = "label11";
+            // 
+            // lblPriceC
+            // 
+            this.lblPriceC.AutoSize = true;
+            this.lblPriceC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceC.Location = new System.Drawing.Point(255, 242);
+            this.lblPriceC.Name = "lblPriceC";
+            this.lblPriceC.Size = new System.Drawing.Size(54, 17);
+            this.lblPriceC.TabIndex = 5;
+            this.lblPriceC.Text = "label11";
             // 
             // AddNewOrder
             // 
@@ -610,5 +646,8 @@
         private DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter t_CHITIETHOADONTableAdapter1;
         private System.Windows.Forms.Label lblUnit;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblPriceC;
+        private System.Windows.Forms.Label lblPriceB;
+        private System.Windows.Forms.Label lblPriceA;
     }
 }

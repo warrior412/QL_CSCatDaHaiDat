@@ -17,15 +17,23 @@ namespace QL_CATDAHAIDAT
                 _instance = new Common();
             return _instance;
         }
+        private string currentShop;
+
+        public string CurrentShop
+        {
+            get { return currentShop; }
+            set { currentShop = value; }
+        }
 
         public string getMoneyFormatByDouble (double value)
         {
-            if (value <= 0)
+            if (value == 0)
                 return "0.0 VND";
             CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
             string stotal = value.ToString("#,###", cul.NumberFormat) + " VND";
             return stotal;
         }
+
 
 
     }

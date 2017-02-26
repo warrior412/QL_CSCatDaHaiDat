@@ -18,6 +18,7 @@ namespace QL_CATDAHAIDAT
         public ListCustomer()
         {
             InitializeComponent();
+            
         }
 
         private void setViewMode()
@@ -83,6 +84,7 @@ namespace QL_CATDAHAIDAT
 
         private void ListCustomer_Load(object sender, EventArgs e)
         {
+            m_KHACHHANGTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.M_KHACHHANG' table. You can move, or remove it, as needed.
             this.m_KHACHHANGTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
             this.setViewMode();
@@ -117,6 +119,7 @@ namespace QL_CATDAHAIDAT
                 newRow.DIA_CHI = this.txtAddress.Text;
                 newRow.GHI_CHU = this.txtDescription.Text;
                 newRow.SO_DT = this.txtPhone.Text;
+                newRow.TRANG_THAI = 1;
 
                 this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG.Rows.Add(newRow);
                 m_KHACHHANGTableAdapter.Update(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
@@ -157,6 +160,8 @@ namespace QL_CATDAHAIDAT
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if (dgCustomer.CurrentRow == null)
+                return;
             SetProductPrice frm = new SetProductPrice();
             frm.Ma_kh = int.Parse(dgCustomer.CurrentRow.Cells[0].Value.ToString());
             frm.ShowDialog();

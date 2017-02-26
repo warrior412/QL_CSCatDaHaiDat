@@ -9,5 +9,6 @@ namespace QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters {
     
     
     public partial class T_HOADONTableAdapter {
+
     }
 }

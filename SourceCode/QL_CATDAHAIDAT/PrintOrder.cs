@@ -24,36 +24,53 @@ namespace QL_CATDAHAIDAT
         public string diachi;
         public string sodt;
         public string total;
-        public PrintOrder(string ten,string diachi,string sdt, string total)
+        public string paid;
+        public string debt;
+        public PrintOrder(string ten,string diachi,string sdt, string total,string paid,string debt)
         {
+            
+
             this.ten = ten;
             this.diachi = diachi;
             this.sodt = sdt;
             this.total = total;
+            this.paid = paid;
+            this.debt = debt;
             InitializeComponent();
         }
 
         private void PrintOrder_Load(object sender, EventArgs e)
         {
+            SELECTDETAILORDERTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
              //TODO: This line of code loads data into the 'DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER' table. You can move, or remove it, as needed.
-            //this.SELECTDETAILORDERTableAdapter.Fill(this.DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER,ma_hd);
-
-            foreach(DataRow row in DtReport.Rows)
+            if(DtReport == null)
+                this.SELECTDETAILORDERTableAdapter.Fill(this.DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER, ma_hd);
+            else
             {
-                DB_QLCatDaHaiDatDataSet.SELECTDETAILORDERRow item = this.DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.NewSELECTDETAILORDERRow();
-                item.TEN_SP = row[1].ToString();
-                item.GIA = double.Parse(row[2].ToString());
-                item.SO_LUONG = double.Parse(row[4].ToString());
-                item.DON_VI_TINH = row[6].ToString();
-                DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.AddSELECTDETAILORDERRow(item);
-            }
+                foreach (DataRow row in DtReport.Rows)
+                {
+                    DB_QLCatDaHaiDatDataSet.SELECTDETAILORDERRow item = this.DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.NewSELECTDETAILORDERRow();
+                    item.TEN_SP = row[1].ToString();
+                    item.GIA = double.Parse(row[2].ToString());
+                    item.SO_LUONG = double.Parse(row[4].ToString());
+                    item.DON_VI_TINH = row[6].ToString();
+                    item.THOI_GIAN_TAO = DateTime.Now;
+                    item.THANH_TIEN = item.GIA * item.SO_LUONG;
+                    DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.AddSELECTDETAILORDERRow(item);
+                }
 
+            }
+            
             Microsoft.Reporting.WinForms.ReportParameter[] param = new Microsoft.Reporting.WinForms.ReportParameter[]
             {
                 new Microsoft.Reporting.WinForms.ReportParameter("customer_name",ten),
                 new Microsoft.Reporting.WinForms.ReportParameter("address",diachi),
                 new Microsoft.Reporting.WinForms.ReportParameter("phone",sodt),
-                new Microsoft.Reporting.WinForms.ReportParameter("total",total)
+                new Microsoft.Reporting.WinForms.ReportParameter("total",total),
+                new Microsoft.Reporting.WinForms.ReportParameter("debt",debt),
+                new Microsoft.Reporting.WinForms.ReportParameter("paid_amount",paid),
+                new Microsoft.Reporting.WinForms.ReportParameter("ma_hd",ma_hd),
+                new Microsoft.Reporting.WinForms.ReportParameter("remark","")
             };
             this.reportViewer1.LocalReport.SetParameters(param);
             this.reportViewer1.RefreshReport();
