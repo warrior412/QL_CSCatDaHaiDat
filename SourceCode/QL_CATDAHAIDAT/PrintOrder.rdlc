@@ -1067,8 +1067,8 @@
           </Style>
         </Textbox>
         <Line Name="Line1">
-          <Top>3.42194cm</Top>
-          <Left>0cm</Left>
+          <Top>3.3cm</Top>
+          <Left>0.03969cm</Left>
           <Height>0cm</Height>
           <Width>20.89672cm</Width>
           <ZIndex>3</ZIndex>

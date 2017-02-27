@@ -107,6 +107,12 @@
     <Compile Include="AddOrder.Designer.cs">
       <DependentUpon>AddOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnalystForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalystForm.Designer.cs">
+      <DependentUpon>AnalystForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common.cs" />
     <Compile Include="DB_QLCatDaHaiDatDataSet.cs">
       <DependentUpon>DB_QLCatDaHaiDatDataSet.xsd</DependentUpon>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddOrder.resx">
       <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalystForm.resx">
+      <DependentUpon>AnalystForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditOrderDetail.resx">
       <DependentUpon>EditOrderDetail.cs</DependentUpon>
@@ -270,6 +279,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1487257973_DAF_Tipper_Container_Truck.ico" />
+    <None Include="Resources\SEO-icon.png" />
     <None Include="Resources\Actions-system-switch-user-icon.png" />
     <None Include="Resources\shop-icon.png" />
     <None Include="Resources\money-icon.png" />

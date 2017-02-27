@@ -16,6 +16,8 @@ namespace QL_CATDAHAIDAT
         public ShopSelect()
         {
             InitializeComponent();
+
+
             if(Common.GetInstance().CurrentShop == null || Common.GetInstance().CurrentShop.Equals(""))
             {
                 Common.GetInstance().CurrentShop = ConfigurationManager.
@@ -49,7 +51,8 @@ namespace QL_CATDAHAIDAT
                 parent.changeShopName("QUẢN LÝ CÁT ĐÁ HAI ƠN");
             }
 
-           
+
+            this.Close();
         }
     }
 }

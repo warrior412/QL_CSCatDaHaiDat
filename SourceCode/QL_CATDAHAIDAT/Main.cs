@@ -84,5 +84,14 @@ namespace QL_CATDAHAIDAT
             dialog.Show();
         }
 
+        private void btnAnalyst_Click(object sender, EventArgs e)
+        {
+            if (!checkBeforeOpen())
+                return;
+            AnalystForm dialog = new AnalystForm();
+            dialog.MdiParent = this;
+            dialog.Show();
+        }
+
     }
 }
