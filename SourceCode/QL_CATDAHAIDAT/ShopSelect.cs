@@ -48,7 +48,7 @@ namespace QL_CATDAHAIDAT
             {
                 Common.GetInstance().CurrentShop = ConfigurationManager.
                     ConnectionStrings["QL_CATDAHAIDAT.Properties.Settings.DB_QLCatDaConnectionString"].ConnectionString;
-                parent.changeShopName("QUẢN LÝ CÁT ĐÁ HAI ƠN");
+                parent.changeShopName("QUẢN LÝ CÁT ĐÁ BA ƠN");
             }
 
 

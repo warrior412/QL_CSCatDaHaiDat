@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblPriceC = new System.Windows.Forms.Label();
+            this.lblPriceB = new System.Windows.Forms.Label();
+            this.lblPriceA = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnAddOrder = new System.Windows.Forms.Button();
             this.txtOther = new System.Windows.Forms.TextBox();
@@ -72,9 +75,6 @@
             this.getProductPriceListByCustomerTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetProductPriceListByCustomerTableAdapter();
             this.t_HOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter();
             this.t_CHITIETHOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter();
-            this.lblPriceA = new System.Windows.Forms.Label();
-            this.lblPriceB = new System.Windows.Forms.Label();
-            this.lblPriceC = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getProductPriceListByCustomerBindingSource)).BeginInit();
@@ -115,6 +115,36 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo hóa đơn";
+            // 
+            // lblPriceC
+            // 
+            this.lblPriceC.AutoSize = true;
+            this.lblPriceC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceC.Location = new System.Drawing.Point(255, 242);
+            this.lblPriceC.Name = "lblPriceC";
+            this.lblPriceC.Size = new System.Drawing.Size(54, 17);
+            this.lblPriceC.TabIndex = 5;
+            this.lblPriceC.Text = "label11";
+            // 
+            // lblPriceB
+            // 
+            this.lblPriceB.AutoSize = true;
+            this.lblPriceB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceB.Location = new System.Drawing.Point(255, 215);
+            this.lblPriceB.Name = "lblPriceB";
+            this.lblPriceB.Size = new System.Drawing.Size(54, 17);
+            this.lblPriceB.TabIndex = 5;
+            this.lblPriceB.Text = "label11";
+            // 
+            // lblPriceA
+            // 
+            this.lblPriceA.AutoSize = true;
+            this.lblPriceA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceA.Location = new System.Drawing.Point(255, 188);
+            this.lblPriceA.Name = "lblPriceA";
+            this.lblPriceA.Size = new System.Drawing.Size(54, 17);
+            this.lblPriceA.TabIndex = 5;
+            this.lblPriceA.Text = "label11";
             // 
             // groupBox3
             // 
@@ -542,36 +572,6 @@
             // 
             this.t_CHITIETHOADONTableAdapter1.ClearBeforeFill = true;
             // 
-            // lblPriceA
-            // 
-            this.lblPriceA.AutoSize = true;
-            this.lblPriceA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceA.Location = new System.Drawing.Point(255, 188);
-            this.lblPriceA.Name = "lblPriceA";
-            this.lblPriceA.Size = new System.Drawing.Size(54, 17);
-            this.lblPriceA.TabIndex = 5;
-            this.lblPriceA.Text = "label11";
-            // 
-            // lblPriceB
-            // 
-            this.lblPriceB.AutoSize = true;
-            this.lblPriceB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceB.Location = new System.Drawing.Point(255, 215);
-            this.lblPriceB.Name = "lblPriceB";
-            this.lblPriceB.Size = new System.Drawing.Size(54, 17);
-            this.lblPriceB.TabIndex = 5;
-            this.lblPriceB.Text = "label11";
-            // 
-            // lblPriceC
-            // 
-            this.lblPriceC.AutoSize = true;
-            this.lblPriceC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceC.Location = new System.Drawing.Point(255, 242);
-            this.lblPriceC.Name = "lblPriceC";
-            this.lblPriceC.Size = new System.Drawing.Size(54, 17);
-            this.lblPriceC.TabIndex = 5;
-            this.lblPriceC.Text = "label11";
-            // 
             // AddNewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,6 +579,8 @@
             this.ClientSize = new System.Drawing.Size(806, 531);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddNewOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình tạo đơn hàng";

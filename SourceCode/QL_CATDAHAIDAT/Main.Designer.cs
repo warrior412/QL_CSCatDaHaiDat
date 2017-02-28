@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnSelectShop = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnListProduct = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnListCutomer = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnListOrder = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.BtnHistoryOrder = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnSelectShop = new System.Windows.Forms.ToolStripButton();
-            this.btnListProduct = new System.Windows.Forms.ToolStripButton();
-            this.btnListCutomer = new System.Windows.Forms.ToolStripButton();
-            this.btnListOrder = new System.Windows.Forms.ToolStripButton();
-            this.BtnHistoryOrder = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.btnAnalyst = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,60 +61,16 @@
             this.toolStripSeparator3,
             this.BtnHistoryOrder,
             this.toolStripSeparator5,
-            this.toolStripButton2,
+            this.btnAnalyst,
             this.toolStripSeparator4,
             this.toolStripLabel1,
-            this.btnAnalyst,
+            this.toolStripButton2,
             this.toolStripSeparator7});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1113, 78);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "Tên cơ sở";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 78);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 78);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 78);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 78);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 78);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 78);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripLabel1.Size = new System.Drawing.Size(106, 75);
-            this.toolStripLabel1.Text = "Tên cơ sở";
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 78);
             // 
             // btnSelectShop
             // 
@@ -131,6 +87,11 @@
             this.btnSelectShop.ToolTipText = "Mặt hàng";
             this.btnSelectShop.Click += new System.EventHandler(this.btnSelectShop_Click);
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 78);
+            // 
             // btnListProduct
             // 
             this.btnListProduct.AutoSize = false;
@@ -146,6 +107,11 @@
             this.btnListProduct.ToolTipText = "Mặt hàng";
             this.btnListProduct.Click += new System.EventHandler(this.btnListProduct_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 78);
+            // 
             // btnListCutomer
             // 
             this.btnListCutomer.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -158,6 +124,11 @@
             this.btnListCutomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListCutomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnListCutomer.Click += new System.EventHandler(this.btnListCutomer_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 78);
             // 
             // btnListOrder
             // 
@@ -172,6 +143,11 @@
             this.btnListOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnListOrder.Click += new System.EventHandler(this.btnListOrder_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 78);
+            // 
             // BtnHistoryOrder
             // 
             this.BtnHistoryOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -185,6 +161,11 @@
             this.BtnHistoryOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnHistoryOrder.Click += new System.EventHandler(this.BtnHistoryOrder_Click);
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 78);
+            // 
             // toolStripButton2
             // 
             this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -196,6 +177,21 @@
             this.toolStripButton2.Text = "Sao lưu dữ liệu";
             this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 78);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Underline);
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.Teal;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripLabel1.Size = new System.Drawing.Size(106, 75);
+            this.toolStripLabel1.Text = "Tên cơ sở";
             // 
             // btnAnalyst
             // 
@@ -209,6 +205,11 @@
             this.btnAnalyst.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAnalyst.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAnalyst.Click += new System.EventHandler(this.btnAnalyst_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 78);
             // 
             // Main
             // 

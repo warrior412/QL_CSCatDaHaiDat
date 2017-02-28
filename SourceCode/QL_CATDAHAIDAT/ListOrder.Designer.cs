@@ -723,6 +723,8 @@
             this.ClientSize = new System.Drawing.Size(969, 571);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ListOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MÀN HÌNH DANH SÁCH HÓA ĐƠN";

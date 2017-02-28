@@ -92,14 +92,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QL_CATDAHAIDAT.exe" size="504320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QL_CATDAHAIDAT.exe" size="538624">
       <assemblyIdentity name="QL_CATDAHAIDAT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MDjK0wJjkc7tnAZ1AA60AFIeNuknyVfZhwRHwuCZG8U=</dsig:DigestValue>
+        <dsig:DigestValue>4JH7nWkGn03zvQLVfzAjlmXTijIaAd8ioFIgHuLIX8k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -112,13 +112,13 @@
       <dsig:DigestValue>W0/7OiAPDS+JDccXW4FlyPL39Wkfk3HcEzTWojWX7jc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="QL_CATDAHAIDAT.exe.config" size="1924">
+  <file name="QL_CATDAHAIDAT.exe.config" size="1919">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xv5AqrCiVV9wa7I0ph8MD6YFoqorEWVVlw99Ni+1AO8=</dsig:DigestValue>
+      <dsig:DigestValue>KSzKoEzlPiBrinNS7HQugXau12Zb33Y4l3+MLn2oyK4=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
