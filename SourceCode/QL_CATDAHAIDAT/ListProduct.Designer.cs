@@ -33,36 +33,32 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgListProduct = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gIASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dONVITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mSANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtUnit = new System.Windows.Forms.TextBox();
-            this.txtProductPrice = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mSANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
+            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dONVITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_SANPHAMTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_SANPHAMTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgListProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,7 +66,7 @@
             this.groupBox1.Controls.Add(this.dgListProduct);
             this.groupBox1.Location = new System.Drawing.Point(11, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 437);
+            this.groupBox1.Size = new System.Drawing.Size(364, 343);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách mặt hàng";
@@ -115,68 +111,21 @@
             this.dgListProduct.RowTemplate.Height = 25;
             this.dgListProduct.RowTemplate.ReadOnly = true;
             this.dgListProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgListProduct.Size = new System.Drawing.Size(351, 399);
+            this.dgListProduct.Size = new System.Drawing.Size(351, 308);
             this.dgListProduct.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MA_SP";
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // tENSPDataGridViewTextBoxColumn
-            // 
-            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
-            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
-            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
-            // 
-            // gIASPDataGridViewTextBoxColumn
-            // 
-            this.gIASPDataGridViewTextBoxColumn.DataPropertyName = "GIA_SP";
-            this.gIASPDataGridViewTextBoxColumn.HeaderText = "Giá";
-            this.gIASPDataGridViewTextBoxColumn.Name = "gIASPDataGridViewTextBoxColumn";
-            // 
-            // dONVITINHDataGridViewTextBoxColumn
-            // 
-            this.dONVITINHDataGridViewTextBoxColumn.DataPropertyName = "DON_VI_TINH";
-            this.dONVITINHDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
-            this.dONVITINHDataGridViewTextBoxColumn.Name = "dONVITINHDataGridViewTextBoxColumn";
-            // 
-            // TRANG_THAI
-            // 
-            this.TRANG_THAI.DataPropertyName = "TRANG_THAI";
-            this.TRANG_THAI.HeaderText = "TRANG_THAI";
-            this.TRANG_THAI.Name = "TRANG_THAI";
-            this.TRANG_THAI.Visible = false;
-            // 
-            // mSANPHAMBindingSource
-            // 
-            this.mSANPHAMBindingSource.DataMember = "M_SANPHAM";
-            this.mSANPHAMBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
-            // 
-            // dB_QLCatDaHaiDatDataSet
-            // 
-            this.dB_QLCatDaHaiDatDataSet.DataSetName = "DB_QLCatDaHaiDatDataSet";
-            this.dB_QLCatDaHaiDatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.lblStatus);
             this.groupBox2.Controls.Add(this.txtDescription);
             this.groupBox2.Controls.Add(this.txtUnit);
-            this.groupBox2.Controls.Add(this.txtProductPrice);
             this.groupBox2.Controls.Add(this.txtProductName);
-            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(382, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(335, 437);
+            this.groupBox2.Size = new System.Drawing.Size(335, 343);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
@@ -187,7 +136,7 @@
             this.groupBox3.Controls.Add(this.btnDelete);
             this.groupBox3.Controls.Add(this.btnAdd);
             this.groupBox3.Controls.Add(this.btnEdit);
-            this.groupBox3.Location = new System.Drawing.Point(6, 377);
+            this.groupBox3.Location = new System.Drawing.Point(12, 274);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(323, 54);
             this.groupBox3.TabIndex = 4;
@@ -208,7 +157,6 @@
             // btnDelete
             // 
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Image = global::QL_CATDAHAIDAT.Properties.Resources.close;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.Location = new System.Drawing.Point(246, 19);
@@ -244,23 +192,12 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblStatus.Location = new System.Drawing.Point(150, 335);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(86, 20);
-            this.lblStatus.TabIndex = 2;
-            this.lblStatus.Text = "Còn hàng";
-            // 
             // txtDescription
             // 
             this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mSANPHAMBindingSource, "GHI_CHU", true));
             this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mSANPHAMBindingSource, "GHI_CHU", true));
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(19, 246);
+            this.txtDescription.Location = new System.Drawing.Point(19, 187);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(310, 68);
@@ -271,20 +208,10 @@
             this.txtUnit.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mSANPHAMBindingSource, "DON_VI_TINH", true));
             this.txtUnit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mSANPHAMBindingSource, "DON_VI_TINH", true));
             this.txtUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnit.Location = new System.Drawing.Point(19, 185);
+            this.txtUnit.Location = new System.Drawing.Point(19, 126);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(181, 26);
             this.txtUnit.TabIndex = 1;
-            // 
-            // txtProductPrice
-            // 
-            this.txtProductPrice.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.mSANPHAMBindingSource, "GIA_SP", true));
-            this.txtProductPrice.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mSANPHAMBindingSource, "GIA_SP", true));
-            this.txtProductPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductPrice.Location = new System.Drawing.Point(19, 115);
-            this.txtProductPrice.Name = "txtProductPrice";
-            this.txtProductPrice.Size = new System.Drawing.Size(181, 26);
-            this.txtProductPrice.TabIndex = 1;
             // 
             // txtProductName
             // 
@@ -296,21 +223,11 @@
             this.txtProductName.Size = new System.Drawing.Size(310, 26);
             this.txtProductName.TabIndex = 1;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 338);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Trạng thái:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 226);
+            this.label4.Location = new System.Drawing.Point(16, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 17);
             this.label4.TabIndex = 0;
@@ -320,21 +237,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 153);
+            this.label3.Location = new System.Drawing.Point(16, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Đơn vị tính:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Đơn giá:";
             // 
             // label1
             // 
@@ -346,6 +253,51 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên mặt hàng:";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MA_SP";
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // TRANG_THAI
+            // 
+            this.TRANG_THAI.DataPropertyName = "TRANG_THAI";
+            this.TRANG_THAI.HeaderText = "TRANG_THAI";
+            this.TRANG_THAI.Name = "TRANG_THAI";
+            this.TRANG_THAI.Visible = false;
+            // 
+            // mSANPHAMBindingSource
+            // 
+            this.mSANPHAMBindingSource.DataMember = "M_SANPHAM";
+            this.mSANPHAMBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
+            this.mSANPHAMBindingSource.CurrentChanged += new System.EventHandler(this.mSANPHAMBindingSource_CurrentChanged);
+            // 
+            // dB_QLCatDaHaiDatDataSet
+            // 
+            this.dB_QLCatDaHaiDatDataSet.DataSetName = "DB_QLCatDaHaiDatDataSet";
+            this.dB_QLCatDaHaiDatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tENSPDataGridViewTextBoxColumn
+            // 
+            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
+            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
+            // 
+            // gIASPDataGridViewTextBoxColumn
+            // 
+            this.gIASPDataGridViewTextBoxColumn.DataPropertyName = "GIA_SP";
+            this.gIASPDataGridViewTextBoxColumn.HeaderText = "Giá";
+            this.gIASPDataGridViewTextBoxColumn.Name = "gIASPDataGridViewTextBoxColumn";
+            this.gIASPDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dONVITINHDataGridViewTextBoxColumn
+            // 
+            this.dONVITINHDataGridViewTextBoxColumn.DataPropertyName = "DON_VI_TINH";
+            this.dONVITINHDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
+            this.dONVITINHDataGridViewTextBoxColumn.Name = "dONVITINHDataGridViewTextBoxColumn";
+            // 
             // m_SANPHAMTableAdapter
             // 
             this.m_SANPHAMTableAdapter.ClearBeforeFill = true;
@@ -354,7 +306,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 461);
+            this.ClientSize = new System.Drawing.Size(729, 374);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -365,11 +317,11 @@
             this.Load += new System.EventHandler(this.ListProduct_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgListProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,15 +331,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgListProduct;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtUnit;
-        private System.Windows.Forms.TextBox txtProductPrice;
         private System.Windows.Forms.TextBox txtProductName;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnSave;

@@ -15,6 +15,9 @@ namespace QL_CATDAHAIDAT
         bool isViewMode;
         bool isInsertMode;
         bool isEditMode;
+
+        DB_QLCatDaHaiDatDataSet.M_SANPHAMRow currentRow;
+
         public ListProduct()
         {
             InitializeComponent();
@@ -24,7 +27,6 @@ namespace QL_CATDAHAIDAT
         private void setViewMode ()
         {
             txtProductName.Enabled = false;
-            txtProductPrice.Enabled = false;
             txtDescription.Enabled = false;
             txtUnit.Enabled = false;
 
@@ -43,7 +45,6 @@ namespace QL_CATDAHAIDAT
         private void setEditMode()
         {
             txtProductName.Enabled = true;
-            txtProductPrice.Enabled = true;
             txtDescription.Enabled = true;
             txtUnit.Enabled = true;
 
@@ -61,12 +62,10 @@ namespace QL_CATDAHAIDAT
         private void setInsertMode()
         {
             txtProductName.Enabled = true;
-            txtProductPrice.Enabled = true;
             txtDescription.Enabled = true;
             txtUnit.Enabled = true;
 
             txtProductName.Text = "";
-            txtProductPrice.Text = "";
             txtDescription.Text = "";
             txtUnit.Text = "";
 
@@ -87,22 +86,10 @@ namespace QL_CATDAHAIDAT
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.M_SANPHAM' table. You can move, or remove it, as needed.
             this.m_SANPHAMTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
             this.m_SANPHAMTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
-            Binding b = new Binding("Text", this.mSANPHAMBindingSource, "TRANG_THAI", true);
-            b.Format += b_Format;
-            lblStatus.DataBindings.Add(b);
             this.setViewMode();
         }
 
-        void b_Format(object sender, ConvertEventArgs e)
-        {
-            if (e.Value == null || e.Value.ToString().Equals(""))
-                return;
-            if (int.Parse(e.Value.ToString()) == 1)
-                e.Value = "Còn hàng";
-            else
-                e.Value = "Ngưng kinh doanh";
 
-        }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -115,10 +102,9 @@ namespace QL_CATDAHAIDAT
             {
                 try
                 {
-                    this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.AcceptChanges();
-                    this.mSANPHAMBindingSource.EndEdit();
-                    this.m_SANPHAMTableAdapter.Update(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
+                    this.m_SANPHAMTableAdapter.UpdateProduct(txtProductName.Text,txtUnit.Text,txtDescription.Text,currentRow.MA_SP);
                     this.setViewMode();
+                    this.m_SANPHAMTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
                 }
                 catch (Exception ex)
                 {
@@ -130,13 +116,12 @@ namespace QL_CATDAHAIDAT
             {
                 DB_QLCatDaHaiDatDataSet.M_SANPHAMRow newRow = dB_QLCatDaHaiDatDataSet.M_SANPHAM.NewM_SANPHAMRow();
                 newRow.TEN_SP = this.txtProductName.Text;
-                newRow.GIA_SP = double.Parse(this.txtProductPrice.Text);
                 newRow.GHI_CHU = this.txtDescription.Text;
                 newRow.DON_VI_TINH = this.txtUnit.Text;
                 newRow.TRANG_THAI = 1;
 
                 this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.Rows.Add(newRow);
-                m_SANPHAMTableAdapter.Update(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
+                m_SANPHAMTableAdapter.InsertProduct(newRow.TEN_SP,newRow.DON_VI_TINH,newRow.GHI_CHU,1);
                 setViewMode();
                 this.m_SANPHAMTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
             }
@@ -148,26 +133,16 @@ namespace QL_CATDAHAIDAT
         {
             if(btnDelete.Text.Equals("Hủy"))
             {
-
+                this.ListProduct_Load(this, null);
             }
             else
             {
                 if(MessageBox.Show("Bạn muốn xóa dòng này ?",
                     "Xác nhận",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
-                    int maSP = int.Parse(this.dgListProduct.CurrentRow.Cells[0].Value.ToString());
-                    foreach(DataRow row in this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.Rows)
-                    {
-                        int rowid = int.Parse(row[0].ToString());
-                        if(maSP==rowid)
-                        {
-                            row[5] = -1;
-                            this.dB_QLCatDaHaiDatDataSet.M_SANPHAM.AcceptChanges();
-                            this.mSANPHAMBindingSource.EndEdit();
-                            this.m_SANPHAMTableAdapter.Update(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
-                            this.setViewMode();
-                        }
-                    }
+                    this.m_SANPHAMTableAdapter.DeleteProduct(currentRow.MA_SP);
+                    this.setViewMode();
+                    this.m_SANPHAMTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_SANPHAM);
                 }
             }
         }
@@ -175,6 +150,15 @@ namespace QL_CATDAHAIDAT
         private void btnAdd_Click(object sender, EventArgs e)
         {
             setInsertMode();
+        }
+
+        private void mSANPHAMBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if(mSANPHAMBindingSource.Current !=null)
+            {
+                currentRow = (DB_QLCatDaHaiDatDataSet.M_SANPHAMRow)((DataRowView)mSANPHAMBindingSource.Current).Row;
+
+            }
         }
 
 

@@ -15,9 +15,12 @@ namespace QL_CATDAHAIDAT
         bool isViewMode;
         bool isInsertMode;
         bool isEditMode;
+
+        DB_QLCatDaHaiDatDataSet.M_KHACHHANGRow currentRow;
         public ListCustomer()
         {
             InitializeComponent();
+
             
         }
 
@@ -37,6 +40,8 @@ namespace QL_CATDAHAIDAT
             isEditMode = false;
             isInsertMode = false;
 
+            rdbKhachLe.Enabled = rdbVua.Enabled = false;
+
             btnDelete.Text = "Xóa";
         }
 
@@ -53,6 +58,8 @@ namespace QL_CATDAHAIDAT
             btnSave.Enabled = true;
 
             btnDelete.Text = "Hủy";
+
+            rdbKhachLe.Enabled = rdbVua.Enabled = true;
 
             isViewMode = false;
             isEditMode = true;
@@ -74,6 +81,8 @@ namespace QL_CATDAHAIDAT
             btnDelete.Enabled = true;
             btnEdit.Enabled = false;
             btnSave.Enabled = true;
+
+            rdbKhachLe.Enabled = rdbVua.Enabled = true;
 
             btnDelete.Text = "Hủy";
 
@@ -97,34 +106,34 @@ namespace QL_CATDAHAIDAT
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (isEditMode)
-            {
-                try
+            try {
+                if (isEditMode)
                 {
-                    this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG.AcceptChanges();
-                    this.mKHACHHANGBindingSource.EndEdit();
-                    this.m_KHACHHANGTableAdapter.Update(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
+
+                    m_KHACHHANGTableAdapter.UpdateCustomer(txtName.Text, txtAddress.Text, txtPhone.Text, txtDescription.Text, rdbKhachLe.Checked ? 0 : 1, 1, currentRow.MA_KH);
                     this.setViewMode();
+                    this.m_KHACHHANGTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
+
                 }
-                catch (Exception ex)
+                if (isInsertMode)
                 {
-                    MessageBox.Show("Lưu không thành công.", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DB_QLCatDaHaiDatDataSet.M_KHACHHANGRow newRow = dB_QLCatDaHaiDatDataSet.M_KHACHHANG.NewM_KHACHHANGRow();
+                    newRow.TEN_KH = this.txtName.Text;
+                    newRow.DIA_CHI = this.txtAddress.Text;
+                    newRow.GHI_CHU = this.txtDescription.Text;
+                    newRow.SO_DT = this.txtPhone.Text;
+                    newRow.TRANG_THAI = 1;
+
+                    this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG.Rows.Add(newRow);
+                    this.m_KHACHHANGTableAdapter.InsertCustomer(newRow.TEN_KH, newRow.DIA_CHI, newRow.SO_DT, newRow.GHI_CHU, 1, rdbKhachLe.Checked ? 0 : 1);
+                    setViewMode();
+                    this.m_KHACHHANGTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
                 }
             }
-            if (isInsertMode)
+            catch (Exception ex)
             {
-                DB_QLCatDaHaiDatDataSet.M_KHACHHANGRow newRow = dB_QLCatDaHaiDatDataSet.M_KHACHHANG.NewM_KHACHHANGRow();
-                newRow.TEN_KH = this.txtName.Text;
-                newRow.DIA_CHI = this.txtAddress.Text;
-                newRow.GHI_CHU = this.txtDescription.Text;
-                newRow.SO_DT = this.txtPhone.Text;
-                newRow.TRANG_THAI = 1;
-
-                this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG.Rows.Add(newRow);
-                m_KHACHHANGTableAdapter.Update(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
-                setViewMode();
-                this.m_KHACHHANGTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
+                MessageBox.Show("Lưu không thành công.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -137,18 +146,15 @@ namespace QL_CATDAHAIDAT
         {
             if (btnDelete.Text.Equals("Hủy"))
             {
-
+                this.ListCustomer_Load(this,null);
             }
             else
             {
                 if (MessageBox.Show("Bạn muốn xóa dòng này ?",
                     "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    int maKH = int.Parse(this.dgCustomer.CurrentRow.Cells[0].Value.ToString());
-                    DB_QLCatDaHaiDatDataSet.M_KHACHHANGRow deleteRow =
-                        this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG.FindByMA_KH(maKH);
-                    this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG.RemoveM_KHACHHANGRow(deleteRow);
-                    m_KHACHHANGTableAdapter.Delete(maKH);
+                    m_KHACHHANGTableAdapter.DeleteCustomer(currentRow.MA_KH);
+                    this.m_KHACHHANGTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
                 }
             }
         }
@@ -165,6 +171,22 @@ namespace QL_CATDAHAIDAT
             SetProductPrice frm = new SetProductPrice();
             frm.Ma_kh = int.Parse(dgCustomer.CurrentRow.Cells[0].Value.ToString());
             frm.ShowDialog();
+        }
+
+        private void mKHACHHANGBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if(mKHACHHANGBindingSource.Current !=null)
+            {
+                currentRow = (DB_QLCatDaHaiDatDataSet.M_KHACHHANGRow)((DataRowView)mKHACHHANGBindingSource.Current).Row;
+                if (!currentRow.IsLOAI_KHACHNull() && currentRow.LOAI_KHACH == 0)//Khach le
+                {
+                    rdbKhachLe.Checked = true;
+                }
+                else
+                {
+                    rdbVua.Checked = true;
+                }
+            }
         }
     }
 }

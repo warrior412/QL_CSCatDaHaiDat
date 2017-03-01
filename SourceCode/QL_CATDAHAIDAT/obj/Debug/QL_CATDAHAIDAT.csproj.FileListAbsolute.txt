@@ -65,33 +65,6 @@ D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.c
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.manifest
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.application
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.dll
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.dll
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.xml
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.xml
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddNewOrder.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddOrder.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListCustomer.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListOrder.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListProduct.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintOrder.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintProductList.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.SetProductPrice.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.cache
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe.manifest
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.application
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PaymentInput.resources
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.manifest
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.application
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddNewOrder.resources
@@ -105,7 +78,34 @@ C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAI
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.application
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.EditOrderDetail.resources
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ShopSelect.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.EditOrderDetail.resources
-D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ShopSelect.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.manifest
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.application
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.dll
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.dll
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.xml
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\EntityFramework.SqlServer.xml
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddNewOrder.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddOrder.resources
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AnalystForm.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.EditOrderDetail.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListCustomer.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListOrder.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListProduct.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PaymentInput.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintOrder.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintProductList.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.SetProductPrice.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ShopSelect.resources
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.cache
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe.manifest
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.application
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
+D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache

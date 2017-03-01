@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblPriceC = new System.Windows.Forms.Label();
             this.lblPriceB = new System.Windows.Forms.Label();
             this.lblPriceA = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnAddOrder = new System.Windows.Forms.Button();
             this.txtOther = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.rdOther = new System.Windows.Forms.RadioButton();
             this.rdPriceC = new System.Windows.Forms.RadioButton();
@@ -48,11 +51,13 @@
             this.mKHACHHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblUnit = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -69,8 +74,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnDoOrder = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.m_KHACHHANGTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_KHACHHANGTableAdapter();
             this.getProductPriceListByCustomerTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetProductPriceListByCustomerTableAdapter();
             this.t_HOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter();
@@ -89,11 +92,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.lblPriceC);
             this.groupBox1.Controls.Add(this.lblPriceB);
             this.groupBox1.Controls.Add(this.lblPriceA);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.txtOther);
+            this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.txtQuantity);
             this.groupBox1.Controls.Add(this.rdOther);
             this.groupBox1.Controls.Add(this.rdPriceC);
@@ -103,11 +108,13 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblTotal);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblUnit);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(3, 12);
             this.groupBox1.Name = "groupBox1";
@@ -116,11 +123,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo hóa đơn";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "DD/MM/YYYY";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(140, 22);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dateTimePicker1.Size = new System.Drawing.Size(229, 23);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
             // lblPriceC
             // 
             this.lblPriceC.AutoSize = true;
             this.lblPriceC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceC.Location = new System.Drawing.Point(255, 242);
+            this.lblPriceC.Location = new System.Drawing.Point(261, 242);
             this.lblPriceC.Name = "lblPriceC";
             this.lblPriceC.Size = new System.Drawing.Size(54, 17);
             this.lblPriceC.TabIndex = 5;
@@ -130,7 +148,7 @@
             // 
             this.lblPriceB.AutoSize = true;
             this.lblPriceB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceB.Location = new System.Drawing.Point(255, 215);
+            this.lblPriceB.Location = new System.Drawing.Point(261, 215);
             this.lblPriceB.Name = "lblPriceB";
             this.lblPriceB.Size = new System.Drawing.Size(54, 17);
             this.lblPriceB.TabIndex = 5;
@@ -140,7 +158,7 @@
             // 
             this.lblPriceA.AutoSize = true;
             this.lblPriceA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceA.Location = new System.Drawing.Point(255, 188);
+            this.lblPriceA.Location = new System.Drawing.Point(261, 188);
             this.lblPriceA.Name = "lblPriceA";
             this.lblPriceA.Size = new System.Drawing.Size(54, 17);
             this.lblPriceA.TabIndex = 5;
@@ -172,16 +190,26 @@
             // txtOther
             // 
             this.txtOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOther.Location = new System.Drawing.Point(159, 267);
+            this.txtOther.Location = new System.Drawing.Point(156, 267);
             this.txtOther.Name = "txtOther";
             this.txtOther.Size = new System.Drawing.Size(127, 24);
             this.txtOther.TabIndex = 3;
             this.txtOther.TextChanged += new System.EventHandler(this.txtOther_TextChanged);
             // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(139, 350);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(227, 48);
+            this.txtAddress.TabIndex = 3;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
+            // 
             // txtQuantity
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(142, 317);
+            this.txtQuantity.Location = new System.Drawing.Point(139, 306);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(144, 24);
             this.txtQuantity.TabIndex = 3;
@@ -191,7 +219,7 @@
             // 
             this.rdOther.AutoSize = true;
             this.rdOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdOther.Location = new System.Drawing.Point(142, 274);
+            this.rdOther.Location = new System.Drawing.Point(139, 274);
             this.rdOther.Name = "rdOther";
             this.rdOther.Size = new System.Drawing.Size(14, 13);
             this.rdOther.TabIndex = 2;
@@ -202,7 +230,7 @@
             // 
             this.rdPriceC.AutoSize = true;
             this.rdPriceC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdPriceC.Location = new System.Drawing.Point(142, 240);
+            this.rdPriceC.Location = new System.Drawing.Point(139, 240);
             this.rdPriceC.Name = "rdPriceC";
             this.rdPriceC.Size = new System.Drawing.Size(116, 21);
             this.rdPriceC.TabIndex = 2;
@@ -214,7 +242,7 @@
             // 
             this.rdPriceB.AutoSize = true;
             this.rdPriceB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdPriceB.Location = new System.Drawing.Point(142, 213);
+            this.rdPriceB.Location = new System.Drawing.Point(139, 213);
             this.rdPriceB.Name = "rdPriceB";
             this.rdPriceB.Size = new System.Drawing.Size(116, 21);
             this.rdPriceB.TabIndex = 2;
@@ -227,7 +255,7 @@
             this.rdPriceA.AutoSize = true;
             this.rdPriceA.Checked = true;
             this.rdPriceA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdPriceA.Location = new System.Drawing.Point(142, 186);
+            this.rdPriceA.Location = new System.Drawing.Point(139, 186);
             this.rdPriceA.Name = "rdPriceA";
             this.rdPriceA.Size = new System.Drawing.Size(116, 21);
             this.rdPriceA.TabIndex = 2;
@@ -243,7 +271,7 @@
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(142, 84);
+            this.comboBox2.Location = new System.Drawing.Point(139, 102);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(230, 26);
             this.comboBox2.TabIndex = 1;
@@ -268,7 +296,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 27);
+            this.comboBox1.Location = new System.Drawing.Point(139, 61);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(230, 26);
             this.comboBox1.TabIndex = 1;
@@ -286,7 +314,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblTotal.Location = new System.Drawing.Point(139, 372);
+            this.lblTotal.Location = new System.Drawing.Point(136, 414);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(143, 26);
             this.lblTotal.TabIndex = 0;
@@ -296,17 +324,27 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 377);
+            this.label5.Location = new System.Drawing.Point(9, 419);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "Thành tiền :";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(9, 350);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 17);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Nơi giao hàng :";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 322);
+            this.label4.Location = new System.Drawing.Point(11, 311);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 0;
@@ -316,7 +354,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 188);
+            this.label3.Location = new System.Drawing.Point(9, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 0;
@@ -327,7 +365,7 @@
             this.lblUnit.AutoSize = true;
             this.lblUnit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.getProductPriceListByCustomerBindingSource, "DON_VI_TINH", true));
             this.lblUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnit.Location = new System.Drawing.Point(139, 141);
+            this.lblUnit.Location = new System.Drawing.Point(137, 150);
             this.lblUnit.Name = "lblUnit";
             this.lblUnit.Size = new System.Drawing.Size(104, 20);
             this.lblUnit.TabIndex = 0;
@@ -337,7 +375,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 141);
+            this.label10.Location = new System.Drawing.Point(9, 153);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 17);
             this.label10.TabIndex = 0;
@@ -347,17 +385,27 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 89);
+            this.label2.Location = new System.Drawing.Point(9, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Chọn mặt hàng :";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(9, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(129, 17);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Ngày tạo hóa đơn :";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Location = new System.Drawing.Point(9, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 17);
             this.label1.TabIndex = 0;
@@ -368,11 +416,9 @@
             this.groupBox2.Controls.Add(this.groupBox6);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Location = new System.Drawing.Point(387, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(417, 515);
+            this.groupBox2.Size = new System.Drawing.Size(539, 515);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin hóa đơn";
@@ -387,7 +433,7 @@
             this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Location = new System.Drawing.Point(9, 18);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(401, 117);
+            this.groupBox6.Size = new System.Drawing.Size(524, 117);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Khách hàng";
@@ -462,7 +508,7 @@
             this.groupBox5.Controls.Add(this.dataGridView1);
             this.groupBox5.Location = new System.Drawing.Point(9, 141);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(401, 216);
+            this.groupBox5.Size = new System.Drawing.Size(524, 305);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách đặt hàng";
@@ -471,7 +517,7 @@
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.ForeColor = System.Drawing.Color.Blue;
-            this.lblTotalAmount.Location = new System.Drawing.Point(307, 196);
+            this.lblTotalAmount.Location = new System.Drawing.Point(422, 283);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(39, 13);
             this.lblTotalAmount.TabIndex = 2;
@@ -480,7 +526,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(246, 196);
+            this.label6.Location = new System.Drawing.Point(361, 283);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 1;
@@ -491,14 +537,27 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(389, 166);
+            this.dataGridView1.Size = new System.Drawing.Size(512, 257);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DataSourceChanged += new System.EventHandler(this.dataGridView1_DataSourceChanged);
             this.dataGridView1.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView1_UserDeletedRow);
             // 
             // groupBox4
@@ -507,7 +566,7 @@
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Location = new System.Drawing.Point(9, 452);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(401, 57);
+            this.groupBox4.Size = new System.Drawing.Size(518, 57);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             // 
@@ -516,7 +575,7 @@
             this.btnDoOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoOrder.Image = global::QL_CATDAHAIDAT.Properties.Resources.save;
             this.btnDoOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDoOrder.Location = new System.Drawing.Point(211, 15);
+            this.btnDoOrder.Location = new System.Drawing.Point(277, 15);
             this.btnDoOrder.Name = "btnDoOrder";
             this.btnDoOrder.Size = new System.Drawing.Size(184, 35);
             this.btnDoOrder.TabIndex = 0;
@@ -530,31 +589,13 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::QL_CATDAHAIDAT.Properties.Resources.close;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(9, 15);
+            this.button2.Location = new System.Drawing.Point(75, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(196, 35);
             this.button2.TabIndex = 0;
             this.button2.Text = "Xóa đơn hàng";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(9, 377);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(401, 63);
-            this.textBox3.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 361);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Ghi Chú :";
             // 
             // m_KHACHHANGTableAdapter
             // 
@@ -576,7 +617,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 531);
+            this.ClientSize = new System.Drawing.Size(938, 531);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -592,7 +633,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mKHACHHANGBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -626,9 +666,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnDoOrder;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblPhone;
@@ -651,5 +689,9 @@
         private System.Windows.Forms.Label lblPriceC;
         private System.Windows.Forms.Label lblPriceB;
         private System.Windows.Forms.Label lblPriceA;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label label12;
     }
 }

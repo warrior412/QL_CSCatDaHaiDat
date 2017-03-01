@@ -40,6 +40,10 @@ namespace QL_CATDAHAIDAT
             dtOrder.Columns.Add("Số lượng", typeof(string));
             dtOrder.Columns.Add("Thành tiền", typeof(string));
             dtOrder.Columns.Add("Đơn vị tính", typeof(string));
+            dtOrder.Columns.Add("Nơi giao", typeof(string));
+
+            
+
 
             
         }
@@ -187,7 +191,13 @@ namespace QL_CATDAHAIDAT
                 }
             }
 
-            dtOrder.Rows.Add(currentRow.MA_SP, currentRow.TEN_SP, selectedPrice.ToString(), Common.GetInstance().getMoneyFormatByDouble(selectedPrice), float.Parse(txtQuantity.Text), Common.GetInstance().getMoneyFormatByDouble(float.Parse(txtQuantity.Text)*selectedPrice),lblUnit.Text);
+            dtOrder.Rows.Add(currentRow.MA_SP, 
+                                currentRow.TEN_SP, 
+                                selectedPrice.ToString(), 
+                                Common.GetInstance().getMoneyFormatByDouble(selectedPrice),
+                                float.Parse(txtQuantity.Text), 
+                                Common.GetInstance().getMoneyFormatByDouble(float.Parse(txtQuantity.Text)*selectedPrice),
+                                lblUnit.Text,txtAddress.Text);
             totalAmount += selectedPrice * float.Parse(txtQuantity.Text);
             lblTotalAmount.Text = Common.GetInstance().getMoneyFormatByDouble(totalAmount);
             dataGridView1.DataSource = dtOrder;
@@ -224,7 +234,7 @@ namespace QL_CATDAHAIDAT
                     
                     if (rs == null)
                     {
-                        hd_id = t_HOADONTableAdapter1.InsertQuery(currentDate, textBox3.Text, totalAmount, 0, id_kh).ToString();
+                        hd_id = t_HOADONTableAdapter1.InsertQuery(currentDate, "", totalAmount, 0, id_kh).ToString();
                     }
                     else
                     {
@@ -258,6 +268,15 @@ namespace QL_CATDAHAIDAT
             }
 
             
+        }
+
+        private void dataGridView1_DataSourceChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Columns[1].FillWeight = 60;
+            dataGridView1.Columns[3].FillWeight = 40;
+            dataGridView1.Columns[4].FillWeight = 20;
+            dataGridView1.Columns[5].FillWeight = 40;
+            dataGridView1.Columns[7].FillWeight = 80;
         }
 
         
