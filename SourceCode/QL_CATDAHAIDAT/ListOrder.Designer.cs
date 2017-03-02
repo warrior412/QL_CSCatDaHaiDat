@@ -34,6 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,10 +64,11 @@
             this.selectListOrderWithCustomerInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnCloseOrder = new System.Windows.Forms.Button();
-            this.btnCheckOut = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnRePrint = new System.Windows.Forms.Button();
+            this.BtnCloseOrder = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnCheckOut = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblDebt = new System.Windows.Forms.Label();
@@ -81,17 +87,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tHOIGIANTAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sOLUONGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tRANGTHAIDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getOrderDetailByOrderIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.selectListOrderWithCustomerInfoTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.SelectListOrderWithCustomerInfoTableAdapter();
             this.getOrderDetailByOrderIDTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetOrderDetailByOrderIDTableAdapter();
             this.t_HOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter();
             this.t_CHITIETHOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter();
+            this.tHOIGIANTAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sOLUONGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gHICHUDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tRANGTHAIDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -100,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.selectListOrderWithCustomerInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getOrderDetailByOrderIDBindingSource)).BeginInit();
@@ -364,10 +373,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.BtnCloseOrder);
-            this.groupBox2.Controls.Add(this.btnCheckOut);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.btnRePrint);
+            this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.lblDebt);
@@ -387,40 +393,53 @@
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Location = new System.Drawing.Point(503, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(454, 556);
+            this.groupBox2.Size = new System.Drawing.Size(573, 556);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hóa đơn";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnRePrint);
+            this.groupBox4.Controls.Add(this.BtnCloseOrder);
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.btnCheckOut);
+            this.groupBox4.Location = new System.Drawing.Point(7, 496);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(560, 54);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            // 
+            // btnRePrint
+            // 
+            this.btnRePrint.Image = global::QL_CATDAHAIDAT.Properties.Resources.printer;
+            this.btnRePrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRePrint.Location = new System.Drawing.Point(299, 11);
+            this.btnRePrint.Name = "btnRePrint";
+            this.btnRePrint.Size = new System.Drawing.Size(121, 37);
+            this.btnRePrint.TabIndex = 2;
+            this.btnRePrint.Text = "IN LẠI";
+            this.btnRePrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRePrint.UseVisualStyleBackColor = true;
+            this.btnRePrint.Click += new System.EventHandler(this.btnRePrint_Click);
+            // 
             // BtnCloseOrder
             // 
             this.BtnCloseOrder.Image = global::QL_CATDAHAIDAT.Properties.Resources.printer;
-            this.BtnCloseOrder.Location = new System.Drawing.Point(9, 513);
+            this.BtnCloseOrder.Location = new System.Drawing.Point(26, 11);
             this.BtnCloseOrder.Name = "BtnCloseOrder";
-            this.BtnCloseOrder.Size = new System.Drawing.Size(106, 37);
+            this.BtnCloseOrder.Size = new System.Drawing.Size(131, 37);
             this.BtnCloseOrder.TabIndex = 2;
             this.BtnCloseOrder.Text = "KẾT HÓA ĐƠN";
             this.BtnCloseOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCloseOrder.UseVisualStyleBackColor = true;
             this.BtnCloseOrder.Click += new System.EventHandler(this.BtnCloseOrder_Click);
             // 
-            // btnCheckOut
-            // 
-            this.btnCheckOut.Image = global::QL_CATDAHAIDAT.Properties.Resources.money_icon;
-            this.btnCheckOut.Location = new System.Drawing.Point(119, 513);
-            this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(106, 37);
-            this.btnCheckOut.TabIndex = 2;
-            this.btnCheckOut.Text = "THANH TOÁN";
-            this.btnCheckOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCheckOut.UseVisualStyleBackColor = true;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
-            // 
             // button2
             // 
             this.button2.Image = global::QL_CATDAHAIDAT.Properties.Resources.close;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(339, 513);
+            this.button2.Location = new System.Drawing.Point(427, 11);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 37);
             this.button2.TabIndex = 2;
@@ -429,18 +448,17 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // btnRePrint
+            // btnCheckOut
             // 
-            this.btnRePrint.Image = global::QL_CATDAHAIDAT.Properties.Resources.printer;
-            this.btnRePrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRePrint.Location = new System.Drawing.Point(231, 513);
-            this.btnRePrint.Name = "btnRePrint";
-            this.btnRePrint.Size = new System.Drawing.Size(102, 37);
-            this.btnRePrint.TabIndex = 2;
-            this.btnRePrint.Text = "IN LẠI";
-            this.btnRePrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRePrint.UseVisualStyleBackColor = true;
-            this.btnRePrint.Click += new System.EventHandler(this.btnRePrint_Click);
+            this.btnCheckOut.Image = global::QL_CATDAHAIDAT.Properties.Resources.money_icon;
+            this.btnCheckOut.Location = new System.Drawing.Point(163, 11);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(127, 37);
+            this.btnCheckOut.TabIndex = 2;
+            this.btnCheckOut.Text = "THANH TOÁN";
+            this.btnCheckOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // label8
             // 
@@ -614,7 +632,7 @@
             this.groupBox3.Controls.Add(this.dataGridView2);
             this.groupBox3.Location = new System.Drawing.Point(6, 171);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(442, 248);
+            this.groupBox3.Size = new System.Drawing.Size(561, 248);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
@@ -624,14 +642,24 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tHOIGIANTAODataGridViewTextBoxColumn,
             this.tENSPDataGridViewTextBoxColumn,
             this.sOLUONGDataGridViewTextBoxColumn,
             this.gIADataGridViewTextBoxColumn,
+            this.gHICHUDataGridViewTextBoxColumn1,
             this.tRANGTHAIDataGridViewTextBoxColumn1,
-            this.mASPDataGridViewTextBoxColumn});
+            this.mASPDataGridViewTextBoxColumn,
+            this.ID});
             this.dataGridView2.DataSource = this.getOrderDetailByOrderIDBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(6, 10);
             this.dataGridView2.MultiSelect = false;
@@ -643,57 +671,10 @@
             this.dataGridView2.RowTemplate.Height = 26;
             this.dataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(430, 231);
+            this.dataGridView2.Size = new System.Drawing.Size(549, 231);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
-            // 
-            // tHOIGIANTAODataGridViewTextBoxColumn
-            // 
-            this.tHOIGIANTAODataGridViewTextBoxColumn.DataPropertyName = "THOI_GIAN_TAO";
-            this.tHOIGIANTAODataGridViewTextBoxColumn.HeaderText = "Thời gian đạt hàng";
-            this.tHOIGIANTAODataGridViewTextBoxColumn.Name = "tHOIGIANTAODataGridViewTextBoxColumn";
-            this.tHOIGIANTAODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tENSPDataGridViewTextBoxColumn
-            // 
-            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
-            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
-            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
-            this.tENSPDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sOLUONGDataGridViewTextBoxColumn
-            // 
-            this.sOLUONGDataGridViewTextBoxColumn.DataPropertyName = "SO_LUONG";
-            this.sOLUONGDataGridViewTextBoxColumn.HeaderText = "Số lượng";
-            this.sOLUONGDataGridViewTextBoxColumn.Name = "sOLUONGDataGridViewTextBoxColumn";
-            this.sOLUONGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // gIADataGridViewTextBoxColumn
-            // 
-            this.gIADataGridViewTextBoxColumn.DataPropertyName = "GIA";
-            dataGridViewCellStyle5.Format = "#,### VND";
-            dataGridViewCellStyle5.NullValue = "0 VND";
-            this.gIADataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.gIADataGridViewTextBoxColumn.HeaderText = "Đơn giá";
-            this.gIADataGridViewTextBoxColumn.Name = "gIADataGridViewTextBoxColumn";
-            this.gIADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tRANGTHAIDataGridViewTextBoxColumn1
-            // 
-            this.tRANGTHAIDataGridViewTextBoxColumn1.DataPropertyName = "TRANG_THAI";
-            this.tRANGTHAIDataGridViewTextBoxColumn1.HeaderText = "TRANG_THAI";
-            this.tRANGTHAIDataGridViewTextBoxColumn1.Name = "tRANGTHAIDataGridViewTextBoxColumn1";
-            this.tRANGTHAIDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.tRANGTHAIDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // mASPDataGridViewTextBoxColumn
-            // 
-            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MA_SP";
-            this.mASPDataGridViewTextBoxColumn.HeaderText = "MA_SP";
-            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
-            this.mASPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mASPDataGridViewTextBoxColumn.Visible = false;
             // 
             // getOrderDetailByOrderIDBindingSource
             // 
@@ -716,11 +697,87 @@
             // 
             this.t_CHITIETHOADONTableAdapter1.ClearBeforeFill = true;
             // 
+            // tHOIGIANTAODataGridViewTextBoxColumn
+            // 
+            this.tHOIGIANTAODataGridViewTextBoxColumn.DataPropertyName = "THOI_GIAN_TAO";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "dd/M/yyyy";
+            this.tHOIGIANTAODataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.tHOIGIANTAODataGridViewTextBoxColumn.FillWeight = 30F;
+            this.tHOIGIANTAODataGridViewTextBoxColumn.HeaderText = "Ngày đặt";
+            this.tHOIGIANTAODataGridViewTextBoxColumn.Name = "tHOIGIANTAODataGridViewTextBoxColumn";
+            this.tHOIGIANTAODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tENSPDataGridViewTextBoxColumn
+            // 
+            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tENSPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.tENSPDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
+            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
+            this.tENSPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sOLUONGDataGridViewTextBoxColumn
+            // 
+            this.sOLUONGDataGridViewTextBoxColumn.DataPropertyName = "SO_LUONG";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.sOLUONGDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.sOLUONGDataGridViewTextBoxColumn.FillWeight = 20F;
+            this.sOLUONGDataGridViewTextBoxColumn.HeaderText = "Số lượng";
+            this.sOLUONGDataGridViewTextBoxColumn.Name = "sOLUONGDataGridViewTextBoxColumn";
+            this.sOLUONGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gIADataGridViewTextBoxColumn
+            // 
+            this.gIADataGridViewTextBoxColumn.DataPropertyName = "GIA";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "#,### VND";
+            this.gIADataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.gIADataGridViewTextBoxColumn.FillWeight = 40F;
+            this.gIADataGridViewTextBoxColumn.HeaderText = "Giá";
+            this.gIADataGridViewTextBoxColumn.Name = "gIADataGridViewTextBoxColumn";
+            this.gIADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gHICHUDataGridViewTextBoxColumn1
+            // 
+            this.gHICHUDataGridViewTextBoxColumn1.DataPropertyName = "GHI_CHU";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gHICHUDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.gHICHUDataGridViewTextBoxColumn1.FillWeight = 80F;
+            this.gHICHUDataGridViewTextBoxColumn1.HeaderText = "Nơi giao";
+            this.gHICHUDataGridViewTextBoxColumn1.Name = "gHICHUDataGridViewTextBoxColumn1";
+            this.gHICHUDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // tRANGTHAIDataGridViewTextBoxColumn1
+            // 
+            this.tRANGTHAIDataGridViewTextBoxColumn1.DataPropertyName = "TRANG_THAI";
+            this.tRANGTHAIDataGridViewTextBoxColumn1.HeaderText = "TRANG_THAI";
+            this.tRANGTHAIDataGridViewTextBoxColumn1.Name = "tRANGTHAIDataGridViewTextBoxColumn1";
+            this.tRANGTHAIDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.tRANGTHAIDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // mASPDataGridViewTextBoxColumn
+            // 
+            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MA_SP";
+            this.mASPDataGridViewTextBoxColumn.HeaderText = "MA_SP";
+            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
+            this.mASPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mASPDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
             // ListOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 571);
+            this.ClientSize = new System.Drawing.Size(1081, 571);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -739,6 +796,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getOrderDetailByOrderIDBindingSource)).EndInit();
@@ -795,17 +853,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mAKHDataGridViewTextBoxColumn;
         private DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter t_HOADONTableAdapter1;
         private DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter t_CHITIETHOADONTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tHOIGIANTAODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sOLUONGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tRANGTHAIDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mASPDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tHOIGIANTAODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sOLUONGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gHICHUDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tRANGTHAIDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mASPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }

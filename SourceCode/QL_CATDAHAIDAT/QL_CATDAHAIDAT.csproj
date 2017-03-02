@@ -217,6 +217,7 @@
     <EmbeddedResource Include="PrintOrder.resx">
       <DependentUpon>PrintOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintOrder2.rdlc" />
     <EmbeddedResource Include="PrintProductList.rdlc" />
     <EmbeddedResource Include="PrintProductList.resx">
       <DependentUpon>PrintProductList.cs</DependentUpon>

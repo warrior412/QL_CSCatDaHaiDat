@@ -43,6 +43,7 @@ namespace QL_CATDAHAIDAT
             rdbKhachLe.Enabled = rdbVua.Enabled = false;
 
             btnDelete.Text = "Xóa";
+            linkLabel1.Enabled = true;
         }
 
         private void setEditMode()
@@ -64,6 +65,8 @@ namespace QL_CATDAHAIDAT
             isViewMode = false;
             isEditMode = true;
             isInsertMode = false;
+
+            linkLabel1.Enabled = false;
         }
         private void setInsertMode()
         {
@@ -83,12 +86,16 @@ namespace QL_CATDAHAIDAT
             btnSave.Enabled = true;
 
             rdbKhachLe.Enabled = rdbVua.Enabled = true;
+            rdbKhachLe.Checked = rdbVua.Checked = false;
 
             btnDelete.Text = "Hủy";
 
             isViewMode = false;
             isEditMode = false;
             isInsertMode = true;
+
+            linkLabel1.Enabled = false;
+
         }
 
         private void ListCustomer_Load(object sender, EventArgs e)
@@ -117,6 +124,12 @@ namespace QL_CATDAHAIDAT
                 }
                 if (isInsertMode)
                 {
+                    if(rdbVua.Checked == false && rdbKhachLe.Checked ==false)
+                    {
+                        MessageBox.Show("Vui lòng chọn thông tin loại khách.");
+                        return;
+                    }
+
                     DB_QLCatDaHaiDatDataSet.M_KHACHHANGRow newRow = dB_QLCatDaHaiDatDataSet.M_KHACHHANG.NewM_KHACHHANGRow();
                     newRow.TEN_KH = this.txtName.Text;
                     newRow.DIA_CHI = this.txtAddress.Text;

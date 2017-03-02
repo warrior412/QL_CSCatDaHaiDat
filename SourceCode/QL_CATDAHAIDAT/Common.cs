@@ -34,6 +34,17 @@ namespace QL_CATDAHAIDAT
             return stotal;
         }
 
+        public DateTime getStartDate(DateTime value)
+        {
+            DateTime rs = DateTime.Parse(value.ToShortDateString() + " 00:00:00");
+            return rs;
+        }
+        public DateTime getEndDate(DateTime value)
+        {
+            DateTime rs = DateTime.Parse(value.ToShortDateString() + " 23:59:59");
+            return rs;
+        }
+
 
 
     }

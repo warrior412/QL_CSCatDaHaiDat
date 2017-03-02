@@ -187,7 +187,7 @@ namespace QL_CATDAHAIDAT
                 Common.GetInstance().getMoneyFormatByDouble(selectedRow.SO_LUONG * selectedRow.GIA));
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                t_CHITIETHOADONTableAdapter1.DeleteOrderDetail(currentRow.MA_HD, selectedRow.MA_SP, selectedRow.THOI_GIAN_TAO);
+                t_CHITIETHOADONTableAdapter1.DeleteOrderDetail(currentRow.MA_HD, selectedRow.ID);
                 this.selectListOrderWithCustomerInfoTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfo);
             }
                 

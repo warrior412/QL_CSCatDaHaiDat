@@ -1672,6 +1672,8 @@ namespace QL_CATDAHAIDAT {
             
             private global::System.Data.DataColumn columnTHANH_TIEN;
             
+            private global::System.Data.DataColumn columnGHI_CHU;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SELECTDETAILORDERDataTable() {
@@ -1755,6 +1757,14 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GHI_CHUColumn {
+                get {
+                    return this.columnGHI_CHU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1790,7 +1800,7 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SELECTDETAILORDERRow AddSELECTDETAILORDERRow(string TEN_SP, string DON_VI_TINH, double GIA, double SO_LUONG, System.DateTime THOI_GIAN_TAO, double THANH_TIEN) {
+            public SELECTDETAILORDERRow AddSELECTDETAILORDERRow(string TEN_SP, string DON_VI_TINH, double GIA, double SO_LUONG, System.DateTime THOI_GIAN_TAO, double THANH_TIEN, string GHI_CHU) {
                 SELECTDETAILORDERRow rowSELECTDETAILORDERRow = ((SELECTDETAILORDERRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TEN_SP,
@@ -1798,7 +1808,8 @@ namespace QL_CATDAHAIDAT {
                         GIA,
                         SO_LUONG,
                         THOI_GIAN_TAO,
-                        THANH_TIEN};
+                        THANH_TIEN,
+                        GHI_CHU};
                 rowSELECTDETAILORDERRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSELECTDETAILORDERRow);
                 return rowSELECTDETAILORDERRow;
@@ -1827,6 +1838,7 @@ namespace QL_CATDAHAIDAT {
                 this.columnSO_LUONG = base.Columns["SO_LUONG"];
                 this.columnTHOI_GIAN_TAO = base.Columns["THOI_GIAN_TAO"];
                 this.columnTHANH_TIEN = base.Columns["THANH_TIEN"];
+                this.columnGHI_CHU = base.Columns["GHI_CHU"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1844,10 +1856,13 @@ namespace QL_CATDAHAIDAT {
                 base.Columns.Add(this.columnTHOI_GIAN_TAO);
                 this.columnTHANH_TIEN = new global::System.Data.DataColumn("THANH_TIEN", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTHANH_TIEN);
+                this.columnGHI_CHU = new global::System.Data.DataColumn("GHI_CHU", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGHI_CHU);
                 this.columnTEN_SP.MaxLength = 100;
                 this.columnDON_VI_TINH.MaxLength = 20;
                 this.columnTHOI_GIAN_TAO.AllowDBNull = false;
                 this.columnTHANH_TIEN.ReadOnly = true;
+                this.columnGHI_CHU.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1993,6 +2008,10 @@ namespace QL_CATDAHAIDAT {
             
             private global::System.Data.DataColumn columnMA_SP;
             
+            private global::System.Data.DataColumn columnGHI_CHU;
+            
+            private global::System.Data.DataColumn columnID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GetOrderDetailByOrderIDDataTable() {
@@ -2076,6 +2095,22 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GHI_CHUColumn {
+                get {
+                    return this.columnGHI_CHU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2111,7 +2146,7 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetOrderDetailByOrderIDRow AddGetOrderDetailByOrderIDRow(string TEN_SP, double SO_LUONG, double GIA, int TRANG_THAI, System.DateTime THOI_GIAN_TAO) {
+            public GetOrderDetailByOrderIDRow AddGetOrderDetailByOrderIDRow(string TEN_SP, double SO_LUONG, double GIA, int TRANG_THAI, System.DateTime THOI_GIAN_TAO, string GHI_CHU) {
                 GetOrderDetailByOrderIDRow rowGetOrderDetailByOrderIDRow = ((GetOrderDetailByOrderIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TEN_SP,
@@ -2119,6 +2154,8 @@ namespace QL_CATDAHAIDAT {
                         GIA,
                         TRANG_THAI,
                         THOI_GIAN_TAO,
+                        null,
+                        GHI_CHU,
                         null};
                 rowGetOrderDetailByOrderIDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetOrderDetailByOrderIDRow);
@@ -2148,6 +2185,8 @@ namespace QL_CATDAHAIDAT {
                 this.columnTRANG_THAI = base.Columns["TRANG_THAI"];
                 this.columnTHOI_GIAN_TAO = base.Columns["THOI_GIAN_TAO"];
                 this.columnMA_SP = base.Columns["MA_SP"];
+                this.columnGHI_CHU = base.Columns["GHI_CHU"];
+                this.columnID = base.Columns["ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2165,6 +2204,10 @@ namespace QL_CATDAHAIDAT {
                 base.Columns.Add(this.columnTHOI_GIAN_TAO);
                 this.columnMA_SP = new global::System.Data.DataColumn("MA_SP", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMA_SP);
+                this.columnGHI_CHU = new global::System.Data.DataColumn("GHI_CHU", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGHI_CHU);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
                 this.columnTEN_SP.MaxLength = 100;
                 this.columnTHOI_GIAN_TAO.AllowDBNull = false;
                 this.columnMA_SP.AutoIncrement = true;
@@ -2172,6 +2215,12 @@ namespace QL_CATDAHAIDAT {
                 this.columnMA_SP.AutoIncrementStep = -1;
                 this.columnMA_SP.AllowDBNull = false;
                 this.columnMA_SP.ReadOnly = true;
+                this.columnGHI_CHU.MaxLength = 200;
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5135,6 +5184,22 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string GHI_CHU {
+                get {
+                    try {
+                        return ((string)(this[this.tableSELECTDETAILORDER.GHI_CHUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GHI_CHU\' in table \'SELECTDETAILORDER\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSELECTDETAILORDER.GHI_CHUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTEN_SPNull() {
                 return this.IsNull(this.tableSELECTDETAILORDER.TEN_SPColumn);
             }
@@ -5191,6 +5256,18 @@ namespace QL_CATDAHAIDAT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTHANH_TIENNull() {
                 this[this.tableSELECTDETAILORDER.THANH_TIENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGHI_CHUNull() {
+                return this.IsNull(this.tableSELECTDETAILORDER.GHI_CHUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGHI_CHUNull() {
+                this[this.tableSELECTDETAILORDER.GHI_CHUColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5296,6 +5373,33 @@ namespace QL_CATDAHAIDAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string GHI_CHU {
+                get {
+                    try {
+                        return ((string)(this[this.tableGetOrderDetailByOrderID.GHI_CHUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GHI_CHU\' in table \'GetOrderDetailByOrderID\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetOrderDetailByOrderID.GHI_CHUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableGetOrderDetailByOrderID.IDColumn]));
+                }
+                set {
+                    this[this.tableGetOrderDetailByOrderID.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTEN_SPNull() {
                 return this.IsNull(this.tableGetOrderDetailByOrderID.TEN_SPColumn);
             }
@@ -5340,6 +5444,18 @@ namespace QL_CATDAHAIDAT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTRANG_THAINull() {
                 this[this.tableGetOrderDetailByOrderID.TRANG_THAIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGHI_CHUNull() {
+                return this.IsNull(this.tableGetOrderDetailByOrderID.GHI_CHUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGHI_CHUNull() {
+                this[this.tableGetOrderDetailByOrderID.GHI_CHUColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8748,6 +8864,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
             tableMapping.ColumnMappings.Add("SO_LUONG", "SO_LUONG");
             tableMapping.ColumnMappings.Add("THOI_GIAN_TAO", "THOI_GIAN_TAO");
             tableMapping.ColumnMappings.Add("THANH_TIEN", "THANH_TIEN");
+            tableMapping.ColumnMappings.Add("GHI_CHU", "GHI_CHU");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8934,6 +9051,8 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
             tableMapping.ColumnMappings.Add("TRANG_THAI", "TRANG_THAI");
             tableMapping.ColumnMappings.Add("THOI_GIAN_TAO", "THOI_GIAN_TAO");
             tableMapping.ColumnMappings.Add("MA_SP", "MA_SP");
+            tableMapping.ColumnMappings.Add("GHI_CHU", "GHI_CHU");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -9454,8 +9573,7 @@ SELECT HOA_DON, SAN_PHAM, THOI_GIAN_TAO, SO_LUONG, GIA, GHI_CHU, TRANG_THAI FROM
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_HD", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_SP", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ORDER_TIME", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9730,7 +9848,7 @@ SELECT HOA_DON, SAN_PHAM, THOI_GIAN_TAO, SO_LUONG, GIA, GHI_CHU, TRANG_THAI FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int DeleteOrderDetail(string MA_HD, global::System.Nullable<int> MA_SP, global::System.Nullable<global::System.DateTime> ORDER_TIME) {
+        public virtual object DeleteOrderDetail(string MA_HD, global::System.Nullable<int> ID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((MA_HD == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
@@ -9738,33 +9856,33 @@ SELECT HOA_DON, SAN_PHAM, THOI_GIAN_TAO, SO_LUONG, GIA, GHI_CHU, TRANG_THAI FROM
             else {
                 command.Parameters[1].Value = ((string)(MA_HD));
             }
-            if ((MA_SP.HasValue == true)) {
-                command.Parameters[2].Value = ((int)(MA_SP.Value));
+            if ((ID.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(ID.Value));
             }
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((ORDER_TIME.HasValue == true)) {
-                command.Parameters[3].Value = ((System.DateTime)(ORDER_TIME.Value));
-            }
-            else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
                 command.Connection.Open();
             }
-            int returnValue;
+            object returnValue;
             try {
-                returnValue = command.ExecuteNonQuery();
+                returnValue = command.ExecuteScalar();
             }
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     command.Connection.Close();
                 }
             }
-            return returnValue;
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
         }
     }
     

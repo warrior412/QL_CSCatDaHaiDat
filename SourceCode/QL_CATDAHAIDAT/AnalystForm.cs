@@ -60,7 +60,10 @@ namespace QL_CATDAHAIDAT
         {
             try
             {
-                this.sp_AnalystByTimeAndCustomerTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.sp_AnalystByTimeAndCustomer, dateTimePicker1.Value, dateTimePicker2.Value, int.Parse(comboBox3.SelectedValue.ToString()));
+                this.sp_AnalystByTimeAndCustomerTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.sp_AnalystByTimeAndCustomer,
+                    Common.GetInstance().getStartDate(dateTimePicker1.Value),
+                    Common.GetInstance().getEndDate(dateTimePicker2.Value), 
+                    int.Parse(comboBox3.SelectedValue.ToString()));
                 double total = 0;
                 foreach (DB_QLCatDaHaiDatDataSet.sp_AnalystByTimeAndCustomerRow row in this.dB_QLCatDaHaiDatDataSet.sp_AnalystByTimeAndCustomer)
                 {

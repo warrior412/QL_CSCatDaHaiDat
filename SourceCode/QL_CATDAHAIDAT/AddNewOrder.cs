@@ -52,8 +52,8 @@ namespace QL_CATDAHAIDAT
         {
             getProductPriceListByCustomerTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
             t_CHITIETHOADONTableAdapter1.Connection.ConnectionString = Common.GetInstance().CurrentShop;
-            getProductPriceListByCustomerTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
             m_KHACHHANGTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
+            t_HOADONTableAdapter1.Connection.ConnectionString = Common.GetInstance().CurrentShop;
 
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.M_KHACHHANG' table. You can move, or remove it, as needed.
             this.m_KHACHHANGTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.M_KHACHHANG);
@@ -72,6 +72,7 @@ namespace QL_CATDAHAIDAT
         {
             if (comboBox1.SelectedValue == null)
                 return;
+            this.reloadForm();
             this.getProductPriceListByCustomerTableAdapter.Fill(dB_QLCatDaHaiDatDataSet.GetProductPriceListByCustomer, int.Parse(comboBox1.SelectedValue.ToString()));
         }
         private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
@@ -182,14 +183,14 @@ namespace QL_CATDAHAIDAT
 
         private void btnAddOrder_Click(object sender, EventArgs e)
         {
-            foreach(DataRow row in dtOrder.Rows)
-            {
-                if(row[0].Equals(currentRow.MA_SP.ToString()))
-                {
-                    MessageBox.Show("Sản phẩm đã được chọn, vui lòng chọn sản phẩm khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
+            //foreach(DataRow row in dtOrder.Rows)
+            //{
+            //    if(row[0].Equals(currentRow.MA_SP.ToString()))
+            //    {
+            //        MessageBox.Show("Sản phẩm đã được chọn, vui lòng chọn sản phẩm khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
+            //}
 
             dtOrder.Rows.Add(currentRow.MA_SP, 
                                 currentRow.TEN_SP, 
@@ -228,7 +229,7 @@ namespace QL_CATDAHAIDAT
             {
                 try
                 {
-                    DateTime currentDate = DateTime.Now;
+                    DateTime currentDate = dateTimePicker1.Value;
                     int id_kh = int.Parse(comboBox1.SelectedValue.ToString());
                     object rs = t_HOADONTableAdapter1.SelectOrderIDByCustomer(id_kh);
                     
@@ -247,9 +248,10 @@ namespace QL_CATDAHAIDAT
                             int.Parse(row[0].ToString()),
                             currentDate,
                             double.Parse(row[4].ToString()),
-                            double.Parse(row[2].ToString()), "", 1);
+                            double.Parse(row[2].ToString()), row[7].ToString(), 1);
                     }
                     ts.Complete();
+                    MessageBox.Show("Đơn hàng đã được tạo thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }catch (Exception ex)
                 {
                     MessageBox.Show("Đã có lỗi xảy ra khi tạo đơn hàng. Vui lòng thử lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -257,7 +259,6 @@ namespace QL_CATDAHAIDAT
                     
                 }finally
                 {
-                    MessageBox.Show("Đơn hàng đã được tạo thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ts.Dispose();
                 }
 
@@ -279,6 +280,21 @@ namespace QL_CATDAHAIDAT
             dataGridView1.Columns[7].FillWeight = 80;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.AddNewOrder_Load(this, null);
+            reloadForm();
+        }
+
+        void reloadForm()
+        {
+            txtOther.Enabled = false;
+            txtOther.Text = "0";
+            txtQuantity.Text = "0";
+            dtOrder.Rows.Clear();
+            totalAmount = 0;
+            lblTotalAmount.Text = Common.GetInstance().getMoneyFormatByDouble(totalAmount);
+        }
         
 
         

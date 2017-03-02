@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -26,6 +27,11 @@ namespace QL_CATDAHAIDAT
         public string total;
         public string paid;
         public string debt;
+
+        public string contact1;
+        public string contact2;
+        public string contact3;
+
         public PrintOrder(string ten,string diachi,string sdt, string total,string paid,string debt)
         {
             
@@ -36,6 +42,19 @@ namespace QL_CATDAHAIDAT
             this.total = total;
             this.paid = paid;
             this.debt = debt;
+
+            if (Common.GetInstance().CurrentShop.Equals(ConfigurationManager.ConnectionStrings["QL_CATDAHAIDAT.Properties.Settings.DB_QLCatDaHaiDatConnectionString"].ConnectionString))
+            {
+                this.contact1 = "0977.209.709 (Đạt)";
+                this.contact2 = "0978.283.939 (Đạt)";
+                this.contact3 = "0967.209.709 (Chinh)";
+            }
+            else
+            {
+                this.contact1 = "0907.768.768 (Ba Ơn)";
+                this.contact2 = "0977.209.709 (Đạt)";
+                this.contact3 = "0978.283.939 (Đạt)";
+            }
             InitializeComponent();
         }
 
@@ -56,6 +75,7 @@ namespace QL_CATDAHAIDAT
                     item.DON_VI_TINH = row[6].ToString();
                     item.THOI_GIAN_TAO = DateTime.Now;
                     item.THANH_TIEN = item.GIA * item.SO_LUONG;
+                    item.GHI_CHU = row[7].ToString();
                     DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.AddSELECTDETAILORDERRow(item);
                 }
 
@@ -70,7 +90,10 @@ namespace QL_CATDAHAIDAT
                 new Microsoft.Reporting.WinForms.ReportParameter("debt",debt),
                 new Microsoft.Reporting.WinForms.ReportParameter("paid_amount",paid),
                 new Microsoft.Reporting.WinForms.ReportParameter("ma_hd",ma_hd),
-                new Microsoft.Reporting.WinForms.ReportParameter("remark","")
+                new Microsoft.Reporting.WinForms.ReportParameter("remark",""),
+                new Microsoft.Reporting.WinForms.ReportParameter("contact1",contact1),
+                new Microsoft.Reporting.WinForms.ReportParameter("contact2",contact2),
+                new Microsoft.Reporting.WinForms.ReportParameter("contact3",contact3)
             };
             this.reportViewer1.LocalReport.SetParameters(param);
             this.reportViewer1.RefreshReport();
