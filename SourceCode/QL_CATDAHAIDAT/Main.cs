@@ -93,5 +93,14 @@ namespace QL_CATDAHAIDAT
             dialog.Show();
         }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (!checkBeforeOpen())
+                return;
+            BackUpForm dialog = new BackUpForm();
+            dialog.MdiParent = this;
+            dialog.Show();
+        }
+
     }
 }

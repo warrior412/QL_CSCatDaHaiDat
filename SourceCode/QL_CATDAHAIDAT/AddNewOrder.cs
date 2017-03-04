@@ -41,6 +41,7 @@ namespace QL_CATDAHAIDAT
             dtOrder.Columns.Add("Thành tiền", typeof(string));
             dtOrder.Columns.Add("Đơn vị tính", typeof(string));
             dtOrder.Columns.Add("Nơi giao", typeof(string));
+            dtOrder.Columns.Add("Ngày đặt", typeof(DateTime));
 
             
 
@@ -198,13 +199,14 @@ namespace QL_CATDAHAIDAT
                                 Common.GetInstance().getMoneyFormatByDouble(selectedPrice),
                                 float.Parse(txtQuantity.Text), 
                                 Common.GetInstance().getMoneyFormatByDouble(float.Parse(txtQuantity.Text)*selectedPrice),
-                                lblUnit.Text,txtAddress.Text);
+                                lblUnit.Text,txtAddress.Text,dateTimePicker1.Value);
             totalAmount += selectedPrice * float.Parse(txtQuantity.Text);
             lblTotalAmount.Text = Common.GetInstance().getMoneyFormatByDouble(totalAmount);
             dataGridView1.DataSource = dtOrder;
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[2].Visible = false;
             dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[8].Visible = false;
         }
 
         private void dataGridView1_UserDeletedRow(object sender, DataGridViewRowEventArgs e)

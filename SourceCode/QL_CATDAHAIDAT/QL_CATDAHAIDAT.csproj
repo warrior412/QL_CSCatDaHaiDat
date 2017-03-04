@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\JunF\Desktop\QL_CatDaHaiDat\</PublishUrl>
+    <PublishUrl>C:\JunF%27s Drive\QL_CSCatDaHaiDat\Release\20170304\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,7 +22,6 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -77,10 +76,27 @@
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
@@ -113,6 +129,12 @@
     </Compile>
     <Compile Include="AnalystForm.Designer.cs">
       <DependentUpon>AnalystForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackUpForm.Designer.cs">
+      <DependentUpon>BackUpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Common.cs" />
     <Compile Include="DB_QLCatDaHaiDatDataSet.cs">
@@ -194,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AnalystForm.resx">
       <DependentUpon>AnalystForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackUpForm.resx">
+      <DependentUpon>BackUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditOrderDetail.resx">
       <DependentUpon>EditOrderDetail.cs</DependentUpon>

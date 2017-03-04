@@ -37,19 +37,6 @@ D:\JunF\Projects\QL_HAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Li
 D:\JunF\Projects\QL_HAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
 D:\JunF\Projects\QL_HAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
 D:\JunF\Projects\QL_HAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddOrder.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListCustomer.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListOrder.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListProduct.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
@@ -65,19 +52,6 @@ D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.c
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
 D:\My_Projects\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.manifest
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.application
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddNewOrder.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PaymentInput.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintOrder.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintProductList.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.SetProductPrice.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.cache
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe.manifest
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.application
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.EditOrderDetail.resources
-C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ShopSelect.resources
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.manifest
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.application
@@ -109,4 +83,30 @@ D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHA
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.config
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe.manifest
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.application
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.exe
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\bin\Debug\QL_CATDAHAIDAT.pdb
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddNewOrder.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AddOrder.resources
 C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AnalystForm.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.BackUpForm.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.EditOrderDetail.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListCustomer.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListOrder.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ListProduct.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Main.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PaymentInput.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintOrder.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.PrintProductList.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.Properties.Resources.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.SetProductPrice.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.ShopSelect.resources
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csproj.GenerateResource.Cache
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.cache
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\RdlCompile.compiled
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe.manifest
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.application
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb

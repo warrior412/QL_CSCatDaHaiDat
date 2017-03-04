@@ -73,7 +73,7 @@ namespace QL_CATDAHAIDAT
                     item.GIA = double.Parse(row[2].ToString());
                     item.SO_LUONG = double.Parse(row[4].ToString());
                     item.DON_VI_TINH = row[6].ToString();
-                    item.THOI_GIAN_TAO = DateTime.Now;
+                    item.THOI_GIAN_TAO = DateTime.Parse(row[8].ToString());
                     item.THANH_TIEN = item.GIA * item.SO_LUONG;
                     item.GHI_CHU = row[7].ToString();
                     DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.AddSELECTDETAILORDERRow(item);

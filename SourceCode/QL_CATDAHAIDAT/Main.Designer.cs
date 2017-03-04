@@ -40,10 +40,10 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.BtnHistoryOrder = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnAnalyst = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnAnalyst = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -166,17 +166,18 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 78);
             // 
-            // toolStripButton2
+            // btnAnalyst
             // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.toolStripButton2.Image = global::QL_CATDAHAIDAT.Properties.Resources.backup;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(117, 75);
-            this.toolStripButton2.Text = "Sao lưu dữ liệu";
-            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAnalyst.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAnalyst.Image = global::QL_CATDAHAIDAT.Properties.Resources.SEO_icon;
+            this.btnAnalyst.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnAnalyst.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAnalyst.Name = "btnAnalyst";
+            this.btnAnalyst.Size = new System.Drawing.Size(153, 75);
+            this.btnAnalyst.Text = "Phân tích doanh thu";
+            this.btnAnalyst.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAnalyst.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAnalyst.Click += new System.EventHandler(this.btnAnalyst_Click);
             // 
             // toolStripSeparator4
             // 
@@ -193,18 +194,18 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(106, 75);
             this.toolStripLabel1.Text = "Tên cơ sở";
             // 
-            // btnAnalyst
+            // toolStripButton2
             // 
-            this.btnAnalyst.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAnalyst.Image = global::QL_CATDAHAIDAT.Properties.Resources.SEO_icon;
-            this.btnAnalyst.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnAnalyst.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAnalyst.Name = "btnAnalyst";
-            this.btnAnalyst.Size = new System.Drawing.Size(153, 75);
-            this.btnAnalyst.Text = "Phân tích doanh thu";
-            this.btnAnalyst.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAnalyst.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAnalyst.Click += new System.EventHandler(this.btnAnalyst_Click);
+            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.toolStripButton2.Image = global::QL_CATDAHAIDAT.Properties.Resources.backup;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(117, 75);
+            this.toolStripButton2.Text = "Sao lưu dữ liệu";
+            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripSeparator7
             // 
