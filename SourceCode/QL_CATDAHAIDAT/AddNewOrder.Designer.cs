@@ -132,7 +132,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimePicker1.Size = new System.Drawing.Size(229, 23);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // lblPriceC
             // 
@@ -181,7 +181,7 @@
             this.btnAddOrder.Location = new System.Drawing.Point(9, 15);
             this.btnAddOrder.Name = "btnAddOrder";
             this.btnAddOrder.Size = new System.Drawing.Size(351, 34);
-            this.btnAddOrder.TabIndex = 0;
+            this.btnAddOrder.TabIndex = 6;
             this.btnAddOrder.Text = "Thêm vào đơn hàng";
             this.btnAddOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddOrder.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(227, 48);
-            this.txtAddress.TabIndex = 3;
+            this.txtAddress.TabIndex = 5;
             this.txtAddress.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
             // txtQuantity
@@ -212,7 +212,7 @@
             this.txtQuantity.Location = new System.Drawing.Point(139, 306);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(144, 24);
-            this.txtQuantity.TabIndex = 3;
+            this.txtQuantity.TabIndex = 4;
             this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
             // rdOther
@@ -274,7 +274,7 @@
             this.comboBox2.Location = new System.Drawing.Point(139, 102);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(230, 26);
-            this.comboBox2.TabIndex = 1;
+            this.comboBox2.TabIndex = 3;
             this.comboBox2.ValueMember = "MA_SP";
             this.comboBox2.SelectedValueChanged += new System.EventHandler(this.comboBox2_SelectedValueChanged);
             // 
@@ -299,7 +299,7 @@
             this.comboBox1.Location = new System.Drawing.Point(139, 61);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(230, 26);
-            this.comboBox1.TabIndex = 1;
+            this.comboBox1.TabIndex = 2;
             this.comboBox1.ValueMember = "MA_KH";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
@@ -578,7 +578,7 @@
             this.btnDoOrder.Location = new System.Drawing.Point(277, 15);
             this.btnDoOrder.Name = "btnDoOrder";
             this.btnDoOrder.Size = new System.Drawing.Size(184, 35);
-            this.btnDoOrder.TabIndex = 0;
+            this.btnDoOrder.TabIndex = 7;
             this.btnDoOrder.Text = "Hoàn thành";
             this.btnDoOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDoOrder.UseVisualStyleBackColor = true;
@@ -592,8 +592,8 @@
             this.button2.Location = new System.Drawing.Point(75, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(196, 35);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Xóa đơn hàng";
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Hủy đơn hàng";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);

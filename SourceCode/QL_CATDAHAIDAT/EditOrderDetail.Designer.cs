@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblOrderTime = new System.Windows.Forms.Label();
-            this.lblCustomerName = new System.Windows.Forms.Label();
-            this.lblProductname = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblProductname = new System.Windows.Forms.Label();
+            this.lblCustomerName = new System.Windows.Forms.Label();
+            this.lblOrderTime = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -69,35 +69,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đặt hàng";
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thời gian đặt hàng :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên mặt hàng :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Đơn giá :";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 233);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 17);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Thành tiền :";
             // 
             // label4
             // 
@@ -109,15 +89,25 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Số lượng :";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 233);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Thành tiền :";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Đơn giá :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên mặt hàng :";
             // 
             // label6
             // 
@@ -128,57 +118,6 @@
             this.label6.Size = new System.Drawing.Size(119, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tên khách hàng :";
-            // 
-            // lblOrderTime
-            // 
-            this.lblOrderTime.AutoSize = true;
-            this.lblOrderTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderTime.ForeColor = System.Drawing.Color.Blue;
-            this.lblOrderTime.Location = new System.Drawing.Point(157, 30);
-            this.lblOrderTime.Name = "lblOrderTime";
-            this.lblOrderTime.Size = new System.Drawing.Size(90, 17);
-            this.lblOrderTime.TabIndex = 0;
-            this.lblOrderTime.Text = "lblOrderTime";
-            // 
-            // lblCustomerName
-            // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(157, 69);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(155, 17);
-            this.lblCustomerName.TabIndex = 0;
-            this.lblCustomerName.Text = "Thời gian đặt hàng :";
-            // 
-            // lblProductname
-            // 
-            this.lblProductname.AutoSize = true;
-            this.lblProductname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductname.Location = new System.Drawing.Point(157, 107);
-            this.lblProductname.Name = "lblProductname";
-            this.lblProductname.Size = new System.Drawing.Size(135, 17);
-            this.lblProductname.TabIndex = 0;
-            this.lblProductname.Text = "Thời gian đặt hàng :";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(157, 149);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(135, 17);
-            this.lblPrice.TabIndex = 0;
-            this.lblPrice.Text = "Thời gian đặt hàng :";
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(157, 194);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(135, 17);
-            this.lblQuantity.TabIndex = 0;
-            this.lblQuantity.Text = "Thời gian đặt hàng :";
             // 
             // lblTotal
             // 
@@ -191,6 +130,67 @@
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "Thời gian đặt hàng :";
             // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(157, 194);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(135, 17);
+            this.lblQuantity.TabIndex = 0;
+            this.lblQuantity.Text = "Thời gian đặt hàng :";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(157, 149);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(135, 17);
+            this.lblPrice.TabIndex = 0;
+            this.lblPrice.Text = "Thời gian đặt hàng :";
+            // 
+            // lblProductname
+            // 
+            this.lblProductname.AutoSize = true;
+            this.lblProductname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductname.Location = new System.Drawing.Point(157, 107);
+            this.lblProductname.Name = "lblProductname";
+            this.lblProductname.Size = new System.Drawing.Size(135, 17);
+            this.lblProductname.TabIndex = 0;
+            this.lblProductname.Text = "Thời gian đặt hàng :";
+            // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerName.Location = new System.Drawing.Point(157, 69);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(155, 17);
+            this.lblCustomerName.TabIndex = 0;
+            this.lblCustomerName.Text = "Thời gian đặt hàng :";
+            // 
+            // lblOrderTime
+            // 
+            this.lblOrderTime.AutoSize = true;
+            this.lblOrderTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderTime.ForeColor = System.Drawing.Color.Blue;
+            this.lblOrderTime.Location = new System.Drawing.Point(157, 30);
+            this.lblOrderTime.Name = "lblOrderTime";
+            this.lblOrderTime.Size = new System.Drawing.Size(90, 17);
+            this.lblOrderTime.TabIndex = 0;
+            this.lblOrderTime.Text = "lblOrderTime";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thời gian đặt hàng :";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
@@ -201,16 +201,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(197, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Hủy đơn hàng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(9, 9);
@@ -220,6 +210,16 @@
             this.button2.Text = "Đóng";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(197, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 39);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Xóa đặt hàng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // EditOrderDetail
             // 

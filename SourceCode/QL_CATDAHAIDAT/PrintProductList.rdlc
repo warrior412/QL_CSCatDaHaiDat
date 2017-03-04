@@ -414,8 +414,8 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>1.29329cm</Top>
         <Left>0.47625cm</Left>
-        <Height>2.09958cm</Height>
-        <Width>27.88708cm</Width>
+        <Height>2.09959cm</Height>
+        <Width>27.8871cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -477,6 +477,7 @@
                   <Value>=Now()</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
+                    <Format>dd/MM/yyyy</Format>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -501,7 +502,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox37">
+        <Textbox Name="Textbox39">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -520,10 +521,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox37</rd:DefaultName>
-          <Top>0.39675cm</Top>
-          <Left>1.43126cm</Left>
+          <Top>0.26486cm</Top>
+          <Left>0.47625cm</Left>
           <Height>0.67938cm</Height>
-          <Width>8.61471cm</Width>
+          <Width>8.24429cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -535,7 +536,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox38">
+        <Textbox Name="Textbox40">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -554,10 +555,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox37</rd:DefaultName>
-          <Top>1.00557cm</Top>
-          <Left>1.43126cm</Left>
+          <Top>0.89077cm</Top>
+          <Left>0.47625cm</Left>
           <Height>0.55563cm</Height>
-          <Width>11.15723cm</Width>
+          <Width>11.83581cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -569,7 +570,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox47">
+        <Textbox Name="Textbox48">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -581,32 +582,6 @@
                     <FontStyle>Italic</FontStyle>
                   </Style>
                 </TextRun>
-                <TextRun>
-                  <Value>0977209709</Value>
-                  <Style>
-                    <FontStyle>Italic</FontStyle>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value> (Đạt) -  </Value>
-                  <Style>
-                    <FontStyle>Italic</FontStyle>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value>0967209709</Value>
-                  <Style>
-                    <FontStyle>Italic</FontStyle>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value> (Chinh)</Value>
-                  <Style>
-                    <FontStyle>Italic</FontStyle>
-                  </Style>
-                </TextRun>
               </TextRuns>
               <Style>
                 <TextAlign>Left</TextAlign>
@@ -614,11 +589,107 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox37</rd:DefaultName>
-          <Top>1.63175cm</Top>
-          <Left>1.43126cm</Left>
+          <Top>1.58751cm</Top>
+          <Left>0.47625cm</Left>
           <Height>0.55563cm</Height>
-          <Width>11.15723cm</Width>
+          <Width>1.75518cm</Width>
           <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox6">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!contact1.Value</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>1.58751cm</Top>
+          <Left>2.40782cm</Left>
+          <Height>0.55563cm</Height>
+          <Width>3.45976cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!contact2.Value</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>1.58751cm</Top>
+          <Left>5.86759cm</Left>
+          <Height>0.55563cm</Height>
+          <Width>3.45976cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!contact3.Value</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>1.58751cm</Top>
+          <Left>9.3979cm</Left>
+          <Height>0.55563cm</Height>
+          <Width>3.90955cm</Width>
+          <ZIndex>7</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -640,6 +711,54 @@
       <Height>1.16417cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox11">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cty TNHH Xây dựng dịch vụ vận tải </Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>Nguyễn Đạt</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value> mong nhận được sự ủng hộ của quý khách hàng !</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>0.17639cm</Top>
+          <Left>0.47625cm</Left>
+          <Height>0.6cm</Height>
+          <Width>27.88709cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>
@@ -711,6 +830,23 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="contact1">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="contact2">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="contact3">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>f54e021c-7d0e-41f1-94d9-5e3d8902fb87</rd:ReportID>

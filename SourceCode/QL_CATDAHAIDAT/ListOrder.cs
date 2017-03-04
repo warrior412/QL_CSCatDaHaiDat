@@ -248,6 +248,24 @@ namespace QL_CATDAHAIDAT
             }
         }
 
+        private void btnDeleteOrder_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn xóa hóa đơn này ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.Cancel)
+                return;
+            try
+            {
+                if (currentRow == null)
+                    return;
+                t_HOADONTableAdapter1.DeleteOrderByID(currentRow.MA_HD);
+                this.selectListOrderWithCustomerInfoTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfo);
+
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Đã có lỗi xảy ra. Xóa hóa đơn thất bại.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
        
 
 

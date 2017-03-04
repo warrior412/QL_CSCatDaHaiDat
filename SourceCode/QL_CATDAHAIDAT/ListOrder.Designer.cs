@@ -67,7 +67,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnRePrint = new System.Windows.Forms.Button();
             this.BtnCloseOrder = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDeleteOrder = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -87,11 +87,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.getOrderDetailByOrderIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.selectListOrderWithCustomerInfoTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.SelectListOrderWithCustomerInfoTableAdapter();
-            this.getOrderDetailByOrderIDTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetOrderDetailByOrderIDTableAdapter();
-            this.t_HOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter();
-            this.t_CHITIETHOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter();
             this.tHOIGIANTAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sOLUONGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,6 +95,11 @@
             this.tRANGTHAIDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getOrderDetailByOrderIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.selectListOrderWithCustomerInfoTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.SelectListOrderWithCustomerInfoTableAdapter();
+            this.getOrderDetailByOrderIDTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.GetOrderDetailByOrderIDTableAdapter();
+            this.t_HOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_HOADONTableAdapter();
+            this.t_CHITIETHOADONTableAdapter1 = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.T_CHITIETHOADONTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -402,7 +402,7 @@
             // 
             this.groupBox4.Controls.Add(this.btnRePrint);
             this.groupBox4.Controls.Add(this.BtnCloseOrder);
-            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.btnDeleteOrder);
             this.groupBox4.Controls.Add(this.btnCheckOut);
             this.groupBox4.Location = new System.Drawing.Point(7, 496);
             this.groupBox4.Name = "groupBox4";
@@ -435,18 +435,19 @@
             this.BtnCloseOrder.UseVisualStyleBackColor = true;
             this.BtnCloseOrder.Click += new System.EventHandler(this.BtnCloseOrder_Click);
             // 
-            // button2
+            // btnDeleteOrder
             // 
-            this.button2.Image = global::QL_CATDAHAIDAT.Properties.Resources.close;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(427, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 37);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "XÓA HÓA ĐƠN";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDeleteOrder.Image = global::QL_CATDAHAIDAT.Properties.Resources.close;
+            this.btnDeleteOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteOrder.Location = new System.Drawing.Point(427, 11);
+            this.btnDeleteOrder.Name = "btnDeleteOrder";
+            this.btnDeleteOrder.Size = new System.Drawing.Size(109, 37);
+            this.btnDeleteOrder.TabIndex = 2;
+            this.btnDeleteOrder.Text = "XÓA HÓA ĐƠN";
+            this.btnDeleteOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeleteOrder.UseVisualStyleBackColor = true;
+            this.btnDeleteOrder.Click += new System.EventHandler(this.btnDeleteOrder_Click);
             // 
             // btnCheckOut
             // 
@@ -487,9 +488,9 @@
             this.lblDebt.ForeColor = System.Drawing.Color.Red;
             this.lblDebt.Location = new System.Drawing.Point(121, 470);
             this.lblDebt.Name = "lblDebt";
-            this.lblDebt.Size = new System.Drawing.Size(103, 15);
+            this.lblDebt.Size = new System.Drawing.Size(47, 15);
             this.lblDebt.TabIndex = 1;
-            this.lblDebt.Text = "1.000.000 VND";
+            this.lblDebt.Text = "0 VND";
             // 
             // lblPaid
             // 
@@ -498,9 +499,9 @@
             this.lblPaid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblPaid.Location = new System.Drawing.Point(121, 446);
             this.lblPaid.Name = "lblPaid";
-            this.lblPaid.Size = new System.Drawing.Size(103, 15);
+            this.lblPaid.Size = new System.Drawing.Size(47, 15);
             this.lblPaid.TabIndex = 1;
-            this.lblPaid.Text = "2.000.000 VND";
+            this.lblPaid.Text = "0 VND";
             // 
             // lblTotal
             // 
@@ -508,9 +509,9 @@
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(121, 422);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(103, 15);
+            this.lblTotal.Size = new System.Drawing.Size(47, 15);
             this.lblTotal.TabIndex = 1;
-            this.lblTotal.Text = "3.000.000 VND";
+            this.lblTotal.Text = "0 VND";
             // 
             // label6
             // 
@@ -570,9 +571,9 @@
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblStatus.Location = new System.Drawing.Point(120, 143);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(151, 20);
+            this.lblStatus.Size = new System.Drawing.Size(90, 20);
             this.lblStatus.TabIndex = 1;
-            this.lblStatus.Text = "ĐÃ THANH TOÁN";
+            this.lblStatus.Text = "Trạng thái";
             // 
             // lblCustomerName
             // 
@@ -676,27 +677,6 @@
             this.dataGridView2.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
-            // getOrderDetailByOrderIDBindingSource
-            // 
-            this.getOrderDetailByOrderIDBindingSource.DataMember = "GetOrderDetailByOrderID";
-            this.getOrderDetailByOrderIDBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
-            // 
-            // selectListOrderWithCustomerInfoTableAdapter
-            // 
-            this.selectListOrderWithCustomerInfoTableAdapter.ClearBeforeFill = true;
-            // 
-            // getOrderDetailByOrderIDTableAdapter
-            // 
-            this.getOrderDetailByOrderIDTableAdapter.ClearBeforeFill = true;
-            // 
-            // t_HOADONTableAdapter1
-            // 
-            this.t_HOADONTableAdapter1.ClearBeforeFill = true;
-            // 
-            // t_CHITIETHOADONTableAdapter1
-            // 
-            this.t_CHITIETHOADONTableAdapter1.ClearBeforeFill = true;
-            // 
             // tHOIGIANTAODataGridViewTextBoxColumn
             // 
             this.tHOIGIANTAODataGridViewTextBoxColumn.DataPropertyName = "THOI_GIAN_TAO";
@@ -773,6 +753,27 @@
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
+            // getOrderDetailByOrderIDBindingSource
+            // 
+            this.getOrderDetailByOrderIDBindingSource.DataMember = "GetOrderDetailByOrderID";
+            this.getOrderDetailByOrderIDBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
+            // 
+            // selectListOrderWithCustomerInfoTableAdapter
+            // 
+            this.selectListOrderWithCustomerInfoTableAdapter.ClearBeforeFill = true;
+            // 
+            // getOrderDetailByOrderIDTableAdapter
+            // 
+            this.getOrderDetailByOrderIDTableAdapter.ClearBeforeFill = true;
+            // 
+            // t_HOADONTableAdapter1
+            // 
+            this.t_HOADONTableAdapter1.ClearBeforeFill = true;
+            // 
+            // t_CHITIETHOADONTableAdapter1
+            // 
+            this.t_CHITIETHOADONTableAdapter1.ClearBeforeFill = true;
+            // 
             // ListOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,7 +823,7 @@
         private System.Windows.Forms.Label lblCustomerName;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblOrderDate;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDeleteOrder;
         private System.Windows.Forms.Button btnRePrint;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn hOADONDataGridViewTextBoxColumn;

@@ -33,6 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgListProduct = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dONVITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mSANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -45,20 +52,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRANG_THAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mSANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_QLCatDaHaiDatDataSet = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSet();
-            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gIASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dONVITINHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_SANPHAMTableAdapter = new QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters.M_SANPHAMTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgListProduct)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -114,6 +114,51 @@
             this.dgListProduct.Size = new System.Drawing.Size(351, 308);
             this.dgListProduct.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MA_SP";
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // tENSPDataGridViewTextBoxColumn
+            // 
+            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
+            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
+            // 
+            // gIASPDataGridViewTextBoxColumn
+            // 
+            this.gIASPDataGridViewTextBoxColumn.DataPropertyName = "GIA_SP";
+            this.gIASPDataGridViewTextBoxColumn.HeaderText = "Giá";
+            this.gIASPDataGridViewTextBoxColumn.Name = "gIASPDataGridViewTextBoxColumn";
+            this.gIASPDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dONVITINHDataGridViewTextBoxColumn
+            // 
+            this.dONVITINHDataGridViewTextBoxColumn.DataPropertyName = "DON_VI_TINH";
+            this.dONVITINHDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
+            this.dONVITINHDataGridViewTextBoxColumn.Name = "dONVITINHDataGridViewTextBoxColumn";
+            // 
+            // TRANG_THAI
+            // 
+            this.TRANG_THAI.DataPropertyName = "TRANG_THAI";
+            this.TRANG_THAI.HeaderText = "TRANG_THAI";
+            this.TRANG_THAI.Name = "TRANG_THAI";
+            this.TRANG_THAI.Visible = false;
+            // 
+            // mSANPHAMBindingSource
+            // 
+            this.mSANPHAMBindingSource.DataMember = "M_SANPHAM";
+            this.mSANPHAMBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
+            this.mSANPHAMBindingSource.CurrentChanged += new System.EventHandler(this.mSANPHAMBindingSource_CurrentChanged);
+            // 
+            // dB_QLCatDaHaiDatDataSet
+            // 
+            this.dB_QLCatDaHaiDatDataSet.DataSetName = "DB_QLCatDaHaiDatDataSet";
+            this.dB_QLCatDaHaiDatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.groupBox3);
@@ -149,7 +194,7 @@
             this.btnSave.Location = new System.Drawing.Point(84, 19);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -163,7 +208,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 3;
+            this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -175,7 +220,7 @@
             this.btnAdd.Location = new System.Drawing.Point(3, 19);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 3;
+            this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -187,7 +232,7 @@
             this.btnEdit.Location = new System.Drawing.Point(165, 19);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 3;
+            this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -201,7 +246,7 @@
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(310, 68);
-            this.txtDescription.TabIndex = 1;
+            this.txtDescription.TabIndex = 3;
             // 
             // txtUnit
             // 
@@ -211,7 +256,7 @@
             this.txtUnit.Location = new System.Drawing.Point(19, 126);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(181, 26);
-            this.txtUnit.TabIndex = 1;
+            this.txtUnit.TabIndex = 2;
             // 
             // txtProductName
             // 
@@ -253,51 +298,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên mặt hàng:";
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MA_SP";
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // TRANG_THAI
-            // 
-            this.TRANG_THAI.DataPropertyName = "TRANG_THAI";
-            this.TRANG_THAI.HeaderText = "TRANG_THAI";
-            this.TRANG_THAI.Name = "TRANG_THAI";
-            this.TRANG_THAI.Visible = false;
-            // 
-            // mSANPHAMBindingSource
-            // 
-            this.mSANPHAMBindingSource.DataMember = "M_SANPHAM";
-            this.mSANPHAMBindingSource.DataSource = this.dB_QLCatDaHaiDatDataSet;
-            this.mSANPHAMBindingSource.CurrentChanged += new System.EventHandler(this.mSANPHAMBindingSource_CurrentChanged);
-            // 
-            // dB_QLCatDaHaiDatDataSet
-            // 
-            this.dB_QLCatDaHaiDatDataSet.DataSetName = "DB_QLCatDaHaiDatDataSet";
-            this.dB_QLCatDaHaiDatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tENSPDataGridViewTextBoxColumn
-            // 
-            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TEN_SP";
-            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Mặt hàng";
-            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
-            // 
-            // gIASPDataGridViewTextBoxColumn
-            // 
-            this.gIASPDataGridViewTextBoxColumn.DataPropertyName = "GIA_SP";
-            this.gIASPDataGridViewTextBoxColumn.HeaderText = "Giá";
-            this.gIASPDataGridViewTextBoxColumn.Name = "gIASPDataGridViewTextBoxColumn";
-            this.gIASPDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dONVITINHDataGridViewTextBoxColumn
-            // 
-            this.dONVITINHDataGridViewTextBoxColumn.DataPropertyName = "DON_VI_TINH";
-            this.dONVITINHDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
-            this.dONVITINHDataGridViewTextBoxColumn.Name = "dONVITINHDataGridViewTextBoxColumn";
-            // 
             // m_SANPHAMTableAdapter
             // 
             this.m_SANPHAMTableAdapter.ClearBeforeFill = true;
@@ -317,11 +317,11 @@
             this.Load += new System.EventHandler(this.ListProduct_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgListProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mSANPHAMBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_QLCatDaHaiDatDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

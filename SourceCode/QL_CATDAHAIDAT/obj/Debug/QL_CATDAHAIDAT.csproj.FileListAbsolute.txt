@@ -109,3 +109,4 @@ D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHA
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.exe
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.pdb
 D:\JunF\Projects\QL_CSCATDAHAIDAT\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.csprojResolveAssemblyReference.cache
+C:\JunF's Drive\QL_CSCatDaHaiDat\SourceCode\QL_CATDAHAIDAT\obj\Debug\QL_CATDAHAIDAT.AnalystForm.resources
