@@ -248,7 +248,7 @@ namespace QL_CATDAHAIDAT
                     {
                         t_CHITIETHOADONTableAdapter1.Insert(hd_id,
                             int.Parse(row[0].ToString()),
-                            currentDate,
+                            DateTime.Parse(row[8].ToString()),
                             double.Parse(row[4].ToString()),
                             double.Parse(row[2].ToString()), row[7].ToString(), 1);
                     }
