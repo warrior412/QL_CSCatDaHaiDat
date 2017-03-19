@@ -128,14 +128,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QL_CATDAHAIDAT.exe" size="565760">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QL_CATDAHAIDAT.exe" size="567808">
       <assemblyIdentity name="QL_CATDAHAIDAT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nHPGdDuObgh4HW8APN0t5OQRrFHLrdVs6IqYzPJaFoA=</dsig:DigestValue>
+        <dsig:DigestValue>mSSAyT4JaioeHBCsOxC1Fml8TlEH0YOrNknY6ylCjBE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
