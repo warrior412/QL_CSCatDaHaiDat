@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QL_CATDAHAIDAT.DB_QLCatDaHaiDatDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +34,22 @@ namespace QL_CATDAHAIDAT
             // TODO: This line of code loads data into the 'dB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfo' table. You can move, or remove it, as needed.
             this.selectListOrderWithCustomerInfoTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfo);
         }
+        private float GetTotalDebitByCustomer()
+        {
+            DB_QLCatDaHaiDatDataSetTableAdapters.GetTotalDebitByCustomerIDTableAdapter adap = new GetTotalDebitByCustomerIDTableAdapter();
+            
+            adap.Connection.ConnectionString = Common.GetInstance().CurrentShop;
+            float totalDebit = float.Parse(adap.GetTotalDebitByCustomerID(currentRow.MA_KH) == null ? "0" : adap.GetTotalDebitByCustomerID(currentRow.MA_KH).ToString());
+            return totalDebit;
+        }
+        private string GetLastOrderByCustomer()
+        {
+            DB_QLCatDaHaiDatDataSetTableAdapters.GetTotalDebitByCustomerIDTableAdapter adap = new GetTotalDebitByCustomerIDTableAdapter();
+
+            adap.Connection.ConnectionString = Common.GetInstance().CurrentShop;
+            string ma_hd = adap.GetLastOrderByCustomer(currentRow.MA_KH) == null ? "" : adap.GetLastOrderByCustomer(currentRow.MA_KH).ToString();
+            return ma_hd;
+        }
 
         private void setBindingSourceControl()
         {
@@ -43,10 +60,13 @@ namespace QL_CATDAHAIDAT
 
             double total = currentRow.IsTONG_TIENNull() ? 0 :currentRow.TONG_TIEN;
             double paid = currentRow.IsTIEN_TRANull() ? 0 :currentRow.TIEN_TRA;
+            float oldDebit = GetTotalDebitByCustomer();
 
             lblTotal.Text = Common.GetInstance().getMoneyFormatByDouble(total);
             lblPaid.Text = Common.GetInstance().getMoneyFormatByDouble(paid);
             lblDebt.Text = Common.GetInstance().getMoneyFormatByDouble(total - paid);
+            //lblOldDebit.Text = Common.GetInstance().getMoneyFormatByDouble(GetTotalDebitByCustomer());
+            label7.Text = "Đã trả :";
 
             if(!currentRow.IsTRANG_THAINull())
             {
@@ -76,6 +96,18 @@ namespace QL_CATDAHAIDAT
                 BtnCloseOrder.Enabled = true;
             }
 
+
+            if(GetLastOrderByCustomer().Equals(currentRow.MA_HD))
+            {
+                btnCheckOut.Enabled = true;
+                label7.Text = "Nợ cũ :";
+                lblPaid.Text = Common.GetInstance().getMoneyFormatByDouble(oldDebit);
+                lblDebt.Text = Common.GetInstance().getMoneyFormatByDouble(total - paid + oldDebit);
+            }
+            else
+            {
+                btnCheckOut.Enabled = false;
+            }
             this.getOrderDetailByOrderIDTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.GetOrderDetailByOrderID, currentRow.MA_HD);
 
         }
@@ -119,14 +151,15 @@ namespace QL_CATDAHAIDAT
                 PaymentInput dialog = new PaymentInput();
                 double total = currentRow.IsTONG_TIENNull() ? 0 : currentRow.TONG_TIEN;
                 double paid = currentRow.IsTIEN_TRANull() ? 0 : currentRow.TIEN_TRA;
+                float oldDebit = GetTotalDebitByCustomer();
 
-                dialog.debt = total - paid;
+                dialog.debt = total - paid + oldDebit;
                 if(dialog.ShowDialog()==DialogResult.OK)
                 {
                     try
                     {
                         double payAmount = dialog.payAmount;
-                        t_HOADONTableAdapter1.DoPaymentWithAmount(payAmount, currentRow.MA_HD);
+                        t_HOADONTableAdapter1.DoPaymentWithAmountByCustomer(payAmount, currentRow.MA_KH);
                         this.selectListOrderWithCustomerInfoTableAdapter.Fill(this.dB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfo);
                     }catch(Exception ex)
                     {

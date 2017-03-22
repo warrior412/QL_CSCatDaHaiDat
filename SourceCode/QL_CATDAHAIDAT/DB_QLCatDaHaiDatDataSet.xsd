@@ -2,7 +2,7 @@
 <xs:schema id="DB_QLCatDaHaiDatDataSet" targetNamespace="http://tempuri.org/DB_QLCatDaHaiDatDataSet.xsd" xmlns:mstns="http://tempuri.org/DB_QLCatDaHaiDatDataSet.xsd" xmlns="http://tempuri.org/DB_QLCatDaHaiDatDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DB_QLCatDaHaiDatConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_QLCatDaHaiDatConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QL_CATDAHAIDAT.Properties.Settings.GlobalReference.Default.DB_QLCatDaHaiDatConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
@@ -231,7 +231,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
               <Mapping SourceColumn="TIEN_TRA" DataSetColumn="TIEN_TRA" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteOrderByID" Modifier="Public" Name="DeleteOrderByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="DeleteOrderByID">
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteOrderByID" Modifier="Public" Name="DeleteOrderByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteOrderByID">
                 <UpdateCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.DeleteOrderByID</CommandText>
@@ -242,7 +242,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.DoPaymentQuery" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DoPaymentQuery" Modifier="Public" Name="DoPaymentQuery" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DoPaymentQuery">
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.DoPaymentQuery" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DoPaymentQuery" Modifier="Public" Name="DoPaymentQuery" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DoPaymentQuery">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.DoPaymentQuery</CommandText>
@@ -253,7 +253,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DoPaymentWithAmount" Modifier="Public" Name="DoPaymentWithAmount" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DoPaymentWithAmount">
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DoPaymentWithAmount" Modifier="Public" Name="DoPaymentWithAmount" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DoPaymentWithAmount">
                 <UpdateCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.DoPaymentWithAmount</CommandText>
@@ -265,7 +265,19 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.DoPaymentWithAmountByCustomer" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DoPaymentWithAmountByCustomer" Modifier="Public" Name="DoPaymentWithAmountByCustomer" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="DoPaymentWithAmountByCustomer">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.DoPaymentWithAmountByCustomer</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@PAY_AMOUNT" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CustomerID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.InsertQuery</CommandText>
@@ -280,7 +292,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.SelectOrderIDByCustomer" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="SelectOrderIDByCustomer" Modifier="Public" Name="SelectOrderIDByCustomer" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="SelectOrderIDByCustomer">
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.SelectOrderIDByCustomer" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="SelectOrderIDByCustomer" Modifier="Public" Name="SelectOrderIDByCustomer" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="SelectOrderIDByCustomer">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SelectOrderIDByCustomer</CommandText>
@@ -291,7 +303,7 @@ SELECT MA_HD, NGAY_LAP, GHI_CHU, TONG_TIEN, TRANG_THAI, KHACH_HANG, TIEN_TRA FRO
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.UpdateTotalAmount" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateTotalAmount" Modifier="Public" Name="UpdateTotalAmount" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateTotalAmount">
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.UpdateTotalAmount" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateTotalAmount" Modifier="Public" Name="UpdateTotalAmount" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="UpdateTotalAmount">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.UpdateTotalAmount</CommandText>
@@ -602,6 +614,48 @@ SELECT HOA_DON, SAN_PHAM, THOI_GIAN_TAO, SO_LUONG, GIA, GHI_CHU, TRANG_THAI FROM
               <Mapping SourceColumn="Column12" DataSetColumn="Column12" />
             </Mappings>
             <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetTotalDebitByCustomerIDTableAdapter" GeneratorDataComponentClassName="GetTotalDebitByCustomerIDTableAdapter" Name="GetTotalDebitByCustomerID" UserDataComponentName="GetTotalDebitByCustomerIDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.GetTotalDebitByCustomerID" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.GetTotalDebitByCustomerID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@KHACH_HANG" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OLD_DEBIT" DataSetColumn="OLD_DEBIT" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.GetLastOrderByCustomer" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="GetLastOrderByCustomer" Modifier="Public" Name="GetLastOrderByCustomer" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetLastOrderByCustomer">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.GetLastOrderByCustomer</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@KHACH_HANG" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DB_QLCatDaHaiDatConnectionString (Settings)" DbObjectName="DB_QLCatDaHaiDat.dbo.GetTotalDebitByCustomerID" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="GetTotalDebitByCustomerID" Modifier="Public" Name="GetTotalDebitByCustomerID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetTotalDebitByCustomerID">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.GetTotalDebitByCustomerID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@KHACH_HANG" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -916,6 +970,13 @@ SELECT HOA_DON, SAN_PHAM, THOI_GIAN_TAO, SO_LUONG, GIA, GHI_CHU, TRANG_THAI FROM
               <xs:element name="Column10" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnColumn10" msprop:Generator_ColumnPropNameInRow="Column10" msprop:Generator_ColumnPropNameInTable="Column10Column" msprop:Generator_UserColumnName="Column10" type="xs:double" minOccurs="0" />
               <xs:element name="Column11" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnColumn11" msprop:Generator_ColumnPropNameInRow="Column11" msprop:Generator_ColumnPropNameInTable="Column11Column" msprop:Generator_UserColumnName="Column11" type="xs:double" minOccurs="0" />
               <xs:element name="Column12" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnColumn12" msprop:Generator_ColumnPropNameInRow="Column12" msprop:Generator_ColumnPropNameInTable="Column12Column" msprop:Generator_UserColumnName="Column12" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GetTotalDebitByCustomerID" msprop:Generator_TableClassName="GetTotalDebitByCustomerIDDataTable" msprop:Generator_TableVarName="tableGetTotalDebitByCustomerID" msprop:Generator_TablePropName="GetTotalDebitByCustomerID" msprop:Generator_RowDeletingName="GetTotalDebitByCustomerIDRowDeleting" msprop:Generator_RowChangingName="GetTotalDebitByCustomerIDRowChanging" msprop:Generator_RowEvHandlerName="GetTotalDebitByCustomerIDRowChangeEventHandler" msprop:Generator_RowDeletedName="GetTotalDebitByCustomerIDRowDeleted" msprop:Generator_UserTableName="GetTotalDebitByCustomerID" msprop:Generator_RowChangedName="GetTotalDebitByCustomerIDRowChanged" msprop:Generator_RowEvArgName="GetTotalDebitByCustomerIDRowChangeEvent" msprop:Generator_RowClassName="GetTotalDebitByCustomerIDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OLD_DEBIT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOLD_DEBIT" msprop:Generator_ColumnPropNameInRow="OLD_DEBIT" msprop:Generator_ColumnPropNameInTable="OLD_DEBITColumn" msprop:Generator_UserColumnName="OLD_DEBIT" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
