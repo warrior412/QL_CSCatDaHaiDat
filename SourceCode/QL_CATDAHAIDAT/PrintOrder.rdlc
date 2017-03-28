@@ -782,7 +782,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
-        <Top>6.44061cm</Top>
+        <Top>6.12311cm</Top>
         <Left>11.55102cm</Left>
         <Height>0.86458cm</Height>
         <Width>2.85775cm</Width>
@@ -817,10 +817,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox40</rd:DefaultName>
-        <Top>6.44061cm</Top>
+        <Top>6.12311cm</Top>
         <Left>14.58516cm</Left>
         <Height>0.86458cm</Height>
-        <Width>4.08908cm</Width>
+        <Width>4.33439cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -840,7 +840,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Còn lại :</Value>
+                <Value>Tổng nợ :</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -852,10 +852,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
-        <Top>8.32769cm</Top>
+        <Top>8.01019cm</Top>
         <Left>11.55102cm</Left>
         <Height>0.86458cm</Height>
-        <Width>2.93618cm</Width>
+        <Width>2.85775cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -875,7 +875,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Đã thanh toán :</Value>
+                <Value>Nợ cũ :</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -887,10 +887,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
-        <Top>7.37574cm</Top>
-        <Left>11.55102cm</Left>
+        <Top>7.05825cm</Top>
+        <Left>11.55266cm</Left>
         <Height>0.86458cm</Height>
-        <Width>2.93618cm</Width>
+        <Width>2.85611cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -922,10 +922,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox40</rd:DefaultName>
-        <Top>7.37574cm</Top>
+        <Top>7.05824cm</Top>
         <Left>14.58516cm</Left>
         <Height>0.86458cm</Height>
-        <Width>4.08908cm</Width>
+        <Width>4.33439cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -957,10 +957,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox40</rd:DefaultName>
-        <Top>8.32769cm</Top>
+        <Top>8.01019cm</Top>
         <Left>14.58516cm</Left>
         <Height>0.86458cm</Height>
-        <Width>4.08908cm</Width>
+        <Width>4.33439cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -977,7 +977,7 @@
         <Top>3.11681cm</Top>
         <Left>0.48375cm</Left>
         <Height>0cm</Height>
-        <Width>18.19049cm</Width>
+        <Width>18.50799cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -985,11 +985,11 @@
           </Border>
         </Style>
       </Line>
-      <Line Name="Line4">
-        <Top>6.37005cm</Top>
+      <Line Name="Line3">
+        <Top>6.05061cm</Top>
         <Left>0.48375cm</Left>
         <Height>0cm</Height>
-        <Width>18.19049cm</Width>
+        <Width>18.50799cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -997,11 +997,11 @@
           </Border>
         </Style>
       </Line>
-      <Line Name="Line5">
-        <Top>9.22755cm</Top>
+      <Line Name="Line4">
+        <Top>8.90811cm</Top>
         <Left>0.48375cm</Left>
         <Height>0cm</Height>
-        <Width>18.19049cm</Width>
+        <Width>18.50799cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -1016,8 +1016,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Nhận thanh toán</Value>
-                <Style />
+                <Value>Ngày</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -1025,11 +1027,11 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.77574cm</Top>
-        <Left>0.81928cm</Left>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>6.19172cm</Top>
+        <Left>2.6725cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.16146cm</Width>
+        <Width>1.15496cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -1041,18 +1043,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line3">
-        <Top>8.96269cm</Top>
-        <Left>0.635cm</Left>
-        <Height>0cm</Height>
-        <Width>3.96271cm</Width>
-        <ZIndex>12</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
       <Textbox Name="Textbox3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -1060,8 +1050,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Ngày</Value>
-                <Style />
+                <Value>Tháng</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -1069,11 +1061,45 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.77574cm</Top>
-        <Left>5.1942cm</Left>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>6.19172cm</Top>
+        <Left>4.41506cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.41876cm</Width>
+        <Width>1.34017cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Năm</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>6.19172cm</Top>
+        <Left>6.18905cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.28725cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -1085,11 +1111,11 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line6">
-        <Top>8.96269cm</Top>
-        <Left>6.18817cm</Left>
+      <Line Name="Line5">
+        <Top>6.63156cm</Top>
+        <Left>3.64515cm</Left>
         <Height>0cm</Height>
-        <Width>3.96271cm</Width>
+        <Width>0.83313cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -1097,39 +1123,41 @@
           </Border>
         </Style>
       </Line>
-      <Line Name="Line7">
-        <Top>9.19419cm</Top>
-        <Left>11.51738cm</Left>
-        <Height>-2.78886cm</Height>
-        <Width>0cm</Width>
+      <Line Name="Line6">
+        <Top>6.63156cm</Top>
+        <Left>5.68582cm</Left>
+        <Height>0cm</Height>
+        <Width>0.7273cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
-            <Style>Dashed</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Line>
-      <Line Name="Line8">
-        <Top>9.22947cm</Top>
-        <Left>5.01781cm</Left>
-        <Height>-2.85942cm</Height>
-        <Width>0cm</Width>
+      <Line Name="Line7">
+        <Top>6.63156cm</Top>
+        <Left>7.24645cm</Left>
+        <Height>0cm</Height>
+        <Width>0.88605cm</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
-            <Style>Dashed</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Line>
-      <Textbox Name="Textbox4">
+      <Textbox Name="Textbox12">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tháng</Value>
-                <Style />
+                <Value>Người Lập Phiếu</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -1137,11 +1165,11 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.77574cm</Top>
-        <Left>7.38527cm</Left>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>6.68589cm</Top>
+        <Left>2.6725cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.21822cm</Width>
+        <Width>5.46cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -1153,82 +1181,62 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox8">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Năm</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.77574cm</Top>
-        <Left>9.21089cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.13884cm</Width>
+      <Line Name="Line8">
+        <Top>6.05061cm</Top>
+        <Left>10.28912cm</Left>
+        <Height>2.8575cm</Height>
+        <Width>0cm</Width>
         <ZIndex>18</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Dashed</Style>
           </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
-      </Textbox>
+      </Line>
       <Line Name="Line9">
-        <Top>7.30519cm</Top>
-        <Left>6.50567cm</Left>
-        <Height>0cm</Height>
-        <Width>0.83305cm</Width>
+        <Top>6.05061cm</Top>
+        <Left>0.48375cm</Left>
+        <Height>2.8575cm</Height>
+        <Width>0cm</Width>
         <ZIndex>19</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>Dashed</Style>
           </Border>
         </Style>
       </Line>
       <Line Name="Line10">
-        <Top>7.30519cm</Top>
-        <Left>8.53074cm</Left>
-        <Height>0cm</Height>
-        <Width>0.83305cm</Width>
+        <Top>6.08395cm</Top>
+        <Left>18.99174cm</Left>
+        <Height>2.82416cm</Height>
+        <Width>0cm</Width>
         <ZIndex>20</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>Dashed</Style>
           </Border>
         </Style>
       </Line>
       <Line Name="Line11">
-        <Top>7.30519cm</Top>
-        <Left>10.24666cm</Left>
+        <Top>5.73311cm</Top>
+        <Left>0.45355cm</Left>
         <Height>0cm</Height>
-        <Width>0.83305cm</Width>
+        <Width>18.50799cm</Width>
         <ZIndex>21</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>Dashed</Style>
           </Border>
         </Style>
       </Line>
     </ReportItems>
-    <Height>10.19621cm</Height>
+    <Height>9.53475cm</Height>
     <Style />
   </Body>
   <Width>19.41508cm</Width>
   <Page>
     <PageHeader>
-      <Height>4.89479cm</Height>
+      <Height>5.26521cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1336,10 +1344,10 @@
           </Style>
         </Textbox>
         <Line Name="Line1">
-          <Top>4.66548cm</Top>
+          <Top>4.98298cm</Top>
           <Left>0.48375cm</Left>
           <Height>0cm</Height>
-          <Width>18.19049cm</Width>
+          <Width>18.50799cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -1555,9 +1563,22 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.02646cm</Height>
+      <Height>2cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Line Name="Line12">
+          <Top>0.17639cm</Top>
+          <Left>0.45355cm</Left>
+          <Height>0cm</Height>
+          <Width>18.5382cm</Width>
+          <Style>
+            <Border>
+              <Style>Dotted</Style>
+            </Border>
+          </Style>
+        </Line>
+      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>

@@ -14,7 +14,7 @@ namespace QL_CATDAHAIDAT
 {
     public partial class ListOrder : Form
     {
-
+        double oldDebit = 0;
         DB_QLCatDaHaiDatDataSet.SelectListOrderWithCustomerInfoRow currentRow;
 
         public ListOrder()
@@ -60,7 +60,7 @@ namespace QL_CATDAHAIDAT
 
             double total = currentRow.IsTONG_TIENNull() ? 0 :currentRow.TONG_TIEN;
             double paid = currentRow.IsTIEN_TRANull() ? 0 :currentRow.TIEN_TRA;
-            float oldDebit = GetTotalDebitByCustomer();
+            oldDebit = GetTotalDebitByCustomer();
 
             lblTotal.Text = Common.GetInstance().getMoneyFormatByDouble(total);
             lblPaid.Text = Common.GetInstance().getMoneyFormatByDouble(paid);
@@ -269,12 +269,27 @@ namespace QL_CATDAHAIDAT
                 //PrintOrder printpreviewer = new PrintOrder(lblCustomerName.Text, lblAddress.Text, lblPhone.Text, stotal);
                 //printpreviewer.ma_hd = id;
                 //printpreviewer.ShowDialog();
+
+                double total = currentRow.IsTONG_TIENNull() ? 0 : currentRow.TONG_TIEN;
+                double paid = currentRow.IsTIEN_TRANull() ? 0 : currentRow.TIEN_TRA;
+                string sTotal = Common.GetInstance().getMoneyFormatByDouble(total);
+                string sOldDebit = "";
+                string sTotalDebit = "";
+                if(btnCheckOut.Enabled)
+                {
+                    sOldDebit = Common.GetInstance().getMoneyFormatByDouble(oldDebit);
+                    sTotalDebit = Common.GetInstance().getMoneyFormatByDouble(total + oldDebit - paid);
+                }else{
+                    sOldDebit = Common.GetInstance().getMoneyFormatByDouble(0);
+                    sTotalDebit = Common.GetInstance().getMoneyFormatByDouble(total - paid);
+                }
+
                 PrintOrder printpreviewer = new PrintOrder(lblCustomerName.Text, 
                     lblAddress.Text, 
                     lblPhone.Text, 
-                    Common.GetInstance().getMoneyFormatByDouble(currentRow.TONG_TIEN),
-                    Common.GetInstance().getMoneyFormatByDouble(currentRow.TIEN_TRA),
-                    Common.GetInstance().getMoneyFormatByDouble(currentRow.TONG_TIEN-currentRow.TIEN_TRA));
+                    sTotal,
+                    sOldDebit,
+                    sTotalDebit);
                 printpreviewer.ma_hd = currentRow.MA_HD;
                 printpreviewer.DtReport = null;
                 printpreviewer.ShowDialog();
