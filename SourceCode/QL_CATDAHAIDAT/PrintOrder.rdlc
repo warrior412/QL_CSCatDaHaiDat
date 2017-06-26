@@ -1282,7 +1282,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Cty TNHH Xây dựng dịch vụ vận tải NGUYỄN ĐẠT</Value>
+                  <Value>Cửa hàng vật liệu xây dựng và san lấp mặt bằng NGUYỄN ĐẠT</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
                   </Style>
@@ -1297,7 +1297,7 @@
           <Top>0.75845cm</Top>
           <Left>0.65976cm</Left>
           <Height>0.57355cm</Height>
-          <Width>8.24429cm</Width>
+          <Width>10.05317cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -1316,7 +1316,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Đ/C: 3b/4 Đường số 28, KP. 7, P. Linh Đông, Q. Thủ Đức, TP. HCM</Value>
+                  <Value>Đ/C: 151A Lý Tế Xuyên, Phường Linh Đông, Quận Thủ Đức, TP.HCM</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
                   </Style>
@@ -1409,7 +1409,7 @@
           <Top>2.61965cm</Top>
           <Left>2.52594cm</Left>
           <Height>0.55563cm</Height>
-          <Width>4.0683cm</Width>
+          <Width>4.30472cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
@@ -1439,9 +1439,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>2.61965cm</Top>
-          <Left>6.73708cm</Left>
+          <Left>7.00705cm</Left>
           <Height>0.55563cm</Height>
-          <Width>3.45976cm</Width>
+          <Width>3.82479cm</Width>
           <ZIndex>6</ZIndex>
           <Style>
             <Border>
@@ -1471,7 +1471,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>2.61965cm</Top>
-          <Left>10.26739cm</Left>
+          <Left>10.90239cm</Left>
           <Height>0.55563cm</Height>
           <Width>3.90955cm</Width>
           <ZIndex>7</ZIndex>
@@ -1526,7 +1526,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>0314246572</Value>
+                  <Value>0314412607</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
                     <FontSize>11pt</FontSize>
