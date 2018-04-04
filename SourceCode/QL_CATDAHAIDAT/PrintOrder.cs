@@ -45,15 +45,15 @@ namespace QL_CATDAHAIDAT
 
             if (Common.GetInstance().CurrentShop.Equals(ConfigurationManager.ConnectionStrings["QL_CATDAHAIDAT.Properties.Settings.DB_QLCatDaHaiDatConnectionString"].ConnectionString))
             {
-                this.contact1 = "0977.209.709 (A.Đạt)";
+                this.contact1 = "0977.209.709 (Đạt)";
                 //this.contact2 = "0978.283.939 (A.Đạt)";
-                this.contact2 = "0967.209.709 (C.Trinh)";
+                this.contact2 = "0967.209.709 (Trinh)";
                 this.contact3 = "";
             }
             else
             {
                 this.contact1 = "0907.768.768 (Ba Ơn)";
-                this.contact2 = "0977.209.709 (A.Đạt)";
+                this.contact2 = "0977.209.709 (Đạt)";
                 //this.contact3 = "0978.283.939 (A.Đạt)";
                 this.contact3 = "";
             }
