@@ -32,6 +32,9 @@ namespace QL_CATDAHAIDAT
         public string contact2;
         public string contact3;
 
+        public string printDate;
+        public string importDate;
+
         public PrintOrder(string ten,string diachi,string sdt, string total,string paid,string debt)
         {
             
@@ -57,6 +60,9 @@ namespace QL_CATDAHAIDAT
                 //this.contact3 = "0978.283.939 (A.Đạt)";
                 this.contact3 = "";
             }
+
+            this.printDate = DateTime.Now.ToShortDateString();
+            //this.importDate = new DateTime().ToShortDateString();
             InitializeComponent();
         }
 
@@ -64,8 +70,14 @@ namespace QL_CATDAHAIDAT
         {
             SELECTDETAILORDERTableAdapter.Connection.ConnectionString = Common.GetInstance().CurrentShop;
              //TODO: This line of code loads data into the 'DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER' table. You can move, or remove it, as needed.
-            if(DtReport == null)
+            if(DtReport == null){
                 this.SELECTDETAILORDERTableAdapter.Fill(this.DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER, ma_hd);
+                DB_QLCatDaHaiDatDataSet.SELECTDETAILORDERDataTable table =
+                    this.SELECTDETAILORDERTableAdapter.GetData(ma_hd);
+                DB_QLCatDaHaiDatDataSet.SELECTDETAILORDERRow row =
+                    table.Rows[table.Rows.Count - 1] as DB_QLCatDaHaiDatDataSet.SELECTDETAILORDERRow;
+                importDate = DateTime.Parse(row["THOI_GIAN_TAO"].ToString()).ToShortDateString();
+            } 
             else
             {
                 foreach (DataRow row in DtReport.Rows)
@@ -78,6 +90,7 @@ namespace QL_CATDAHAIDAT
                     item.THOI_GIAN_TAO = DateTime.Parse(row[8].ToString());
                     item.THANH_TIEN = item.GIA * item.SO_LUONG;
                     item.GHI_CHU = row[7].ToString();
+                    importDate = DateTime.Parse(row[8].ToString()).ToShortDateString();
                     DB_QLCatDaHaiDatDataSet.SELECTDETAILORDER.AddSELECTDETAILORDERRow(item);
                 }
 
@@ -95,7 +108,9 @@ namespace QL_CATDAHAIDAT
                 new Microsoft.Reporting.WinForms.ReportParameter("remark",""),
                 new Microsoft.Reporting.WinForms.ReportParameter("contact1",contact1),
                 new Microsoft.Reporting.WinForms.ReportParameter("contact2",contact2),
-                new Microsoft.Reporting.WinForms.ReportParameter("contact3",contact3)
+                new Microsoft.Reporting.WinForms.ReportParameter("contact3",contact3),
+                new Microsoft.Reporting.WinForms.ReportParameter("importDate",importDate),
+                new Microsoft.Reporting.WinForms.ReportParameter("printDate",printDate)
             };
             this.reportViewer1.LocalReport.SetParameters(param);
             this.reportViewer1.RefreshReport();

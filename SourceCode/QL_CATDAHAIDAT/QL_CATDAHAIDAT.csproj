@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -56,10 +56,11 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <ManifestCertificateThumbprint>F695C7F8BE251C6209C00BB7E0ABD77E439202BB</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>8854812282D482BCCD155B561E1A45E006B99C86</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>QL_CATDAHAIDAT_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>

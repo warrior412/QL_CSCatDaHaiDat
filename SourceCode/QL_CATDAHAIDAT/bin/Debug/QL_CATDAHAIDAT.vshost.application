@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="QL_CATDAHAIDAT.exe.manifest" size="9335">
+    <dependentAssembly dependencyType="install" codebase="QL_CATDAHAIDAT.exe.manifest" size="10722">
       <assemblyIdentity name="QL_CATDAHAIDAT.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uQu71uttddN1HXDVyDbywxg1rhx6Tdgkkk3vLLE9nrA=</dsig:DigestValue>
+        <dsig:DigestValue>UeGlJHI2+DytF1glE5Y4uhIPfcQYveZ6sC4UwjMvKj4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
